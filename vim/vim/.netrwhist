@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/jordanLund/Development/Repos/fieldaware/dev/backend/www/webapp/webapp/scripts/setup/simpledemo'
+let g:netrw_dirhist_2='/Users/jordanLund/Development/rubyProjects/project_manager'
+let g:netrw_dirhist_3='/Users/jordanLund/Mozilla'
+let g:netrw_dirhist_4='/home/jrdlnd/bin/dotfiles/bash'
+let g:netrw_dirhist_5='/home/jrdlnd/projects/rails/gratitude/lib/tasks'
+let g:netrw_dirhist_6='/home/jlund/mozilla/mozilla-central'
+let g:netrw_dirhist_7='/home/jlund/Documents'
+let g:netrw_dirhist_8='/home/jlund/.config/terminator'

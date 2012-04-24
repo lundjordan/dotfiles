@@ -1,0 +1,199 @@
+filetype off
+
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype on
+filetype plugin indent on
+
+syntax on
+
+set background=dark
+colorscheme ir_black
+
+set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+
+set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\
+            \ [%l/%L\ (%p%%)
+
+set nocompatible
+set autoindent
+set smartindent
+set textwidth=79 " PEP-8 Friendly
+set number  "display line numbers
+
+"let g:pydiction_location = '$HOME/Development/vimFiles/pydiction/complete-dict'
+
+"runtime macros/matchit.vim        " Load the matchit plugin.
+
+set showcmd                       " Display incomplete commands.
+set showmode                      " Display the mode you're in.
+
+set backspace=indent,eol,start    " Intuitive backspacing.
+
+
+set wildmenu                      " Enhanced command line completion.
+set wildmode=list:longest         " Complete files like a shell.
+
+set ignorecase                    " Case-insensitive searching.
+set smartcase                     " But case-sensitive if expression contains a capital letter.
+
+set ruler                         " Show cursor position.
+
+set incsearch                     " Highlight matches as you type.
+set hlsearch                      " Highlight matches.
+
+set wrap                          " Turn on line wrapping.
+set scrolloff=3                   " Show 3 lines of context around the cursor.
+
+set title                         " Set the terminal's title
+
+set visualbell                    " No beeping.
+
+set nobackup                      " Don't make a backup before overwriting a file.
+set nowritebackup                 " And again.
+set directory=$HOME/.vim/tmp//,  " Keep swap files in one location
+
+set tabstop=4                    " Global tab width.
+set shiftwidth=4                 " And again, related.
+set expandtab                    " Use spaces instead of tabs
+
+set laststatus=2                  " Show the status line all the time
+" Useful status information at bottom of screen
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+
+
+"autocmd BufEnter * :cd %:p:h
+"
+" Controversial...swap colon and semicolon for easier commands
+nnoremap ; :
+nnoremap : ;
+
+vnoremap ; :
+vnoremap : ;
+
+
+"###################################################################
+"################Colemak specific###################################
+" Turbo navigation mode
+" Modified to work with counts, see :help complex-repeat
+nnoremap <silent> N @='5n'<CR>|xnoremap <silent> N @='5n'<CR>|onoremap N 5h|
+nnoremap <silent> U @='5u'<CR>|xnoremap <silent> U @='5u'<CR>|onoremap U 5k|
+nnoremap <silent> E @='5e'<CR>|xnoremap <silent> E @='5e'<CR>|onoremap E 5j|
+nnoremap <silent> I @='5i'<CR>|xnoremap <silent> I @='5i'<CR>|onoremap I 5l|
+inoremap <M-N> <C-o>5h|cnoremap <M-N> <Left><Left><Left><Left><Left>|
+inoremap <M-U> <C-o>5k|cnoremap <M-U> <Up><Up><Up><Up><Up>|
+inoremap <M-E> <C-o>5j|cnoremap <M-E> <Down><Down><Down><Down><Down>|
+inoremap <M-I> <C-o>5l|cnoremap <M-I> <Right><Right><Right><Right><Right>|
+
+" Up/down/left/right
+nnoremap n h|xnoremap n h|onoremap n h|
+nnoremap u k|xnoremap u k|onoremap u k|
+nnoremap e j|xnoremap e j|onoremap e j|
+nnoremap i l|xnoremap i l|onoremap i l|
+inoremap <M-n> <Left>|cnoremap <M-n> <Left>|
+inoremap <M-u> <Up>|cnoremap <M-u> <Up>|
+inoremap <M-e> <Down>|cnoremap <M-e> <Down>|
+inoremap <M-i> <Right>|cnoremap <M-i> <Right>|
+
+" Home/end of line
+" 0 unchanged
+nnoremap L ^|xnoremap L ^|onoremap L ^|
+nnoremap Y $|xnoremap Y $|onoremap Y $|
+inoremap <M-L> <Home>|cnoremap <M-L> <Home>|
+inoremap <M-Y> <End>|cnoremap <M-Y> <End>|
+
+" new remap of direction keys
+nnoremap h e|xnoremap h e|onoremap h e|
+nnoremap H E|xnoremap H E|onoremap H E|
+nnoremap k n|xnoremap k n|onoremap k n|
+noremap K N|xnoremap K N|onoremap K N|
+nnoremap j u|xnoremap j u|onoremap j u|
+nnoremap l i|xnoremap l i|onoremap l i|
+
+"page down/up
+nnoremap E <C-d>|xnoremap <C-E> <C-d>|
+nnoremap U <C-u>|xnoremap <C-U> <C-u>|
+
+"window managing
+nnoremap <C-n> <C-w>h|xnoremap <C-n> <C-w>h|
+nnoremap <C-u> <C-w>k|xnoremap <C-u> <C-w>k|
+nnoremap <C-e> <C-w>j|xnoremap <C-e> <C-w>j|
+nnoremap <C-i> <C-w>l|xnoremap <C-i> <C-w>l|
+"this below does not work... arrrrg
+nnoremap <C-q> <C-w>q|xnoremap <C-q> <C-w>q|
+"###################################################################
+
+"clear search history
+noremap <silent><Leader>/ :nohls<CR>
+
+"buffers
+"switch to previous buffer
+noremap <Leader><Leader> <C-^>
+
+"remove all trailing white spaces
+noremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+
+"grep all current buffers (WOOT!)
+"Bgrep - searches all buffers listed with the :buffers command, skipping over
+"unlisted, quickfix, and help buffers.  Analagous to :bufdo.
+"Agrep - searches all buffers listed with the :args command.  Analagous to
+":argdo.
+"Wgrep - searches all buffers visible on the screen (current tab page only).
+"Analagous to :windo.
+"Tgrep - searches all buffers open on any tabpage.  Analagous to :tabdo.
+noremap <leader>g ;Bgrep
+
+"search find look
+noremap <leader>f yiw:/<C-r>0<CR>
+noremap <leader>F yiw/def <C-r>0<CR>
+
+" The Tab key is mapped to Escape. Press Shift-Tab to insert a Tab.
+" To minimize Tab use, you can use '<', '>' and ':set autoindent'
+"nnoremap <silent> <Esc> <Esc>:nohlsearch<bar>pclose<CR>|
+" vnoremap <Tab> <Esc><Nul>| " <Nul> added to fix select mode problem
+" inoremap <Tab> <Esc>|
+" nnoremap <S-Tab> i<Tab><Esc><Right>
+" vnoremap <S-Tab> >gv|
+" inoremap <S-Tab> <Tab>|
+
+
+"Java stuff
+":inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P>
+":inoremap <buffer> <C-S-Space> <C-X><C-U><C-P>
+
+" Automatic fold settings for specific files. Uncomment to use.
+" autocmd FileType ruby setlocal foldmethod=syntax
+" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+
+" mustache.vim settings
+if has("autocmd")
+    au  BufnewFile,BufRead *.mustache set syntax=mustache
+    endif
+
+
+set pastetoggle=<F2>
+
+
+" Uncomment to use Jamis Buck's file opening plugin
+"map <Leader>t :NERDTree<Enter>
+
+map <Leader>t ;CommandT<CR>
+map <Leader>b ;CommandTBuffer<CR>
+map <Leader>r ;CommandTFlush <CR>
+let g:CommandTCancelMap=['<ESC>','<C-c>']
+let g:CommandTAcceptSelectionMap=['<CR>']
+
+set guifont=Menlo:h13
+
+if has("gui_running")
+    set guioptions=egmrt
+endif
+
+"python settings
+let g:pymode_run_key = 'R'
+let g:pymode_breakpoint_key = 'B'
+let g:pymode_doc_key = 'M'
+
+" automatically reload vimrc when it's saved
+"au BufWritePost .vimrc so ~/.vimrc
