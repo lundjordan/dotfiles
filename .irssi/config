@@ -6,6 +6,21 @@ servers = (
     use_ssl = "yes";
     ssl_verify = "no";
     autoconnect = "yes";
+  },
+
+  {
+    address = "irc.freenode.net";
+    chatnet = "Freenode";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "no";
+  },
+  {
+    address = "irc.quakenet.org";
+    chatnet = "QuakeNet";
+    port = "6667";
+    autoconnect = "yes";
   }
 );
 
@@ -16,6 +31,17 @@ chatnets = {
     username = "jlund";
     realname = "Jordan Lund";
   };
+
+  Freenode = { type = "IRC"; nick = "lundjordan"; };
+
+  QuakeNet = {
+    type = "IRC";
+    nick = "jlund";
+    realname = "Jordan Lund";
+    max_kicks = "1";
+    max_msgs = "3";
+    max_whois = "30";
+  };
 };
 
 channels = (
@@ -24,9 +50,13 @@ channels = (
     name = "#mozbuild";
     chatnet = "moznet";
     autojoin = "yes";
-    password = "LuckyCharms";
+    password = "***********";
   },
+  { name = "#developers"; chatnet = "moznet"; autojoin = "yes"; },
+  { name = "#dt354"; chatnet = "QuakeNet"; autojoin = "yes"; },
+  { name = "#toronto"; chatnet = "moznet"; autojoin = "yes"; }
 );
+
 
 aliases = {
   J = "join";

@@ -15,6 +15,12 @@ alias cdr='cd ~/projects/rails/gratitude'
 # source zsh
 alias sz='. ~/.zshrc'
 
+# reattach screen
+alias rs='screen -raAd'
+
+# irssi notifier
+alias irc='/home/jlund/scripts/irssiNotifier/irssi-connect.sh'
+
 # GREP_COLOR=bright yellow on black bg.
 # use GREP_COLOR=7 to highlight whitespace on black terminals
 # LANG=C for speed. See also: http://www.pixelbeat.org/scripts/findrepo
