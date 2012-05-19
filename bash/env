@@ -29,9 +29,16 @@ export GROFF_NO_SGR=1
 # Another option is to use $VIMRUNTIME/macros/less.sh
 # though I find that less effective
 
+# DIRS ###########
+
+# Personal
+export DOT=~/bin/dotfiles
 
 # Mozilla Environment
-#export MOZCONFIG=~/mozilla/central/src/mozilla
+export BUC=~/mozilla/cleanBuildRepos-hg
+export BUD=~/mozilla/dirtyBuildRepos-git
+
+##################
 
 # Tell less not to beep and also display colours
 export LESS="-QR"

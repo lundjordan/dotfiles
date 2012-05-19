@@ -1,1 +1,2 @@
 tcomment.vba: call delete('/home/jrdlnd/.vim/doc/tcomment.txt')|call delete('/home/jrdlnd/.vim/plugin/tcomment.vim')|call delete('/home/jrdlnd/.vim/autoload/tcomment.vim')
+camelcasemotion.vba: call delete('/home/jlund/.vim/autoload/camelcasemotion.vim')|call delete('/home/jlund/.vim/plugin/camelcasemotion.vim')|call delete('/home/jlund/.vim/doc/camelcasemotion.txt')

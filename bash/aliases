@@ -53,6 +53,9 @@ alias pip="python-pip"
 # what is my ip address
 alias myip="curl -s http://whatismyip.org/"
 
+# stack the resulting files that grep outputs into seperate panes in vim ;)
+# grim () { grep -ril 
+
 # what most people want from od (hexdump)
 alias hd='od -Ax -tx1z -v'
 
@@ -81,3 +84,6 @@ scan() { e="$1"; shift; less -i -p "*$e" "$@"; }
 # Make these functions, common to other languages, available in the shell
 ord() { printf "0x%x\n" "'$1"; }
 chr() { printf $(printf '\\%03o\\n' "$1"); }
+
+# Mozilla alias's
+alias mozenv='source ~/virtualenvs/moz/bin/activate'

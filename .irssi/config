@@ -238,7 +238,7 @@ settings = {
   };
   "fe-common/core" = {
     autolog = "yes";
-    autolog_path = "~/irclogs/$tag/%Y/$0.%Y%m%d.log";
+    autolog_path = "~/docs/irclogs/$tag/%Y/$0.%Y%m%d.log";
     autolog_colors = "no";
     show_nickmode = "no";
     autoclose_windows = "yes";

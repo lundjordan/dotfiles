@@ -52,7 +52,7 @@ set visualbell                    " No beeping.
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,  " Keep swap files in one location
+set directory=$HOME/.vim_swps//,  " Keep swap files in one location
 
 set tabstop=4                    " Global tab width.
 set shiftwidth=4                 " And again, related.
@@ -184,11 +184,26 @@ map <Leader>r ;CommandTFlush <CR>
 let g:CommandTCancelMap=['<ESC>','<C-c>']
 let g:CommandTAcceptSelectionMap=['<CR>']
 
-set guifont=Menlo:h13
+set guifont=Liberation\ Mono\ 10
 
 if has("gui_running")
     set guioptions=egmrt
 endif
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+      autocmd GUIEnter * set visualbell t_vb=
+  endif
+
+"camelcaseplugin
+map <S-W> <Plug>CamelCaseMotion_e
+map <S-B> <Plug>CamelCaseMotion_b
+"map <S-E> <Plug>CamelCaseMotion_e
+omap l<S-W> <Plug>CamelCaseMotion_iw
+xmap l<S-B> <Plug>CamelCaseMotion_iw
+omap l<S-E> <Plug>CamelCaseMotion_ib
+xmap l<S-W> <Plug>CamelCaseMotion_ib
+omap l<S-B> <Plug>CamelCaseMotion_ie
+xmap l<S-E> <Plug>CamelCaseMotion_ie
 
 "python settings
 let g:pymode_run_key = 'R'
