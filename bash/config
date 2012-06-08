@@ -15,3 +15,5 @@ ulimit -c unlimited
 
 #use vim in command line mode
 # set -o vi
+
+[[ -s "~/.rvm/scripts/rvm" ]] && source "~/.rvm/scripts/rvm"

@@ -33,7 +33,7 @@ alias diff='LC_ALL=C TZ=GMT0 diff -Naur' #normalise diffs for distribution
 #alias lynx='lynx -force_html -width=$COLUMNS' #best settings for viewing HTML
 alias links='links -force-html' #need to enable colour in config menu manually
 alias xterm='xterm -fb "" -bg black -fg gray -fa "Sans Mono" -fs 9 +sb -sl 3000 -g 80x50+1+1'
-alias vim='vim -X' #don't try to contact xserver (which can hang on networkissues)
+#alias vim='vim -X' #don't try to contact xserver (which can hang on networkissues)
 #alias gdb='gdb -tui -quiet' #enable the text window interface if possible
 alias head='head -n $((${LINES:-12}-2))' #as many as possible without scrolling
 alias tail='tail -n $((${LINES:-12}-2)) -s.1' #Likewise, also more responsive -f
@@ -87,3 +87,8 @@ chr() { printf $(printf '\\%03o\\n' "$1"); }
 
 # Mozilla alias's
 alias mozenv='source ~/virtualenvs/moz/bin/activate'
+alias bbotenv='source ~/virtualenvs/bbot/bin/activate'
+alias char='cd ~/devel/mozilla/dirtyBuildRepos-git/mozharness'
+alias cbuc='cd ~/devel/mozilla/cleanBuildRepos-hg'
+alias cbud='cd ~/devel/mozilla/dirtyBuildRepos-git'
+alias sshp='ssh people.mozilla.org'

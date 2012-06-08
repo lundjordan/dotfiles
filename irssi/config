@@ -5,7 +5,7 @@ servers = (
     port = "6697";
     use_ssl = "yes";
     ssl_verify = "no";
-    autoconnect = "yes";
+    autoconnect = "no";
   },
 
   {
@@ -20,7 +20,7 @@ servers = (
     address = "irc.quakenet.org";
     chatnet = "QuakeNet";
     port = "6667";
-    autoconnect = "yes";
+    autoconnect = "no";
   }
 );
 
@@ -238,7 +238,7 @@ settings = {
   };
   "fe-common/core" = {
     autolog = "yes";
-    autolog_path = "~/docs/irclogs/$tag/%Y/$0.%Y%m%d.log";
+    autolog_path = "~/Documents/irclogs/$tag/%Y/$0.%Y%m%d.log";
     autolog_colors = "no";
     show_nickmode = "no";
     autoclose_windows = "yes";

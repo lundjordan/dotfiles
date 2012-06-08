@@ -1,2 +1,4 @@
 noremap <S-E> <C-d>
 noremap <S-U> <C-u>
+noremap ; :
+noremap : ;

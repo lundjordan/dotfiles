@@ -3,13 +3,13 @@
 #lynx homepage
 export WWW_HOME=http://www.google.com
 
-export PATH=~/bin:$PATH:$HOME/android-sdks:$HOME/android-sdks/tools:$HOME/android-sdks/platform-tools
+export PATH=~/bin:$PATH
 
 # vim and gnome-terminal have support for 256 colours in fedora 8 at least
 # Note debian/ubuntu users need to install the ncurses-term package for this
 # Note this should be set in ~/.profile for Fedora startup scripts to
 # setup LS_COLORS correctly.
-export TERM=xterm-256color
+# export TERM=xterm-256color
 
 # Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t
 # to browse and return from referenced man pages. ZZ or q to quit.
@@ -35,8 +35,8 @@ export GROFF_NO_SGR=1
 export DOT=~/bin/dotfiles
 
 # Mozilla Environment
-export BUC=~/mozilla/cleanBuildRepos-hg
-export BUD=~/mozilla/dirtyBuildRepos-git
+export BUC=~/devel/mozilla/cleanBuildRepos-hg
+export BUD=~/devel/mozilla/dirtyBuildRepos-git
 
 ##################
 
