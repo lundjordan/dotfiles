@@ -37,6 +37,7 @@ export DOT=~/bin/dotfiles
 # Mozilla Environment
 export BUC=~/devel/mozilla/cleanBuildRepos-hg
 export BUD=~/devel/mozilla/dirtyBuildRepos-git
+export PAT=~/devel/mozilla/patches/
 
 ##################
 

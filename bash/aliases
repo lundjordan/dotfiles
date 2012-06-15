@@ -12,6 +12,9 @@ alias cdr='cd ~/projects/rails/gratitude'
 #permanent aliases
 #############
 
+# alias to aliases
+alias via='vim /home/jlund/bin/dotfiles/bash/aliases'
+
 # source zsh
 alias sz='. ~/.zshrc'
 
@@ -49,6 +52,10 @@ alias lld='ls -lUd */'  #list directories
 
 alias pip="python-pip"
 
+# GIT aliases
+alias gl="git log --pretty=format:'%h - %an, %ar : %s' --graph"
+alias gst="git status --short"
+# in global git: unstage='git reset HEAD --'
 
 # what is my ip address
 alias myip="curl -s http://whatismyip.org/"
@@ -86,9 +93,14 @@ ord() { printf "0x%x\n" "'$1"; }
 chr() { printf $(printf '\\%03o\\n' "$1"); }
 
 # Mozilla alias's
-alias mozenv='source ~/virtualenvs/moz/bin/activate'
-alias bbotenv='source ~/virtualenvs/bbot/bin/activate'
+alias mozenv='source ~/virtualenvs/bbot/bin/activate'
 alias char='cd ~/devel/mozilla/dirtyBuildRepos-git/mozharness'
 alias cbuc='cd ~/devel/mozilla/cleanBuildRepos-hg'
 alias cbud='cd ~/devel/mozilla/dirtyBuildRepos-git'
+alias cus='cd ~/devel/mozilla/user-repo/mozharness/'
 alias sshp='ssh people.mozilla.org'
+alias sshm='ssh jlund@dev-master01.build.scl1.mozilla.com'
+alias sendchange='python ~/devel/mozilla/armen/github-arm/playground/mozilla/scripts/sendchanges.py'
+alias vsendchange='vim ~/devel/mozilla/armen/github-arm/playground/mozilla/scripts/sendchanges.py'
+alias diffharn='git diff > ~/devel/mozilla/patches/mozharness_patch.diff'
+alias impharn='hg import ~/devel/mozilla/patches/mozharness_patch.diff'
