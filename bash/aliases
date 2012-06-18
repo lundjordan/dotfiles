@@ -12,6 +12,14 @@ alias cdr='cd ~/projects/rails/gratitude'
 #permanent aliases
 #############
 
+# yum alias's
+alias yi='sudo yum install'
+alias yr='sudo yum remove'
+alias yu='sudo yum update'
+
+# alias's to dirs
+alias cdot='cd ~/bin/dotfiles'
+
 # alias to aliases
 alias via='vim /home/jlund/bin/dotfiles/bash/aliases'
 
@@ -55,6 +63,10 @@ alias pip="python-pip"
 # GIT aliases
 alias gl="git log --pretty=format:'%h - %an, %ar : %s' --graph"
 alias gst="git status --short"
+alias gba="git branch -a"
+alias gcam="git commit -am"
+alias gcm="git commit -m"
+
 # in global git: unstage='git reset HEAD --'
 
 # what is my ip address
