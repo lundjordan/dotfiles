@@ -16,12 +16,16 @@ alias cdr='cd ~/projects/rails/gratitude'
 alias yi='sudo yum install'
 alias yr='sudo yum remove'
 alias yu='sudo yum update'
+alias ys='yum search'
 
 # alias's to dirs
 alias cdot='cd ~/bin/dotfiles'
 
 # alias to aliases
 alias via='vim /home/jlund/bin/dotfiles/bash/aliases'
+
+# my zsh config
+alias vic='vim /home/jlund/bin/dotfiles/zsh/config'
 
 # source zsh
 alias sz='. ~/.zshrc'
@@ -66,6 +70,7 @@ alias gst="git status --short"
 alias gba="git branch -a"
 alias gcam="git commit -am"
 alias gcm="git commit -m"
+alias gco="git checkout"
 
 # in global git: unstage='git reset HEAD --'
 

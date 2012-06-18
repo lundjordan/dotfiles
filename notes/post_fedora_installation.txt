@@ -1,0 +1,41 @@
+# Alright, time to start documenting what I do in the event of a
+# reinstall/upgrade
+
+# First thing is first, either recover my external ssd or link my home partition
+# as my main user
+
+# Now, let's disable selinux (F****** SELINUX!)
+In Fedora Core and RedHat Enterprise, edit /etc/selinux/config and change the
+SELINUX line to SELINUX=disabled
+
+# tweak the **** out of gnome
+yum install gnome-tweak-tool dconf-editor
+yum install gnome-shell-extension-* or go to:
+http://extensions.gnome.org/ -> install extentions
+
+# themes
+if lost-home folder: mkdir in ~ -> .icons, .themes, .fonts and:
+http://worldofgnome.org/how-to-theme-gnome-3/
+http://gnome-look.org/?xsection=home
+
+# rpmfusion
+su -
+yum localinstall --nogpgcheck
+http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+yum update
+
+# autoplus for things like flash, codecs, etc
+http://dnmouse.org/autoten/
+# XXX su -c 'yum -y --nogpgcheck install
+http://dnmouse.org/autoplus-1.4-5.noarch.rpm'
+
+# skype
+http://www.skype.com/intl/en-us/get-skype/on-your-computer/linux/
+
+# now lets go crazy with yum
+sudo yum install python-setuptools bpython python-devel python-virtualenv
+vim ctags git mercurial openssl virtualenv
+thunderbird shutter screen vlc cmus
+libreoffice-writer
+guake terminator
