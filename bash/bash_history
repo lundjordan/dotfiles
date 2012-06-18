@@ -1,0 +1,1000 @@
+..
+ls
+cd after/
+..
+ls *
+cd after/
+ls
+ls *
+cd ftplugin/
+ls
+...
+ls
+cd ..
+ls
+cp .vim/ .vim.backup2/
+ls
+ls -a
+cp .vim .vim.backup2
+ls -a
+cp -r .vim .vim.backup2
+ls -la
+ls -a
+cd .vim.backup2
+ls
+cd
+mkdir temp
+mv .vim temp/
+ls
+ls -a
+mkdir .vim
+man wget
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+wget -O ~/.vim/autoload/pathogen.vim     https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
+ls
+cd .vim
+ls
+ls *
+cd bundle/
+git clone git://github.com/klen/python-mode.git
+vim this.py
+cd
+rm -rf .vim
+mv ~/temp/.vim .
+ls -la
+mv .vim.backup* ~/temp/
+cd .vim/bundle/
+ls
+mv ~/Music/* .
+ls
+cd
+vim this.py
+cd .vim
+ls
+cd .vim
+ls
+ls *
+mv colors/ir_black.vim ~/temp/
+vim this.py
+vim
+cd bundle/
+ls
+cd python-mode/
+ls
+cd syntax/
+ls
+vim /home/jrdlnd/bin/dotfiles/bash/aliases 
+ls
+vim python.vim 
+ls
+..
+ls
+.
+ls *
+tree
+...
+mv ~/temp/ir_black.vim ~/.vim/colors/
+cd ~/.vim/colors/
+ls
+vim this.py
+exit
+zsh
+exit
+
+
+vim ~/.vimrc
+exit
+vim this.py
+ls
+rm this.py 
+exit
+vim this.py
+cd projects/
+cd rails/starter_project/
+rails g model Status title:string position:integer
+rails g Role person_id:integer project_id:integer status_id:integer title:string
+rails g model Role person_id:integer project_id:integer status_id:integer title:string
+cd db/migrate/
+ls
+vim *stat*
+rake db:migrate
+bundle exec rake db:migrate
+rails console
+rake db:seed
+bundle exec rake db:seed
+rails console
+ls
+...
+ls
+cd lib/tasks/
+ls
+touch app.rake
+rake -T reset
+bundle exec rake -T reset
+bundle exec rake db:reset
+exit
+vim .vimrc
+vim ~/.vimrc
+exit
+cd projects/rails/starter_project/
+grep -r "people_path" .
+grep -r "person_path" .
+grep -r "person_path" ~/projects/rails/starter_project/
+bundle exec rake app:populate
+rails console
+exit
+bundle exec rake db:migrate
+bundle exec rake db:create db:migrate
+bundle exec rake db:seed
+bundle exec rake app:populate
+bundle exec rake app:reset
+rails console
+bundle exec rake app:reset
+rails console
+exit
+cd ~/Videos/Peepcode/peepcode-053-rails-3-ii-2-code/
+ls
+cd finished_project/
+ls
+cd app/controllers/
+ls
+vim roles_controller.rb 
+exit
+cd projects/rails/starter_project/
+grep -r "add a new role" ~/projects/rails/starter_project/
+exit
+vim ~/.vimrc
+cd ~/.vim
+ls
+cd bundle/
+ls
+exit
+cd projects/rails/starter_project/
+vim
+cd ~/projects/
+mkdir pythonOnlineTutor
+cd pythonOnlineTutor
+vim twoSum.py
+exit
+ls
+cd projects/rails/
+ls
+cd ingratitude/
+ls
+hg status
+cd ../starter_project/
+ls
+bundle
+rails s
+rake db:create db:migrate
+cd db/migrate/
+ls
+rails -v
+cd ..
+ls
+catl schema.rb 
+ls
+..
+vim
+exit
+rails s
+md ../app/views/shared
+rails s
+rails g scaffold Project title:string
+rake db:migrate
+bundle exec rake db:migrate
+rails s
+rake db:drop
+bundle exec rake db:drop
+rails s
+sqlite3 
+...
+..
+sqlite3 
+rails s
+sqlite3 
+rails s
+bundle exec rake db:create
+
+bundle exec rake db:migrate
+
+rails s
+bundle exec rake app:populate
+rails s
+bundle
+rails s
+exit
+rails db.console
+rails dbconsole
+rails console
+role.title = "General Contractor"
+rails console
+bundle exec rake db:seed
+rails console
+bundle exec rake app:reset
+s
+ls
+cd public/
+ls
+rm index.html 
+hg status
+hg help
+hg add
+hg commit -m "initial commit, peepcode rails 3 demo"
+ls
+clear
+ls
+cd ..
+ls
+..
+ls
+cd ingratitude/
+hg status
+ls
+cd app/
+ls
+cd views/
+ls
+ls layouts/
+vim ap
+cd layouts/
+vim application.html.erb 
+exit
+fg
+exit
+bpython
+exit
+cd /media/Parallels\ Tools/
+sudo ./install
+LS
+ls
+vim .hgignore
+ls
+...
+vim .hgignore
+la
+l.
+hg status
+hg rm *.swp
+hg rm db/migrate/*.swp
+hg rm db/migrate/.*.swp
+vim .hgignore
+hg status
+vim .hgignore 
+hg status
+hg add .hgignore 
+hg status
+hg add
+hg commit -m "fixed grammar errors in db"
+hg status
+exit
+...
+..
+cd starter_project/
+bundle exec rake app:reset
+exit
+irb
+exit
+irb
+ruby -v
+cd
+open vlc &
+ps
+vlc &
+ps
+ps kill 1945
+kill 1945
+clear
+ls
+clear
+cd projects/
+ls
+cd rails/
+ls
+cd ingratitude/
+ls
+hg status
+cd app/
+ls
+cd ..
+vim
+rails g model Country name:string population:integer ecoRating:integer annualTravVisits:integer
+rails g model Traveler email:string password:string firstName:string secondName:string dob:date countryOrigin:string
+rails g model Donation traveler_id:integer country_id:integer amount:float dateMade:date travelerMessage:string
+rails g Gemfilemodel Charity country_id:string name:string type:string nonProfit:boolean yearsExperience:integer description:text
+ls app/models/
+fg
+rails db:migrate
+rake db:migrate
+rails dbconsole
+clear
+hg status
+hg add
+hg commit -m "added models to appliction"
+fg
+cd db/
+ls
+cd migrate/
+ls
+rm *
+rails g model Country name:string population:integer eco_Rating:integer annual_Trav_visits:integer
+rails g model Traveler email:string password:string first_name:string second_name:string dob:date country_origin:string
+ls
+rm *coun*
+rails g model Country name:string population:integer eco_rating:integer annual_trav_visits:integer
+rails g model Donation traveler_id:integer country_id:integer amount:float date_made:date traveler_message:string
+rails g model Charity country_id:string name:string type:string non_profit:boolean years_experience:integer description:text
+rake db:migrate
+rake db:drop
+rake db:create db:migrate
+hg status
+hg add
+hg status
+fg
+rake db:migrate
+hg rm *.swp
+fg
+rake db:populate
+fg
+rake app:populate
+fg
+rake app:populate
+fg
+rake app:populate
+fg
+rake app:reset
+fg
+rake app:populate
+fg
+rake app:populate
+fg
+rake app:populate
+fg
+rake app:populate
+fg
+rake app:populate
+fg
+rake app:reset
+fg
+rake app:populate
+fg
+rake app:populate
+fg
+rake app:populate
+fg
+rake app:populate
+fg
+rake app:populate
+fg
+bundle
+bundle update
+bundle install
+fg
+bundle
+rake app:populate
+fg
+rake app:reset
+bundle update
+rake app:reset
+rails s
+bundle install
+bundle
+rails s
+vim ../../config/application.rb 
+rails -v
+cd
+rails -v
+cd -
+hg status
+...
+..
+ls
+rails _3.0.1_ new gratitude
+cd gratitude
+ls
+hg init
+hg status
+hg add
+mv ../ingratitude/.hgignore .
+cp .hgignore ../ingratitude/
+hg status
+hg add
+hg commit -m "initial commit"
+fg
+rails g model Traveler email:string password:string first_name:string second_name:string dob:date country_origin:string
+rails g model Country name:string population:integer eco_rating:integer annual_trav_visits:integer
+rails g model Donation traveler_id:integer country_id:integer amount:float date_made:date traveler_message:string
+rails g model Charity country_id:string name:string type:string non_profit:boolean years_experience:integer description:text
+fg
+rails db:create db:migrate
+rake db:create db:migrate
+bundle
+bundle update
+fg
+rails s
+rails dbconsole
+fg
+rake app:populate
+../ingratitude/
+cd ../ingratitude/
+wg
+fg
+ls
+pwd
+bundle update
+bundle
+hg log
+bundle
+bundle update
+bundle
+rails s
+cd ..
+ls
+rm -r gratitude/*
+ls
+ls gratitude/
+rmdir gratitude/
+ls -la gratitude/
+rm -r gratitude/
+ls
+rails new gratitude
+cd gratitude/
+ls
+hg init
+cp ../ingratitude/.hgignore .
+hg status
+hg add
+hg commit -m "initial commit, blank rails project"
+rails g model Traveler email:string password:string first_name:string second_name:string dob:date country_origin:string
+rails g model Country name:string population:integer eco_rating:integer annual_trav_visits:integer
+rails g model Donation traveler_id:integer country_id:integer amount:float date_made:date traveler_message:string
+rails g model Charity country_id:string name:string type:string non_profit:boolean years_experience:integer description:text
+hg add
+hg commit -m "created models: Traveler, Country, Charity, Donation"
+fg
+vim
+rake db:create db:migrate
+rake app:populate
+bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+. ~/.bash_profile
+rvm requirements
+rvm install 1.9.2
+ruby -v
+rvm 1.9.2
+ruby -v
+rails s
+bundle
+gem install bundler
+gem-ruby-1.9.2-p290 install bundler
+gem -v
+ruby -v
+cd ..
+rails new test
+gem install rails
+rvm use 1.9.2
+ruby -v
+gem install rails
+exit
+fg
+exit
+ruby -v
+rvm use 1.9.2 --default
+rvm 1.9.2 --default
+rvm use 1.9.2
+ruby -v
+rvm install 1.9.2
+rvm use 1.9.2
+cd -
+cd projects/rails/gratitude/
+ll
+l.
+find .rvm
+find -name .rvm
+find . -name .rvm
+find -name .rvm .
+find -name ".rvm"
+find . -name ".rvm"
+find . -name "rvm"
+..
+find . -name "rvm"
+find . -name ".rvm"
+cd
+find . -name ".rvm"
+la
+l.
+which rvm
+rvm
+rvm use 1.9.2
+type rvm | head -1
+type rvm 
+exit
+rvm use 1.9.2
+rvm 1.9.2 --default
+ruby -v
+rails new test
+gem install rails
+gem
+gem 0v
+gem 0=-v
+gem -v
+gem server
+cd Downloads/
+ls
+tar -zxvf rubygems-1.8.17.tgz 
+ls
+mv rubygems-1.8.17 ../src/
+ls
+cd ../src/
+ls
+cd rubygems-1.8.17/
+ls
+ruby setup.rb 
+gem install rails
+ROR:  Loading command: install (LoadError)
+rvm pkg install zlib
+echo $rvm_path
+cd $rvm_path
+ls
+cd
+rvm reinstall 1.9.2 --with-zlib-dir=$rvm_path/usr
+rails new test
+gem install rails
+sudo yum install zlib1g-dev
+rvm pkg install zlib
+rvm reinstall 1.9.2
+exit
+ruby -v
+rvm use 1.9.2 --default
+ruby -v
+rails install test
+gem install rails
+rails new test
+rails new rnstir
+sudo yum install libxslt-devel sqlite-devel openssh openssl-devel
+rails new nriestn
+exit
+rails new riesn
+rvm reinstall 1.9.2
+gem install rails
+exit
+ruby -v
+rvm use 1.9.2 --default
+exit
+ruby -v
+rails new rnersnt
+ls
+rm core*
+rm core.*
+rm -r riesn/ rnersnt/ rnstir/ nriestn/
+ls
+cd projects/
+ls
+cd rails/
+ls
+rm -r gratitude/
+rails new gratitude
+ruby -v
+cd gratitude/
+hg init
+cp ../ingratitude/.hgignore .
+hg add
+rails -v
+hg commit -m "initial blank rails 3.2.1"
+rails g model Traveler email:string password:string first_name:string second_name:string dob:date country_origin:string
+rails g model Country name:string population:integer eco_rating:integer annual_trav_visits:integer
+rails g model Donation traveler_id:integer country_id:integer amount:float date_made:date traveler_message:string
+rails g model Charity country_id:string name:string type:string non_profit:boolean years_experience:integer description:text
+cp ../ingratitude/lib/tasks/app.rake lib/tasks/
+vim lib/tasks/
+rake db:create db:migrate
+rake app:populate
+ruby -v
+irb
+rvm requirements
+rvm use 1.8.7
+rvm install 1.8.7
+ruby -v
+rvm pkg install readline
+irb
+exit
+ps
+fg
+exit
+ls
+ruby -v
+which ruby
+catl Gemfile
+vim Gemfile
+vim Gemfile.lock 
+ll Gemfile.lock 
+exit
+ls
+cd projects/rails/
+ls
+cd gratitude/
+ls
+which ruby
+rake app:populate
+bundle exec rake app:populate
+ls
+rubuy
+ruby
+irb
+rvm reinstall 1.9.2
+irb
+clear
+ls
+cd config/
+ls
+cd environments/
+ls
+cd ..
+ls
+vim environment
+vim environment.rb 
+vim boot.rb 
+..
+vim config.ru 
+grep -r "RUBY_VERSION"
+grep -r "1.9.2
+grep -r "1.9.2"
+rails console
+rails s
+sudo yum install gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel iconv-devel
+exit
+zsh
+exit
+zsh
+exit
+zsh
+exit
+zsh
+exit
+zsh
+exit
+echo $SHELL
+chsh -list
+chsh -list-shells
+chsh
+sudo chsh
+exit
+ls
+exit
+chsh
+sudo chsh
+exit
+cd bin/
+cd dotfiles/
+ls
+cd zsh/
+ls
+vim *
+zsh
+exit
+zsh
+exit
+cd projects/rails/gratitude/
+ls
+rails console
+ruby -v
+rvm 1.9.2 --default
+sudo yum install gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel iconv-devel
+rails console
+..
+rails new example
+cd example/
+ls
+rails console
+gem install rails
+..
+rm -r example/
+rails -v
+ruby -v
+rails new example
+cd example/
+ls
+rails console
+..
+rm -r example/
+ls
+rm -r gratitude/
+ls
+cd
+ll
+ll.
+l.
+cd .rvm/
+ls
+cd
+rvm implode
+ruby -v
+which ruby
+sudo yum install git ruby curl bison patch make
+man curl
+bash < <( curl -s http://rvm.beginrescueend.com/releases/rvm-install-head )
+bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+vim ~/.vimrc
+. ~/.bash_profile
+sudo yum install gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel iconv-devel
+sudo yum install libxslt-devel sqlite-devel openssh openssl-devel
+rvm install 1.9.2
+rvm use 1.9.2 --default
+vim
+gem install rails
+ruby -v
+rails new bozotest
+cd bozotest/
+ls
+rails console
+irb
+..
+rm -r bozotest/
+cd projects/
+ls
+cd rails/
+ls
+rails new gratitude
+ls
+cd gratitude/
+rails s
+ruby -v
+hg init
+cp ../ingratitude/.hgignore .
+hg add
+hg commit -m "initial blank rails 3.2.1"
+rails g model Traveler email:string password:string first_name:string second_name:string dob:date country_origin:string
+rails g model Country name:string population:integer eco_rating:integer annual_trav_visits:integer
+rails g model Donation traveler_id:integer country_id:integer amount:float date_made:date traveler_message:string
+rails g model Charity country_id:string name:string type:string non_profit:boolean years_experience:integer description:text
+rake db:create db:migrate
+hg add
+hg commit -m "created models: Traveler, Country, Charity, Donation"
+cp ../ingratitude/lib/tasks/app.rake lib/tasks/
+cd lib/tasks/
+vim app.rake 
+rake app:populate
+irb
+exit
+fg
+exit
+ls
+exit
+ruby -v
+rvm use 1.9.2
+which ruby
+rvm
+cd bin/
+ls
+cd dotfiles/n
+cd dotfiles/
+ls
+cd zsh/
+ls
+cd con
+vim config 
+exit
+rails g model Charity country_id:string name:string type:string non_profit:boolean years_experience:integer description:text
+ls
+zsh
+exit
+rails g model Charity country_id:string name:string charity_type:string non_profit:boolean years_experience:integer description:text
+zsh
+rails g model Charity country_id:string name:string charity_type:string non_profit:boolean years_experience:integer description:text
+exit
+rake db:drop
+rails dbconsole
+rails s
+rails destroy model Traveler
+rails g model Traveler email:string password_digest:string first_name:string second_name:string dob:date country_origin:string
+hg status
+fg
+exit
+lynx
+exit
+lynx
+vim bin/dotfiles/bash/env 
+yum search mutt
+sudo yum install mutt
+mutt
+l.
+vim .msmtpr
+mkdir .mail
+exit
+ps
+fg
+ps
+exit
+sudo yum install zsh
+cd
+ls
+mv vimrc.backup .vimrc
+mv zsh_history.backup zsh_history
+mv bash_profile .bash_profile
+mv bash_profile.backup .bash_profile
+mv zsh_history .zsh_history 
+mv bash_history.backup .bash_history
+mv bashrc.backup .bashrc
+mv zshrc.backup .zshrc
+mkdir bin && cd bin
+reboot
+zsh
+exit
+cmus
+exit
+vim /home/jlund/.config/terminator/config 
+exit
+vim /home/jlund/.config/terminator/config 
+su -c "yum update terminator"
+terminator --version
+exit
+vim /home/jlund/.config/terminator/
+vim /home/jlund/.config/terminator/config 
+ls
+ll
+vim /home/jlund/.config/terminator/config 
+exit
+ll
+exit
+ls
+ll
+exit
+ll
+cim ~/.config/terminator/config 
+cp ~/bin/dotfiles/terminatorConfig ~/.config/terminator/config 
+exit
+ll
+exit
+ll
+exit
+ll
+zsh
+exit
+ll
+screen -ls
+screen cmus
+cmus
+exit
+reboot
+ll
+vim .config/terminator/config 
+exit
+ll
+$TERM
+echo $TERM
+env TERM=terminator
+echo $TERM
+set TERM=terminator
+echo $TERM
+ll
+export TERM=terminator
+echo $TERM
+ll
+exit
+echo $TERM
+ll
+vim  .config/terminator/config 
+exit
+ll
+exit
+ll
+exit
+ll
+zsh
+exit
+ps -A
+kill 3827
+exit
+ll
+exit
+ls
+cd /media/
+ls
+ll
+..
+zsh
+ls
+cd bin/
+ls
+cd ~/bin
+ls
+ll
+chmod 755 vcprompt 
+sz
+ls
+ll
+cd
+ll
+exit
+ll
+su -c 'yum install zsh'
+exit
+ll
+zsh
+exit
+ll
+exit
+bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+exit
+rvm use 1.9.3
+exit
+rvm use 1.9.3
+exit
+rvm use 1.9.3
+ruby --version
+rvm install 1.8.7
+rvm use 1.8.7 --default
+ruby --version
+gem install bundle
+gem install bundler
+exit
+whereis bundle
+gem install bundler
+whereis ruby
+sudo yum remove ruby
+sudo yum install ruby
+sudo yum install rubygems
+gem uninstall bundler
+ruby --version
+sudo yum remove ruby rubygems
+sz
+exit
+ruby --version
+gem install bundler
+rvm use 1.9.3
+gem install bundler
+rvm use 1.8.7
+gem install bundler
+rvm remove 1.8.7
+rvm install 1.8.7
+rvm use 1.8.7 --default
+gem install bundle
+gem install bundler
+gem install json
+rvm gemdir
+rvm 1.8.7
+cd $(rvm gemdir)
+pwd
+gem install bundler
+rvm rubygems current
+exit
+gem install bundler
+gem install bundle
+rvm rubygems 1.3.7
+exit
+gem --version
+gem install bundler
+gem install bundle
+rvm remove 1.8.7
+rvm use 1.9.3 --default
+cd ~/.vim/bundle/command-t/
+bundle install
+rake make
+vim
+vi /home/jlund/bin/dotfiles/bash/aliases 
+vi
+..
+ls
+exit
+rvm remove 1.8.7
+CFLAGS="-O2 -fno-tree-dce -fno-optimize-sibling-calls" rvm install 1.8.7
+rvm use 1.8.7
+rvm use 1.8.7 --default
+which python
+python --version
+which ruby
+ruby --version
+gem install bundler
+cd .vim/bundle/command-t/
+bundle install
+rake make
+..
+mv command-t/ ~/tmp/
+man mv
+mv command-t/ ~/tmp/command-t-2
+ls
+exit
+ls
+cd /mnt/
+ls
+fdisk -l
+sudo reboot
