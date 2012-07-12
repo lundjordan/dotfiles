@@ -64,13 +64,16 @@ alias lld='ls -lUd */'  #list directories
 
 alias pip="python-pip"
 
-# GIT aliases
+# git alias's
 alias gl="git log --pretty=format:'%h - %an, %ar : %s' --graph"
 alias gst="git status --short"
 alias gba="git branch -a"
 alias gcam="git commit -am"
 alias gcm="git commit -m"
 alias gco="git checkout"
+
+# git-hg alias's
+alias hgpp='hg pull -u git; hg push'
 
 # in global git: unstage='git reset HEAD --'
 
@@ -109,11 +112,35 @@ scan() { e="$1"; shift; less -i -p "*$e" "$@"; }
 ord() { printf "0x%x\n" "'$1"; }
 chr() { printf $(printf '\\%03o\\n' "$1"); }
 
+# Mozilla functions
+
+function mozgithg ()
+{
+    if [ $1 ]
+    then
+        start_dir=`pwd`
+        cd ~/devel/mozilla/dirtyBuildRepos-git/mozharness/
+        echo "#### committing changes in local git repo..."
+        git commit -am $1
+        echo "#### pushing changes to remote origin..."
+        git push
+        cd ~/devel/mozilla/user-repo/mozharness/
+        echo "#### pulling git changes into hg repo..."
+        hg pull -u git+ssh://git@github.com:lundjordan/mozharness.git
+        echo "#### pushing changes in hg repo to hg.mozilla.org user_repo..."
+        hg push
+        cd $start_dir
+        echo "#### booya!"
+    else
+        echo "you must supply a commit message"
+    fi
+}
+
 # Mozilla alias's
 alias mozenv='source ~/virtualenvs/bbot/bin/activate'
 alias char='cd ~/devel/mozilla/dirtyBuildRepos-git/mozharness'
-alias cbuc='cd ~/devel/mozilla/cleanBuildRepos-hg'
-alias cbud='cd ~/devel/mozilla/dirtyBuildRepos-git'
+alias cbc='cd ~/devel/mozilla/cleanBuildRepos-hg'
+alias cbd='cd ~/devel/mozilla/dirtyBuildRepos-git'
 alias cus='cd ~/devel/mozilla/user-repo/mozharness/'
 alias sshp='ssh people.mozilla.org'
 alias sshm='ssh jlund@dev-master01.build.scl1.mozilla.com'
@@ -121,3 +148,4 @@ alias sendchange='python ~/devel/mozilla/armen/github-arm/playground/mozilla/scr
 alias vsendchange='vim ~/devel/mozilla/armen/github-arm/playground/mozilla/scripts/sendchanges.py'
 alias diffharn='git diff > ~/devel/mozilla/patches/mozharness_patch.diff'
 alias impharn='hg import ~/devel/mozilla/patches/mozharness_patch.diff'
+alias vitc='vim /home/jlund/devel/mozilla/dirtyBuildRepos-git/buildbot-configs/mozilla-tests/config.py'

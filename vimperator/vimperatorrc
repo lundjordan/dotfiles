@@ -2,3 +2,5 @@ noremap <S-E> <C-d>
 noremap <S-U> <C-u>
 noremap ; :
 noremap : ;
+colorscheme vimPgray
+set hintchars=arstneio
