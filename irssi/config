@@ -286,12 +286,12 @@ logs = {
   };
 };
 keyboard = (
-{ key = "meta-q"; id = "change_window"; data = "11"; },
-{ key = "meta-w"; id = "change_window"; data = "12"; },
-{ key = "meta-f"; id = "change_window"; data = "13"; },
-{ key = "meta-p"; id = "change_window"; data = "14"; },
-{ key = "meta-g"; id = "change_window"; data = "15"; },
-{ key = "meta-l"; id = "change_window"; data = "16"; }
+  { key = "meta-q"; id = "change_window"; data = "11"; },
+  { key = "meta-w"; id = "change_window"; data = "12"; },
+  { key = "meta-f"; id = "change_window"; data = "13"; },
+  { key = "meta-p"; id = "change_window"; data = "14"; },
+  { key = "meta-g"; id = "change_window"; data = "15"; },
+  { key = "meta-l"; id = "change_window"; data = "16"; }
 );
 hilights = (
   { text = "jlund"; nick = "yes"; word = "yes"; },
