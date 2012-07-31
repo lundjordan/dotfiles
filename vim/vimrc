@@ -11,6 +11,11 @@ syntax on
 set background=dark
 colorscheme ir_black
 
+" ctrlp 'best plugin ever...'
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_map = '<c-p>'
+
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\
@@ -72,6 +77,11 @@ nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 
+"python settings
+let g:pymode_run_key = 'R'
+let g:pymode_breakpoint_key = 'B'
+let g:pymode_doc_key = 'M'
+let g:pymode_utils_whitespaces = 0
 
 "###################################################################
 "################Colemak specific###################################
@@ -145,7 +155,7 @@ noremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 noremap <leader>g ;Bgrep
 
 "search find look
-noremap <leader>f yiw:/<C-r>0<CR>
+noremap <leader>f yiw:/<C-r>0<CR>N
 noremap <leader>F yiw/def <C-r>0<CR>
 
 " The Tab key is mapped to Escape. Press Shift-Tab to insert a Tab.
@@ -205,11 +215,6 @@ xmap l<S-W> <Plug>CamelCaseMotion_ib
 omap l<S-B> <Plug>CamelCaseMotion_ie
 xmap l<S-E> <Plug>CamelCaseMotion_ie
 
-"python settings
-let g:pymode_run_key = 'R'
-let g:pymode_breakpoint_key = 'B'
-let g:pymode_doc_key = 'M'
-let g:pymode_utils_whitespaces = 0
 
 " automatically reload vimrc when it's saved
 "au BufWritePost .vimrc so ~/.vimrc
