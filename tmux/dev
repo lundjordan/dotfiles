@@ -1,4 +1,4 @@
 selectp -t 0 # select the first (0) pane
-splitw -h -p 25 'cmus' # split current pane and run 'cmus' command inside the new
+splitw -h -p 20 'cmus' # split current pane and run 'cmus' command inside the new
 selectp -t 0 # select the new, second (0) pane
-splitw -v -p 50 'ssh people.mozilla.org' # split it into two halves
+splitw -v -p 50 'mosh jlund@99.231.116.249' # split it into two halves

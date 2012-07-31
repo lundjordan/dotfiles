@@ -33,6 +33,7 @@ export GROFF_NO_SGR=1
 
 # Personal
 export DOT=~/bin/dotfiles
+export PATCHES=~/devel/mozilla/patches/
 
 # Mozilla Environment
 export BUC=~/devel/mozilla/cleanBuildRepos-hg
