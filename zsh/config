@@ -1,7 +1,7 @@
 autoload -U colors
 colors
 setopt prompt_subst
-PROMPT='%{$fg_bold[black]%}❲%m❳→%n: %~ %{$fg[cyan]%}$(vcprompt)%{$fg_bold[black]%}
+PROMPT='%{$fg_bold[green]%}❲%m❳→%n: %~ %{$fg_bold[green]%}
 → %{$reset_color%}'
 
 # ⋗ old prompt symbol
