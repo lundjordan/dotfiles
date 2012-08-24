@@ -25,7 +25,15 @@ set nocompatible
 set autoindent
 set smartindent
 set textwidth=79 " PEP-8 Friendly
-set number  "display line numbers
+set rnu
+au BufEnter * :set rnu
+au BufLeave * :set nu
+au WinEnter * :set rnu
+au WinLeave * :set nu
+au InsertEnter * :set nu
+au InsertLeave * :set rnu
+au FocusLost * :set nu
+au FocusGained * :set rnu
 
 "let g:pydiction_location = '$HOME/Development/vimFiles/pydiction/complete-dict'
 
@@ -80,7 +88,7 @@ vnoremap : ;
 "python settings
 let g:pymode_run_key = 'R'
 let g:pymode_breakpoint_key = 'B'
-let g:pymode_doc_key = 'M'
+let g:pymode_doc_key = '<M-M>'
 let g:pymode_utils_whitespaces = 0
 
 "###################################################################

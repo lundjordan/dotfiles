@@ -36,6 +36,7 @@ export DOT=~/bin/dotfiles
 export PATCHES=~/devel/mozilla/patches/
 export PATCHES=~/devel/mozilla/patches/
 export PI=jlund@99.231.116.249
+export PIL=jlund@192.168.0.145
 
 # Mozilla Environment
 export BUC=~/devel/mozilla/cleanBuildRepos-hg

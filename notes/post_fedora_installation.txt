@@ -39,3 +39,10 @@ vim ctags git mercurial openssl virtualenv
 thunderbird shutter screen vlc cmus
 libreoffice-writer
 guake terminator
+
+# make apps start on startup:
+gnome-session-properties
+
+# make apps startup in a workspace:
+install gnome-shell-extensions-auto-move-windows
+gsettings set org.gnome.shell.extensions.auto-move-windows application-list "['terminator.desktop:2','firefox.desktop:3','thunderbird.desktop:4']"

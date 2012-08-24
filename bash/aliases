@@ -42,16 +42,17 @@ alias moshw='mosh jlund@99.231.116.249'
 alias moshl='mosh jlund@192.168.0.145'
 alias moshwp='mosh pi@99.231.116.249'
 alias moshlp='mosh pi@192.168.0.145'
-alias sshw='ssh jlund@99.231.116.249'
 alias sshl='ssh jlund@192.168.0.145'
 alias sshwp='ssh pi@99.231.116.249'
 alias sshlp='ssh pi@192.168.0.145'
+alias sshw='ssh jlund@99.231.116.249 -R 4222:localhost:4222'
+alias sshl='ssh jlund@192.168.0.145 -R 4222:localhost:4222'
 
 # reattach screen
 alias rs='screen -raAd'
 
 # irssi notifier
-alias irc='/home/jlund/scripts/irssiNotifier/irssi-connect.sh'
+alias irs='/home/jlund/opensrc/github/irssi-over-ssh-notifications/irssi-notify-listener.py'
 
 # GREP_COLOR=bright yellow on black bg.
 # use GREP_COLOR=7 to highlight whitespace on black terminals
@@ -88,6 +89,7 @@ alias gba="git branch -a"
 alias gcam="git commit -am"
 alias gcm="git commit -m"
 alias gco="git checkout"
+alias gmum="git merge upstream/master"
 
 # git-hg alias's
 alias hgpp='hg pull -u git; hg push'
@@ -163,7 +165,7 @@ alias mozenv='source ~/virtualenvs/bbot/bin/activate'
 alias mozvim='cd ~/devel/mozilla/dirtyBuildRepos-git/ && vim -S vimbackup.vim'
 alias char='cd ~/devel/mozilla/dirtyBuildRepos-git/mozharness'
 alias cbc='cd ~/devel/mozilla/cleanBuildRepos-hg'
-alias cbd='cd ~/devel/mozilla/dirtyBuildRepos-git'
+alias cdir='cd ~/devel/mozilla/dirtyBuildRepos-git'
 alias cus='cd ~/devel/mozilla/user-repo/mozharness/'
 alias sshp='ssh people.mozilla.org'
 alias sshm="ssh -t jlund@dev-master01.build.scl1.mozilla.com 'cd /builds/buildbot/jlund/tests-master; exec zsh'"
