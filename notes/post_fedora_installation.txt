@@ -46,3 +46,25 @@ gnome-session-properties
 # make apps startup in a workspace:
 install gnome-shell-extensions-auto-move-windows
 gsettings set org.gnome.shell.extensions.auto-move-windows application-list "['terminator.desktop:2','firefox.desktop:3','thunderbird.desktop:4']"
+
+
+#### lets start the Ubuntu post installation guide
+"""
+first lets restore .mozilla .ssh .gnome2 (keyring) and make our lives easier
+
+bare minimum packages: vim, zsh, git, terminator, tmux
+
+then get ~/bin back and ssh keys
+
+then add all our . files and set up appropriate ln -s 
+
+*note some important ones are .gconf .thunderbird
+.config/terminator .zsh's .bash's .irssi .vim's .vimp's
+"""
+
+## now lets install some more packages:
+
+# gnome-shell
+
+
+
