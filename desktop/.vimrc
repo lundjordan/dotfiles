@@ -1,1 +1,1 @@
-/home/jlund/bin/dotfiles/vimrc
+/root/bin/dotfiles/vim/vimrc
