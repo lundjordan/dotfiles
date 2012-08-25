@@ -50,9 +50,15 @@ gsettings set org.gnome.shell.extensions.auto-move-windows application-list "['t
 
 #### lets start the Ubuntu post installation guide
 """
-first lets restore .mozilla .ssh .gnome2 (keyring) and make our lives easier
+if using crashplan: http://fs2/IT/CrashPlan/
+    username: jlund@mozilla.com pass: ldap server: crashplan.tor1.mozilla.com
 
-bare minimum packages: vim, zsh, git, terminator, tmux
+
+bare minimum packages: vim, zsh, git, terminator, tmux, thunderbird
+
+first lets restore .zsh_history .mozilla .ssh .gnome2 (keyring)
+
+clone dotfiles to /home/jlund/bin and /root/bin and move desktop/* to ~/
 
 then get ~/bin back and ssh keys
 
@@ -62,9 +68,27 @@ then add all our . files and set up appropriate ln -s
 .config/terminator .zsh's .bash's .irssi .vim's .vimp's
 """
 
+
 ## now lets install some more packages:
 
 # gnome-shell
+# http://www.filiwiese.com/installing-gnome-on-ubuntu-12-04-precise-pangolin
 
+sudo add-apt-repository ppa:gnome3-team/gnome3
+# prompt on this:
+# You are about to add the following PPA to your system:
+# Before upgrading your system to a new Ubuntu release (i.e. from Ubuntu 11.10
+# to 12.04), you should probably run ppa-purge ppa:gnome3-team/gnome3 first.
+
+sudo apt-get update
+sudo apt-get install gnome-shell
+
+sudo apt-get install gnome-tweak-tool
+
+sudo add-apt-repository ppa:ricotz/testing
+sudo apt-get update
+sudo apt-get install gnome-shell-extensions-common
+
+# go to fedora for further gnome customization
 
 

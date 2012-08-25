@@ -21,7 +21,7 @@ alias ys='yum search'
 # yum alias's
 alias ai='sudo apt-get install'
 alias ar='sudo apt-get remove'
-# alias yu='sudo yum update'
+alias au='sudo apt-get update'
 # alias ys='yum search'
 
 ####### Configs
