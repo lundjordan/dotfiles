@@ -71,6 +71,17 @@ then add all our . files and set up appropriate ln -s
 
 ## now lets install some more packages:
 
+# codecs and goodies
+sudo apt-get install ubuntu-restricted-extras
+
+others:
+python-setuptools bpython python-devel python-virtualenv
+vim ctags git mercurial openssl virtualenv
+thunderbird shutter screen vlc cmus
+libreoffice-writer irssi
+guake terminator
+
+##### dont do this !!! ########
 # gnome-shell
 # http://www.filiwiese.com/installing-gnome-on-ubuntu-12-04-precise-pangolin
 
@@ -88,6 +99,7 @@ sudo apt-get install gnome-tweak-tool
 sudo add-apt-repository ppa:ricotz/testing
 sudo apt-get update
 sudo apt-get install gnome-shell-extensions-common
+####################################
 
 # go to fedora for further gnome customization
 

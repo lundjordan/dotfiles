@@ -21,6 +21,9 @@ set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\
             \ [%l/%L\ (%p%%)
 
+set wildmode=longest,list,full
+set wildmenu
+set autoread
 set nocompatible
 set autoindent
 set smartindent
