@@ -52,3 +52,4 @@ WORDCHARS=${WORDCHARS//[&=\/;\!#%\{]}
 
 bindkey -e
 
+fpath=(~/opensrc/github/zsh-completions/src $fpath)

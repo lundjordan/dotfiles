@@ -13,7 +13,7 @@ colorscheme ir_black
 
 " ctrlp 'best plugin ever...'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*.so,*.swp,*.zip
 let g:ctrlp_map = '<c-p>'
 
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
@@ -47,9 +47,6 @@ set showmode                      " Display the mode you're in.
 
 set backspace=indent,eol,start    " Intuitive backspacing.
 
-
-set wildmenu                      " Enhanced command line completion.
-set wildmode=list:longest         " Complete files like a shell.
 
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.

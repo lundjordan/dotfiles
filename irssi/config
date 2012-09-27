@@ -54,12 +54,6 @@ chatnets = {
 };
 
 channels = (
-  {
-    name = "#mozbuild";
-    chatnet = "moznet";
-    autojoin = "yes";
-    password = "BlueDiamonds";
-  },
   { name = "#dt354"; chatnet = "QuakeNet"; autojoin = "yes"; },
   { name = "#toronto"; chatnet = "moznet"; autojoin = "yes"; },
   { name = "#build"; chatnet = "moznet"; autojoin = "yes"; },
@@ -221,13 +215,6 @@ statusbar = {
       items = {
         barstart = { priority = "100"; };
         awl_0 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
-    awl_1 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
         barend = { priority = "100"; alignment = "right"; };
       };
     };

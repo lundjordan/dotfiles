@@ -4,6 +4,7 @@
 export WWW_HOME=http://www.google.com
 
 export PATH=~/bin:$PATH
+export PATH=$PATH:~/.android-sdk-linux/tools:~/.android-sdk-linux/platform-tools
 
 # vim and gnome-terminal have support for 256 colours in fedora 8 at least
 # Note debian/ubuntu users need to install the ncurses-term package for this
@@ -33,8 +34,6 @@ export GROFF_NO_SGR=1
 
 # Personal
 export DOT=~/bin/dotfiles
-export PATCHES=~/devel/mozilla/patches/
-export PATCHES=~/devel/mozilla/patches/
 export PI=jlund@99.231.116.249
 export PIL=jlund@192.168.0.145
 
