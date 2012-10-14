@@ -3,23 +3,20 @@ dotfiles
 
 Just another dotfile repo
 
-mainly consists of dotfiles that are heavly customized for me (I know,
+Mainly consists of dotfiles that are heavly customized for me personally (I know,
 shocking).
 
-For example: there are lots of vim related plugins and configs for python and
-colemak
 
-When I clone this repo on a new machine (or I end up switching/losing my OS), I run:
+When I clone this repo on a new machine (or I end up switching/losing an OS), I run:
     initial_setup.py
 
-It's basically a quick and dirty script that just makes links in my home dir
-so that I can get my environment up and running quick. This way maintaining my
-configs as they all reside within my home dir.
-note: If the dest path exists, I make a backup of it incase I
-it contains configurations that I want to keep.
+It's basically a quick and dirty script that just makes links in my home
+directory, so that I can get my environment up and running.
+This makes maintaining my configs easy as they all stay this dotfiles repo.
+note: If the dest link path exists, I make a backup incase it contains
+configurations that I did not mean to overwrite.
 
-
-This contains stuff for use with:
+In here there are configs for use with:
     - python
     - colemak
     - irssi

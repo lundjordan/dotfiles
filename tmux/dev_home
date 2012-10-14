@@ -1,6 +1,0 @@
-selectp -t 0 # select the first (0) pane
-splitw -v -p 50 'ssh jlund@192.168.1.16 -R 4222:localhost:4222' # split it into two halves
-selectp -t 0 # select the new, second (0) pane
-splitw -h -p 20 'cmus' # split current pane and run 'cmus' command inside the new
-selectp -t 2 # select the new, second (0) pane
-
