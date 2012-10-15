@@ -51,7 +51,6 @@ def backup_and_remove(dest):
         os.move(abs_src_path, abs_dest_path)
     except:
         print 'could not move ' + base_notification
-        sys.exit(0)
 
 
 if platform.system() != 'Windows':
