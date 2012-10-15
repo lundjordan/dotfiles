@@ -2,12 +2,11 @@
 
 import os
 import sys
-import shutil
 import platform
 
-abs_home_path = os.getenv('HOME')
-abs_dotfiles_path = os.path.join(abs_home_path, 'bin/dotfiles')
-abs_backup_dir = os.path.join(abs_home_path, 'dotfiles_backup')
+ABS_HOME_PATH = os.getenv('HOME')
+ABS_DOTFILES_PATH = os.path.join(ABS_HOME_PATH, 'bin/dotfiles')
+ABS_BACKUP_DIR = os.path.join(ABS_HOME_PATH, 'dotfiles_backup')
 
 links = {'zsh/zshrc': '.zshrc',
          'bash/bashrc': '.bashrc',
@@ -26,45 +25,34 @@ def start():
 
 def make_links():
     for target, link in enumerate(links):
-        abs_target_path = os.path.join(abs_dotfiles_path, target)
-        abs_link_path = os.path.join(abs_home_path, link)
+        abs_target_path = os.path.join(ABS_DOTFILES_PATH, target)
+        abs_link_path = os.path.join(ABS_HOME_PATH, link)
+        base_notification = '%s to %s' % (abs_target_path, abs_link_path)
 
-        while True:
-            try:
-                os.symlink(abs_target_path, abs_link_path)
-                print 'symlinking %s to %s' % (abs_target_path, abs_link_path)
-                break
-            except OSError, e:
-                if e.errno == 17:  # file exists
-                    backup_and_remove(link)
-                else:
-                    print e.message  # not sure if thats how we deal with excepts
+        try:
+            if os.path.exists(abs_link_path):
+                backup_and_remove(link)
+            print 'symlinking ' + base_notification
+            os.symlink(abs_target_path, abs_link_path)
+        except:
+            print 'could not link ' + base_notification
 
 
-def backup_and_remove(link):
+def backup_and_remove(dest):
     """backs up the file that already exists then removes it"""
-    abs_copy_src_path = os.path.join(abs_home_path, link)
-    abs_copy_dest_path = os.path.join(abs_backup_dir, link)
-    backup_message = 'backing up %s to %s' % (abs_copy_src_path, abs_copy_dest_path)
-    remove_message = 'removing %s' % (abs_copy_src_path)
+    abs_src_path = os.path.join(ABS_HOME_PATH, dest)
+    abs_dest_path = os.path.join(ABS_BACKUP_DIR, dest)
+    base_notification = '%s to %s' % (abs_src_path, abs_dest_path)
 
-    if not os.path.exists(abs_backup_dir):
-        os.mkdir(abs_backup_dir)
+    if not os.path.exists(ABS_BACKUP_DIR):
+        os.mkdir(ABS_BACKUP_DIR)
     try:
-        if os.path.isdir(abs_copy_src_path):
-            print backup_message
-            shutil.copytree(abs_copy_src_path, abs_copy_dest_path)
-            print remove_message
-            shutil.rmtree(abs_copy_src_path)
-        else:
-            print backup_message
-            shutil.copy2(abs_copy_src_path, abs_copy_dest_path)
-            print remove_message
-            os.remove(abs_copy_src_path)
+        print 'moving ' + base_notification
+        os.move(abs_src_path, abs_dest_path)
     except:
-        print 'could not copy or remove %s to %s' % (abs_copy_src_path,
-                                                     abs_copy_dest_path)
+        print 'could not move ' + base_notification
         sys.exit(0)
+
 
 if platform.system() != 'Windows':
     start()
