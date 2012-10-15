@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import os
-import sys
 import platform
 
 ABS_HOME_PATH = os.getenv('HOME')
@@ -24,7 +23,7 @@ def start():
 
 
 def make_links():
-    for target, link in enumerate(links):
+    for target, link in links.iteritems():
         abs_target_path = os.path.join(ABS_DOTFILES_PATH, target)
         abs_link_path = os.path.join(ABS_HOME_PATH, link)
         base_notification = '%s to %s' % (abs_target_path, abs_link_path)
