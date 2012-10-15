@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import os
+import shutil
 import platform
 
 ABS_HOME_PATH = os.getenv('HOME')
@@ -47,7 +48,7 @@ def backup_and_remove(dest):
         os.mkdir(ABS_BACKUP_DIR)
     try:
         print 'moving ' + base_notification
-        os.move(abs_src_path, abs_dest_path)
+        shutil.move(abs_src_path, abs_dest_path)
     except:
         print 'could not move ' + base_notification
 
