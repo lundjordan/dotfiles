@@ -299,22 +299,12 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#mozbuild";
-        tag = "moznet";
-      }
-    );
-  };
-  3 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
         name = "#dt354";
         tag = "QuakeNet";
       }
     );
   };
-  4 = {
+  3 = {
     items = (
       {
         type = "CHANNEL";
@@ -324,7 +314,7 @@ windows = {
       }
     );
   };
-  5 = {
+  4 = {
     items = (
       {
         type = "CHANNEL";
@@ -334,9 +324,9 @@ windows = {
       }
     );
   };
-  6 = { name = "hilight"; sticky = "yes"; };
+  5 = { name = "hilight"; sticky = "yes"; };
 };
 mainwindows = {
   2 = { first_line = "11"; lines = "16"; };
-  6 = { first_line = "1"; lines = "10"; };
+  5 = { first_line = "1"; lines = "10"; };
 };
