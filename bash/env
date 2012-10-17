@@ -32,11 +32,6 @@ export GROFF_NO_SGR=1
 
 # DIRS ###########
 
-# Personal
-export DOT=~/bin/dotfiles
-export PI=jlund@99.231.116.249
-export PIL=jlund@192.168.0.145
-
 # Mozilla Environment
 export BUC=~/devel/mozilla/cleanBuildRepos-hg
 export BUD=~/devel/mozilla/dirtyBuildRepos-git
