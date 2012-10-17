@@ -35,17 +35,17 @@ servers = (
 chatnets = {
   moznet = {
     type = "IRC";
-    nick = "jlund";
-    username = "jlund";
-    realname = "Jordan Lund";
+    nick = "<nick>";
+    username = "<nick>";
+    realname = "<full name>";
   };
 
   Freenode = { type = "IRC"; nick = "lundjordan"; };
 
   QuakeNet = {
     type = "IRC";
-    nick = "jlund";
-    realname = "Jordan Lund";
+    nick = "<nick>";
+    realname = "<full name>";
     max_kicks = "1";
     max_msgs = "3";
     max_whois = "30";
@@ -55,10 +55,6 @@ chatnets = {
 
 channels = (
   { name = "#dt354"; chatnet = "QuakeNet"; autojoin = "yes"; },
-  { name = "#toronto"; chatnet = "moznet"; autojoin = "yes"; },
-  { name = "#build"; chatnet = "moznet"; autojoin = "yes"; },
-  { name = "#ateam"; chatnet = "moznet"; autojoin = "yes"; },
-  { name = "&bitlbee"; chatnet = "bitlbee"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -99,7 +95,7 @@ aliases = {
   GOTO = "sb goto";
   Q = "QUERY";
   win = "window";
-  ll = "lastlog jlund 20";
+  ll = "lastlog <nick> 20";
   lc = "lastlog -clear";
 };
 
@@ -222,9 +218,9 @@ statusbar = {
 };
 settings = {
   core = {
-    real_name = "Jordan Lund";
-    user_name = "jlund";
-    nick = "jlund";
+    real_name = "<full name>";
+    user_name = "<nick>";
+    nick = "<nick>";
     server_connect_timeout = "3min";
     server_reconnect_time = "5";
     timestamp_format = "[%H:%M:%S]";
@@ -253,7 +249,7 @@ settings = {
   };
   "irc/core" = {
     usermode = "+iwx";
-    alternate_nick = "jlund_";
+    alternate_nick = "<nick>_";
     lag_max_before_disconnect = "1min";
     ctcp_version_reply = "";
   };
@@ -281,9 +277,7 @@ keyboard = (
   { key = "meta-l"; id = "change_window"; data = "16"; }
 );
 hilights = (
-  { text = "jlund"; nick = "yes"; word = "yes"; },
-  { text = "!squirrel"; nick = "yes"; word = "yes"; },
-  { text = "mozharness"; nick = "yes"; word = "yes"; }
+  { text = "<nick>"; nick = "yes"; word = "yes"; },
 );
 ignores = ( );
 
@@ -299,44 +293,14 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#mozbuild";
-        tag = "moznet";
-      }
-    );
-  };
-  3 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
         name = "#dt354";
         tag = "QuakeNet";
       }
     );
   };
-  4 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#toronto";
-        tag = "moznet";
-      }
-    );
-  };
-  5 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#build";
-        tag = "moznet";
-      }
-    );
-  };
-  6 = { name = "hilight"; sticky = "yes"; };
+  3 = { name = "hilight"; sticky = "yes"; };
 };
 mainwindows = {
   2 = { first_line = "11"; lines = "16"; };
-  6 = { first_line = "1"; lines = "10"; };
+  3 = { first_line = "1"; lines = "10"; };
 };
