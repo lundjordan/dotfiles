@@ -2,11 +2,6 @@
 # shortcut aliases and functions
 #######################################
 
-#############
-#temp aliases
-#############
-alias cdr='cd ~/projects/rails/gratitude'
-
 
 #############
 #permanent aliases
