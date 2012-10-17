@@ -30,11 +30,11 @@ alias sz='. ~/.zshrc'
 # alias's to dirs
 alias cdot='cd ~/bin/dotfiles'
 # alias to aliases
-alias via='vim /home/jlund/bin/dotfiles/bash/aliases'
+alias via='vim ~/bin/dotfiles/bash/aliases'
 # my zsh config
-alias vic='vim /home/jlund/bin/dotfiles/zsh/config'
+alias vic='vim ~/bin/dotfiles/zsh/config'
 # my zsh config
-alias vie='vim /home/jlund/bin/dotfiles/bash/env'
+alias vie='vim ~/bin/dotfiles/bash/env'
 # alias to vimrc
 alias vimrc='vim ~/.vimrc'
 ########
@@ -44,20 +44,16 @@ alias pydump='vim ~/tmp/pydump.py'
 alias ppydump='python ~/tmp/pydump.py'
 #
 # raspberry pi
-alias moshw='mosh jlund@99.231.116.249'
-alias moshl='mosh jlund@192.168.0.145'
-alias moshwp='mosh pi@99.231.116.249'
-alias moshlp='mosh pi@192.168.0.145'
-alias sshwp='ssh pi@99.231.116.249'
-alias sshlp='ssh pi@192.168.0.145'
-alias sshw='ssh jlund@99.231.116.249 -R 4222:localhost:4222'
-alias sshl='ssh jlund@192.168.0.145 -R 4222:localhost:4222'
+alias moshw='mosh 176.61.67.136'
+alias moshl='mosh 192.168.1.16'
+alias sshw='ssh 176.61.67.136 -R 4222:localhost:4222'
+alias sshl='ssh 192.168.0.145 -R 4222:localhost:4222'
 
 # reattach screen
 alias rs='screen -raAd'
 
 # irssi notifier
-alias irs='/home/jlund/opensrc/github/irssi-over-ssh-notifications/irssi-notify-listener.py'
+alias irs='~/opensrc/github/irssi-over-ssh-notifications/irssi-notify-listener.py'
 
 # GREP_COLOR=bright yellow on black bg.
 # use GREP_COLOR=7 to highlight whitespace on black terminals
@@ -188,7 +184,7 @@ alias sendchange='python ~/devel/mozilla/armen/github-arm/playground/mozilla/scr
 alias vsendchange='vim ~/devel/mozilla/armen/github-arm/playground/mozilla/scripts/sendchanges.py'
 alias diffharn='git diff > ~/devel/mozilla/patches/mozharness_patch.diff'
 alias impharn='hg import ~/devel/mozilla/patches/mozharness_patch.diff'
-alias vitc='vim /home/jlund/devel/mozilla/dirtyBuildRepos-git/buildbot-configs/mozilla-tests/config.py'
+alias vitc='vim ~/devel/mozilla/dirtyBuildRepos-git/buildbot-configs/mozilla-tests/config.py'
 
 # DIT alias's
 alias cdit='cd ~/devel/dit/'
