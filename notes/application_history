@@ -1,0 +1,34 @@
+terminator guake bpython ctags mercurial irssi screen cmus shutter gimp jekyll vim-gnome mosh gparted javascript-common curl banshee git git-gui tree mtp-tools mtpfs vim tomahawk
+
+ubuntu-restricted-extras
+ruby
+rubygems
+python-django
+python-openssl
+python-dev
+python-virtualenv
+mysql-server
+python-mysqldb
+indicator-weather
+openvpn bridge-utils
+network-manager-openvpn-gnome
+unity-lens-utilities unity-scope-calculator
+unity-scope-cities
+unity-scope-rottentomatoes
+indicator-multiload
+network-manager-openvpn-gnome
+
+
+phonon-backend-gstreamer
+phonon-backend-vlc
+python-setuptools
+nodejs
+oracle-java7-installer
+eclipse
+ps3mediaserver
+gnome-shell-extensions-common
+libmtp-common libmtp-runtime libmtp9 mtpfs mtp-tools
+ubuntu-restricted-extras
+xtightvncviewer
+java
+ia32-libs
