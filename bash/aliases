@@ -12,6 +12,7 @@ alias cdr='cd ~/projects/rails/gratitude'
 #permanent aliases
 #############
 
+
 # yum alias's
 alias yi='sudo yum install'
 alias yr='sudo yum remove'
@@ -31,6 +32,8 @@ alias sz='. ~/.zshrc'
 alias cdot='cd ~/bin/dotfiles'
 # alias to aliases
 alias via='vim ~/bin/dotfiles/bash/aliases'
+# zsh alias shortcut
+alias viaz='vim ~/bin/dotfiles/zsh/aliases'
 # my zsh config
 alias vic='vim ~/bin/dotfiles/zsh/config'
 # my zsh config
@@ -189,3 +192,14 @@ alias vitc='vim ~/devel/mozilla/dirtyBuildRepos-git/buildbot-configs/mozilla-tes
 # DIT alias's
 alias cdit='cd ~/devel/dit/'
 
+function patserv ()
+{
+        cd ~/devel/dit/patterns/starting/
+        ruby server.rb
+}
+
+function vipa ()
+{
+        cd ~/devel/dit/patterns/starting/
+        vim -S musicBackup.vim
+}

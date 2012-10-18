@@ -1,1 +1,19 @@
+# general
+alias -g L="|less" # Write L after a command to page through the output.
+alias -g G="|grep"
+alias -g TL='| tail -20'
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+
+# file paths
+alias -g DOT='~/bin/dotfiles/'
+alias -g DEV='~/devel'
+alias -g MOZ='~/devel/mozilla'
+alias -g FIN='~/devel/dit/final_project'
+alias -g PAT='~/devel/dit/patterns/starting/'
+alias -g AND='~/devel/dit/android/'
+alias -g DOW='~/Downloads/'
+alias -g DOC='~/Documents/'
+
 source ~/bin/dotfiles/bash/aliases
