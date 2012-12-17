@@ -1,5 +1,28 @@
-selectp -t 0 # select the first (0) pane
-splitw -v -p 50 'ssh jlund@176.61.67.136' # split it into two halves
-selectp -t 0 # select the new, second (0) pane
-splitw -h -p 20 'cmus' # split current pane and run 'cmus' command inside the new
-selectp -t 2 # select the new, second (0) pane
+tmux has-session -t development
+if [ $? != 0 ]
+then
+  TERM=screen-256color-bce tmux -2 new-session -s development -n vim_gofer -d
+  tmux new-window -n service_gofer -t development
+  tmux new-window -n irc -t development
+  tmux new-window -n playground -t development
+
+  tmux send-keys -t development:1 'cd ~/devel/learn/final_project/goferIT' C-m
+  tmux send-keys -t development:1 'vim -S .vim_bup.vim' C-m
+
+  tmux split-window -v -t development:2
+  tmux split-window -h -t development:2.2
+  tmux select-layout -t development main-vertical
+  tmux send-keys -t development:2.1 'cd ~/devel/learn/final_project/goferIT' C-m
+  tmux send-keys -t development:2.2 'cd ~/devel/learn/final_project/goferIT' C-m
+  tmux send-keys -t development:2.3 'cd ~/devel/learn/final_project/goferIT' C-m
+  tmux send-keys -t development:2.1 './bin/devserv' C-m
+  tmux send-keys -t development:2.2 'mongo' C-m
+
+  tmux send-keys -t development:3 'ssh jlund@176.61.67.136' C-m
+  tmux send-keys -t development:3 'rs' C-m
+
+  tmux split-window -v -t development:4
+  tmux split-window -h -t development:4.2
+  tmux select-layout -t development main-vertical
+fi
+tmux attach -t development

@@ -6,6 +6,9 @@ export WWW_HOME=http://www.google.com
 export PATH=~/bin:$PATH
 export PATH=$PATH:~/.android-sdk-linux/tools:~/.android-sdk-linux/platform-tools
 
+# bpythonrc path
+export PYTHONSTARTUP=~/.pythonrc
+
 # vim and gnome-terminal have support for 256 colours in fedora 8 at least
 # Note debian/ubuntu users need to install the ncurses-term package for this
 # Note this should be set in ~/.profile for Fedora startup scripts to

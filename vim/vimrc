@@ -13,7 +13,7 @@ colorscheme ir_black
 
 " ctrlp 'best plugin ever...'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*.so,*.swp,*.zip
+set wildignore+=*.so,*.swp,*.zip,*.pyc
 let g:ctrlp_map = '<c-p>'
 
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
@@ -96,7 +96,7 @@ let g:pymode_folding = 0
 source ~/bin/dotfiles/vim/colemakrc
 
 "clear search history
-noremap <silent><Leader>/ :nohls<CR>
+noremap <silent><Leader>] :nohls<CR>
 
 "buffers
 "switch to previous buffer
@@ -179,3 +179,16 @@ xmap l<S-E> <Plug>CamelCaseMotion_ie
 
 " automatically reload vimrc when it's saved
 "au BufWritePost .vimrc so ~/.vimrc
+"
+
+" set html indenting to 2 spaces
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+
+" set html indenting to 2 spaces
+autocmd FileType jade setlocal shiftwidth=2 tabstop=2
+
+"coffee
+let coffee_linter = '/usr/local/bin/coffeelint'
+map <Leader>c ;CoffeeMake<CR>
+map <Leader>C ;CoffeeCompile<CR>
+au BufWritePost *.coffee silent CoffeeMake! -o .compiled_javascripts/ -b | cwindow | redraw!

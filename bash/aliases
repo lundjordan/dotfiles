@@ -41,16 +41,24 @@ alias vie='vim ~/bin/dotfiles/bash/env'
 # alias to vimrc
 alias vimrc='vim ~/.vimrc'
 ########
-#
+
+# tmux
+alias tmux="TERM=screen-256color-bce tmux -2"
+alias tmu="~/.tmux/dev"
+alias tmuh="~/.tmux/dev_home"
+
 # pydump practice
 alias pydump='vim ~/tmp/pydump.py'
 alias ppydump='python ~/tmp/pydump.py'
 #
+
 # raspberry pi
 alias moshw='mosh 176.61.67.136'
 alias moshl='mosh 192.168.1.16'
-alias sshw='ssh 176.61.67.136 -R 4222:localhost:4222'
-alias sshl='ssh 192.168.0.145 -R 4222:localhost:4222'
+alias sshwi='ssh 176.61.67.136 -R 4222:localhost:4222'
+alias sshli='ssh 192.168.1.16 -R 4222:localhost:4222'
+alias sshw='ssh 176.61.67.136'
+alias sshl='ssh 192.168.1.16'
 
 # reattach screen
 alias rs='screen -raAd'
@@ -128,6 +136,9 @@ md () { mkdir -p "$1" && cd "$1"; }
 # make and change to a directory
 catl () { cat "$1" | less; }
 
+# grep with color, context of 3 lines, and pipe through less
+grel () {grep --color=always -rnC 3 "$1" . | less -R}
+
 # print the corresponding error message
 strerror() { python -c "\
 import os,locale as l; l.setlocale(l.LC_ALL, ''); print os.strerror($1)"; }
@@ -152,6 +163,17 @@ function viba ()
         cd ~/devel/mozilla/dirtyBuildRepos-git/
         vim -S vimbackup.vim
 }
+
+function hist () # history of everything if no args[0]. if args[0], grep it
+{
+    if [ $1 ]
+    then
+        history 1 -1 | grep "$1" | vim -R -
+    else
+        history 1 -1 | vim -R -
+    fi
+}
+
 function mozgithg ()
 {
         start_dir=`pwd`
@@ -190,16 +212,25 @@ alias impharn='hg import ~/devel/mozilla/patches/mozharness_patch.diff'
 alias vitc='vim ~/devel/mozilla/dirtyBuildRepos-git/buildbot-configs/mozilla-tests/config.py'
 
 # DIT alias's
-alias cdit='cd ~/devel/dit/'
 
 function patserv ()
 {
-        cd ~/devel/dit/patterns/starting/
+        cd ~/devel/learn/patterns/starting/
         ruby server.rb
 }
 
 function vipa ()
 {
-        cd ~/devel/dit/patterns/starting/
+        cd ~/devel/learn/patterns/starting/
         vim -S musicBackup.vim
 }
+
+# snippet files
+alias pysnips="vim ~/.vim/bundle/snipmate-snippets/snippets/python.snippets"
+
+#node
+alias devserv="~/devel/learn/final_project/goferIT/bin/devserv"
+alias mocha="~/devel/learn/final_project/goferIT/bin/mocha"
+
+# gofer
+ggrel () {grep --color=always --exclude-dir .compiled_javascripts --exclude-dir node_modules -rnC 3 "$1" . | less -R}

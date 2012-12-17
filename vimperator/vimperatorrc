@@ -2,5 +2,10 @@ noremap <S-E> <C-d>
 noremap <S-U> <C-u>
 noremap ; :
 noremap : ;
+noremap <c-p> L
+noremap L <c-p>
+noremap <c-n> Y
+noremap Y <c-n>
+noremap : ;
 colorscheme vimPgray
 set hintchars=arstneio

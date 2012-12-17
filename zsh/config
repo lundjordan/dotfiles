@@ -1,8 +1,17 @@
 autoload -U colors
 colors
 setopt prompt_subst
-PROMPT='%{$fg_bold[black]%}❲%m❳→%n: %~ %{$fg[cyan]%}$(vcprompt)%{$fg_bold[black]%}
+if [ $VIRTUAL_ENV ]
+then
+    PROMPT='($(basename "$VIRTUAL_ENV"))%{$fg_bold[black]%}❲%m❳→%n: %~ %{$fg[cyan]%}$(vcprompt)%{$fg_bold[black]%}
 → %{$reset_color%}'
+    alias vpip='$VIRTUAL_ENV/bin/pip'
+
+else
+    PROMPT='%{$fg_bold[black]%}❲%m❳→%n: %~ %{$fg[cyan]%}$(vcprompt)%{$fg_bold[black]%}
+→ %{$reset_color%}'
+
+fi
 
 # ⋗ old prompt symbol
 
@@ -40,10 +49,6 @@ HISTSIZE=15000
 REPORTTIME=10 # Show elapsed time if command took more than X seconds
 LISTMAX=0 # ask to complete if top of list would scroll off screen
 
-# Load completions for Ruby, Git, etc.
-autoload compinit
-compinit
-
 ## case-insensitive (all),partial-word and then substring completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
@@ -53,3 +58,8 @@ WORDCHARS=${WORDCHARS//[&=\/;\!#%\{]}
 bindkey -e
 
 fpath=(~/opensrc/github/zsh-completions/src $fpath)
+
+# Load completions for Ruby, Git, etc.
+autoload compinit
+compinit
+
