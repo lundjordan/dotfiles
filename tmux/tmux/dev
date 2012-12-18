@@ -5,6 +5,7 @@ then
   tmux new-window -n service_gofer -t development
   tmux new-window -n irc -t development
   tmux new-window -n playground -t development
+  tmux new-window -n system_monitor -t development
 
   tmux send-keys -t development:1 'cd ~/devel/learn/final_project/goferIT' C-m
   tmux send-keys -t development:1 'vim -S .vim_bup.vim' C-m
@@ -24,5 +25,7 @@ then
   tmux split-window -v -t development:4
   tmux split-window -h -t development:4.2
   tmux select-layout -t development main-vertical
+
+  tmux send-keys -t development:5 'top' C-m
 fi
 tmux attach -t development

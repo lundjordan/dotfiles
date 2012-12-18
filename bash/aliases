@@ -46,6 +46,8 @@ alias vimrc='vim ~/.vimrc'
 alias tmux="TERM=screen-256color-bce tmux -2"
 alias tmu="~/.tmux/dev"
 alias tmuh="~/.tmux/dev_home"
+alias tmu2="TERM=screen-256color-bce tmux -2 new-session -t development -s dev_quake"
+alias tmu3="TERM=screen-256color-bce tmux -2 new-session -t development -s dev_terminal"
 
 # pydump practice
 alias pydump='vim ~/tmp/pydump.py'
