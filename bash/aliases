@@ -22,7 +22,7 @@ alias ys='yum search'
 # yum alias's
 alias ai='sudo apt-get install'
 alias ar='sudo apt-get remove'
-alias au='sudo apt-get update'
+alias au='sudo apt-get update && sudo apt-get upgrade'
 # alias ys='yum search'
 
 ####### Configs
@@ -40,6 +40,8 @@ alias vic='vim ~/bin/dotfiles/zsh/config'
 alias vie='vim ~/bin/dotfiles/bash/env'
 # alias to vimrc
 alias vimrc='vim ~/.vimrc'
+# alias to vimrc
+alias vimnotes='vim ~/bin/dotfiles/notes/vim_cheat_sheet.txt'
 ########
 
 # tmux
@@ -55,11 +57,11 @@ alias ppydump='python ~/tmp/pydump.py'
 #
 
 # raspberry pi
-alias moshw='mosh 176.61.67.136'
+alias moshw='mosh 176.61.62.139'
 alias moshl='mosh 192.168.1.16'
-alias sshwi='ssh 176.61.67.136 -R 4222:localhost:4222'
+alias sshwi='ssh 176.61.62.139 -R 4222:localhost:4222'
 alias sshli='ssh 192.168.1.16 -R 4222:localhost:4222'
-alias sshw='ssh 176.61.67.136'
+alias sshw='ssh 176.61.62.139'
 alias sshl='ssh 192.168.1.16'
 
 # reattach screen
@@ -104,7 +106,7 @@ alias gf="git fetch"
 alias gm="git merge"
 alias gba="git branch -a"
 alias gcam="git commit -am"
-alias gcm="git commit -m"
+alias gca="git commit -a"
 alias gco="git checkout"
 alias gcob="git checkout -b"
 alias gmum="git merge upstream/master"
@@ -227,6 +229,9 @@ function vipa ()
         vim -S musicBackup.vim
 }
 
+# ps alias
+alias psa="ps -ely | grep"
+
 # snippet files
 alias pysnips="vim ~/.vim/bundle/snipmate-snippets/snippets/python.snippets"
 
@@ -236,3 +241,4 @@ alias mocha="~/devel/learn/final_project/goferIT/bin/mocha"
 
 # gofer
 ggrel () {grep --color=always --exclude-dir .compiled_javascripts --exclude-dir node_modules -rnC 3 "$1" . | less -R}
+alias linesOfGoferCode="find . -type d \( -name node_modules -o -name .git -o -name js -o -name css -o -name img -o -name .compiled_javascripts \) -prune -o -print | xargs wc -l | less"

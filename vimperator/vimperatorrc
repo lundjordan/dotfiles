@@ -7,5 +7,6 @@ noremap L <c-p>
 noremap <c-n> Y
 noremap Y <c-n>
 noremap : ;
+noremap pp <c-^>
 colorscheme vimPgray
 set hintchars=arstneio

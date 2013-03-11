@@ -1,5 +1,5 @@
 . ~/bin/dotfiles/zsh/env
-. ~/bin/dotfiles/zsh/config
 . ~/bin/dotfiles/zsh/aliases
+. ~/bin/dotfiles/zsh/config
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

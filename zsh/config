@@ -3,17 +3,17 @@ colors
 setopt prompt_subst
 if [ $VIRTUAL_ENV ]
 then
-    PROMPT='($(basename "$VIRTUAL_ENV"))%{$fg_bold[black]%}❲%m❳→%n: %~ %{$fg[cyan]%}$(vcprompt)%{$fg_bold[black]%}
-→ %{$reset_color%}'
+    PROMPT='($(basename "$VIRTUAL_ENV"))%{$fg_bold[black]%}❲%m❳→ %n: %~ %{$fg[cyan]%}$(vcprompt)%{$fg_bold[black]%}
+⋗  %{$reset_color%}'
     alias vpip='$VIRTUAL_ENV/bin/pip'
 
 else
-    PROMPT='%{$fg_bold[black]%}❲%m❳→%n: %~ %{$fg[cyan]%}$(vcprompt)%{$fg_bold[black]%}
-→ %{$reset_color%}'
+    PROMPT='%{$fg_bold[black]%}❲%m❳→ %n: %~ %{$fg[cyan]%}$(vcprompt)%{$fg_bold[black]%}
+⋗  %{$reset_color%}'
 
 fi
 
-# ⋗ old prompt symbol
+# → old prompt symbol
 
 # Set RPROMPT to have info show up on the right, too.
 
@@ -43,8 +43,8 @@ autoload url-quote-magic
 zle -N self-insert url-quote-magic
 
 HISTFILE=~/.zsh_history
-SAVEHIST=15000
-HISTSIZE=15000
+SAVEHIST=65000
+HISTSIZE=65000
 
 REPORTTIME=10 # Show elapsed time if command took more than X seconds
 LISTMAX=0 # ask to complete if top of list would scroll off screen
@@ -54,6 +54,22 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:
 
 # Make CTRL-W delete after other chars, not just spaces
 WORDCHARS=${WORDCHARS//[&=\/;\!#%\{]}
+
+
+### Automatically Expanding zsh Global Aliases - Simplified
+globalias() {
+   if [[ $LBUFFER =~ ' [A-Z0-9]+$' ]]; then
+     zle _expand_alias
+   fi
+   zle self-insert
+}
+
+zle -N globalias
+
+bindkey " " globalias
+bindkey "^ " magic-space           # control-space to bypass completion
+bindkey -M isearch " " magic-space # normal space during searches
+###
 
 bindkey -e
 

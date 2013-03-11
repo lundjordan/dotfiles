@@ -13,7 +13,7 @@ colorscheme ir_black
 
 " ctrlp 'best plugin ever...'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*.so,*.swp,*.zip,*.pyc
+set wildignore+=*.so,*.swp,*.zip,*.pyc,*/node_modules/*,*/js/*
 let g:ctrlp_map = '<c-p>'
 
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
@@ -95,6 +95,14 @@ let g:pymode_folding = 0
 " source colemak configs
 source ~/bin/dotfiles/vim/colemakrc
 
+" tab navigation (TODO not working!!!)
+" noremap <A-A> 1gt
+" noremap <A-R> 2gt
+" noremap <A-S> 3gt
+" noremap <A-T> 4gt
+" noremap <A-D> 5gt
+" noremap <A-Q> :tablast<CR>
+
 "clear search history
 noremap <silent><Leader>] :nohls<CR>
 
@@ -104,6 +112,9 @@ noremap <Leader><Leader> <C-^>
 
 "remove all trailing white spaces
 noremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+
+"refactor highlighted word
+noremap <leader>r yiw:%s/<C-r>"/
 
 "grep all current buffers (WOOT!)
 "Bgrep - searches all buffers listed with the :buffers command, skipping over
@@ -149,11 +160,11 @@ set pastetoggle=<F2>
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :NERDTree<Enter>
 
-map <Leader>t ;CommandT<CR>
-map <Leader>b ;CommandTBuffer<CR>
-map <Leader>r ;CommandTFlush <CR>
-let g:CommandTCancelMap=['<ESC>','<C-c>']
-let g:CommandTAcceptSelectionMap=['<CR>']
+" map <Leader>t ;CommandT<CR>
+" map <Leader>b ;CommandTBuffer<CR>
+" map <Leader>r ;CommandTFlush <CR>
+" let g:CommandTCancelMap=['<ESC>','<C-c>']
+" let g:CommandTAcceptSelectionMap=['<CR>']
 
 set guifont=Liberation\ Mono\ 10
 
@@ -191,4 +202,4 @@ autocmd FileType jade setlocal shiftwidth=2 tabstop=2
 let coffee_linter = '/usr/local/bin/coffeelint'
 map <Leader>c ;CoffeeMake<CR>
 map <Leader>C ;CoffeeCompile<CR>
-au BufWritePost *.coffee silent CoffeeMake! -o .compiled_javascripts/ -b | cwindow | redraw!
+au BufWritePost *.coffee silent CoffeeMake! -o ./.compiled_javascripts/ -b | cwindow | redraw!

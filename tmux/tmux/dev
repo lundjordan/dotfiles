@@ -7,24 +7,24 @@ then
   tmux new-window -n playground -t development
   tmux new-window -n system_monitor -t development
 
-  tmux send-keys -t development:1 'cd ~/devel/learn/final_project/goferIT' C-m
-  tmux send-keys -t development:1 'vim -S .vim_bup.vim' C-m
-
-  tmux split-window -v -t development:2
-  tmux split-window -h -t development:2.2
-  tmux select-layout -t development main-vertical
-  tmux send-keys -t development:2.1 'cd ~/devel/learn/final_project/goferIT' C-m
-  tmux send-keys -t development:2.2 'cd ~/devel/learn/final_project/goferIT' C-m
-  tmux send-keys -t development:2.3 'cd ~/devel/learn/final_project/goferIT' C-m
-  tmux send-keys -t development:2.1 './bin/devserv' C-m
-  tmux send-keys -t development:2.2 'mongo' C-m
-
-  tmux send-keys -t development:3 'ssh jlund@176.61.67.136' C-m
-  tmux send-keys -t development:3 'rs' C-m
-
   tmux split-window -v -t development:4
   tmux split-window -h -t development:4.2
   tmux select-layout -t development main-vertical
+  tmux send-keys -t development:4.3 'mongod --dbpath ~/mongo/db &' C-m
+  tmux send-keys -t development:4.2 'cd GOF' C-m
+  tmux send-keys -t development:4.2 'GCOF' C-m
+
+  tmux send-keys -t development:1 'cd ~/devel/learn/final_project/goferIT' C-m
+  tmux send-keys -t development:1 'vim -S .vim_bup.vim' C-m
+
+  tmux split-window -t development:2
+  tmux send-keys -t development:2.1 'cd ~/devel/learn/final_project/goferIT' C-m
+  tmux send-keys -t development:2.2 'cd ~/devel/learn/final_project/goferIT' C-m
+  tmux send-keys -t development:2.1 './bin/devserv' C-m
+  tmux send-keys -t development:2.2 'mongo' C-m
+
+  tmux send-keys -t development:3 'ssh 176.61.62.139 -R 4222:localhost:4222' C-m
+  tmux send-keys -t development:3 'rs' C-m
 
   tmux send-keys -t development:5 'top' C-m
 fi

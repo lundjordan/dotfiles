@@ -1,0 +1,8 @@
+# surround
+
+yslw" <- surrounds a word with ""
+[make a visual selection]S[ <- surrounds the visual selection with []
+cs"<em> <- change surrounding ''s with <em></em>
+ds" <- removes surrounding ""s
+yss{ <- wrap the current line with {}
+
