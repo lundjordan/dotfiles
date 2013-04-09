@@ -137,7 +137,9 @@ alias hd='od -Ax -tx1z -v'
 alias realpath='readlink -f'
 
 # make and change to a directory
-md () { mkdir -p "$1" && cd "$1"; }
+# md () { mkdir -p "$1" && cd "$1"; }
+# this doesn't play well with oh-my-zsh as zsh has an md alias and both
+# combined makes an infinite loop
 
 # cat arg1 and pipe output to less
 catl () { cat "$1" | less; }
