@@ -1,0 +1,3 @@
+
+# SYS ADMIN NOTES
+list_LAN_computers: sudo nmap -sP 192.168.1.\*

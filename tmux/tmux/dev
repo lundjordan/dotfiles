@@ -1,21 +1,24 @@
 tmux has-session -t development
 if [ $? != 0 ]
 then
-  TERM=screen-256color-bce tmux -2 new-session -s development -n vim_gofer -d
-  tmux new-window -n service_gofer -t development
+  TERM=screen-256color-bce tmux -2 new-session -s development -n vimGOF -d
+  tmux new-window -n adminGOF -t development
+  tmux new-window -n servGOF -t development
   tmux new-window -n irc -t development
   tmux new-window -n playground -t development
-  tmux new-window -n system_monitor -t development
-
-  tmux split-window -v -t development:4
-  tmux split-window -h -t development:4.2
   tmux select-layout -t development main-vertical
-  tmux send-keys -t development:4.3 'mongod --dbpath ~/mongo/db &' C-m
-  tmux send-keys -t development:4.2 'cd GOF' C-m
-  tmux send-keys -t development:4.2 'GCOF' C-m
+
+  tmux split-window -v -t development:3
+  tmux split-window -h -t development:3.2
+  tmux send-keys -t development:3.3 'mongod --dbpath ~/mongo/db &' C-m
+  tmux send-keys -t development:3.2 'cd GOF' C-m
+  tmux send-keys -t development:3.2 'GCOF' C-m
 
   tmux send-keys -t development:1 'cd ~/devel/learn/final_project/goferIT' C-m
   tmux send-keys -t development:1 'vim -S .vim_bup.vim' C-m
+
+  tmux send-keys -t development:4 'ssh 176.61.62.139 -R 4222:localhost:4222' C-m
+  tmux send-keys -t development:4 'rs' C-m
 
   tmux split-window -t development:2
   tmux send-keys -t development:2.1 'cd ~/devel/learn/final_project/goferIT' C-m
@@ -23,9 +26,5 @@ then
   tmux send-keys -t development:2.1 './bin/devserv' C-m
   tmux send-keys -t development:2.2 'mongo' C-m
 
-  tmux send-keys -t development:3 'ssh 176.61.62.139 -R 4222:localhost:4222' C-m
-  tmux send-keys -t development:3 'rs' C-m
-
-  tmux send-keys -t development:5 'top' C-m
 fi
 tmux attach -t development

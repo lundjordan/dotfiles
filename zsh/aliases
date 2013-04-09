@@ -1,6 +1,6 @@
 # general
-alias -g L="|less" # Write L after a command to page through the output.
-alias -g G="|grep"
+alias -g L="| less" # Write L after a command to page through the output.
+alias -g G="| grep"
 alias -g TL='| tail -20'
 alias -g ...='../..'
 alias -g ....='../../..'

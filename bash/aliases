@@ -12,6 +12,10 @@ alias cdr='cd ~/projects/rails/gratitude'
 #permanent aliases
 #############
 
+#############
+#zsh aliases
+#############
+alias vzshrc='vim ~/.zshrc'
 
 # yum alias's
 alias yi='sudo yum install'
@@ -48,8 +52,6 @@ alias vimnotes='vim ~/bin/dotfiles/notes/vim_cheat_sheet.txt'
 alias tmux="TERM=screen-256color-bce tmux -2"
 alias tmu="~/.tmux/dev"
 alias tmuh="~/.tmux/dev_home"
-alias tmu2="TERM=screen-256color-bce tmux -2 new-session -t development -s dev_quake"
-alias tmu3="TERM=screen-256color-bce tmux -2 new-session -t development -s dev_terminal"
 
 # pydump practice
 alias pydump='vim ~/tmp/pydump.py'
@@ -75,41 +77,41 @@ alias irs='~/opensrc/github/irssi-over-ssh-notifications/irssi-notify-listener.p
 # LANG=C for speed. See also: http://www.pixelbeat.org/scripts/findrepo
 alias grep='GREP_COLOR="1;33;40" LANG=C grep --color=auto'
 
-alias ls="BLOCK_SIZE=\'1 ls --color=auto" #enable thousands grouping and colour
-alias minicom='minicom -c on' #enable colour
+# alias ls="BLOCK_SIZE=\'1 ls --color=auto" #enable thousands grouping and colour
+# alias minicom='minicom -c on' #enable colour
 alias units='units -t' #terse mode
 alias diff='LC_ALL=C TZ=GMT0 diff -Naur' #normalise diffs for distribution
 #alias lynx='lynx -force_html -width=$COLUMNS' #best settings for viewing HTML
-alias links='links -force-html' #need to enable colour in config menu manually
-alias xterm='xterm -fb "" -bg black -fg gray -fa "Sans Mono" -fs 9 +sb -sl 3000 -g 80x50+1+1'
+# alias links='links -force-html' #need to enable colour in config menu manually
+# alias xterm='xterm -fb "" -bg black -fg gray -fa "Sans Mono" -fs 9 +sb -sl 3000 -g 80x50+1+1'
 #alias vim='vim -X' #don't try to contact xserver (which can hang on networkissues)
 #alias gdb='gdb -tui -quiet' #enable the text window interface if possible
-alias head='head -n $((${LINES:-12}-2))' #as many as possible without scrolling
-alias tail='tail -n $((${LINES:-12}-2)) -s.1' #Likewise, also more responsive -f
+# alias head='head -n $((${LINES:-12}-2))' #as many as possible without scrolling
+# alias tail='tail -n $((${LINES:-12}-2)) -s.1' #Likewise, also more responsive -f
 
-alias ..="cd .."        #go to parent dir
-alias ...="cd ../.."    #go to grandparent dir
-alias ....="cd ../../.."    #go to grandparent dir
-alias .....="cd ../../../.."    #go to grandparent dir
-alias cdd="cd -"       #go to previous dir
+# alias ..="cd .."        #go to parent dir
+# alias ...="cd ../.."    #go to grandparent dir
+# alias ....="cd ../../.."    #go to grandparent dir
+# alias .....="cd ../../../.."    #go to grandparent dir
+# alias cdd="cd -"       #go to previous dir
 alias l.='ls -d .*'     #list hidden files
 alias ll='ls -lhrt'     #extra info compared to "l"
 alias lld='ls -lUd */'  #list directories
 
-alias pip="python-pip"
+# alias pip="python-pip"
 
 # git alias's
-alias gl="git log --pretty=format:'%h - %an, %ar : %s' --graph"
-alias gp="git push"
-alias gst="git status --short"
-alias gf="git fetch"
-alias gm="git merge"
-alias gba="git branch -a"
-alias gcam="git commit -am"
-alias gca="git commit -a"
-alias gco="git checkout"
-alias gcob="git checkout -b"
-alias gmum="git merge upstream/master"
+alias glo="git log --pretty=format:'%h - %an, %ar : %s' --graph"
+# alias gp="git push"
+# alias gst="git status --short"
+# alias gf="git fetch"
+# alias gm="git merge"
+# alias gba="git branch -a"
+# alias gcam="git commit -am"
+# alias gca="git commit -a"
+# alias gco="git checkout"
+# alias gcob="git checkout -b"
+# alias gmum="git merge upstream/master"
 
 # cmus aliases
 alias cmp="cmus-remote -p"
@@ -123,7 +125,7 @@ alias hgpp='hg pull -u git; hg push'
 # in global git: unstage='git reset HEAD --'
 
 # what is my ip address
-alias myip="curl -s http://whatismyip.org/"
+# alias myip="curl -s http://whatismyip.org/"
 
 # stack the resulting files that grep outputs into seperate panes in vim ;)
 # grim () { grep -ril 
@@ -137,7 +139,7 @@ alias realpath='readlink -f'
 # make and change to a directory
 md () { mkdir -p "$1" && cd "$1"; }
 
-# make and change to a directory
+# cat arg1 and pipe output to less
 catl () { cat "$1" | less; }
 
 # grep with color, context of 3 lines, and pipe through less

@@ -1,0 +1,10 @@
+I am now using oh-my-zsh
+
+to install:
+
+    1. git clone oh-my-zsh ~/oh-my-zsh
+    2. ln -s ~/bin/dotfiles/zsh/jlund_ohmyzsh_template ~/.zshrc
+    3. ln -s ~/bin/dotfiles/zsh/env ~/.oh-my-zsh/custom/jlund_env.zsh
+    4. ln -s ~/bin/dotfiles/zsh/config ~/.oh-my-zsh/custom/jlund_config.zsh
+    4. ln -s ~/bin/dotfiles/zsh/aliases ~/.oh-my-zsh/custom/jlund_aliases.zsh
+
