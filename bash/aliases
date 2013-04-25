@@ -12,9 +12,7 @@ alias cdr='cd ~/projects/rails/gratitude'
 #permanent aliases
 #############
 
-#############
 #zsh aliases
-#############
 alias vzshrc='vim ~/.zshrc'
 
 # yum alias's
@@ -23,11 +21,14 @@ alias yr='sudo yum remove'
 alias yu='sudo yum update'
 alias ys='yum search'
 
-# yum alias's
-alias ai='sudo apt-get install'
-alias ar='sudo apt-get remove'
-alias au='sudo apt-get update && sudo apt-get upgrade'
-# alias ys='yum search'
+# apt-get alias's
+# alias ai='sudo apt-get install'
+# alias ar='sudo apt-get remove'
+# alias au='sudo apt-get update && sudo apt-get upgrade'
+
+# taskwarrior alias's
+alias tad='task add project:DIT'
+
 
 ####### Configs
 # source zsh
@@ -75,7 +76,7 @@ alias irs='~/opensrc/github/irssi-over-ssh-notifications/irssi-notify-listener.p
 # GREP_COLOR=bright yellow on black bg.
 # use GREP_COLOR=7 to highlight whitespace on black terminals
 # LANG=C for speed. See also: http://www.pixelbeat.org/scripts/findrepo
-alias grep='GREP_COLOR="1;33;40" LANG=C grep --color=auto'
+# alias grep='GREP_COLOR="1;33;40" LANG=C grep --color=auto'
 
 # alias ls="BLOCK_SIZE=\'1 ls --color=auto" #enable thousands grouping and colour
 # alias minicom='minicom -c on' #enable colour

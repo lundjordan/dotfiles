@@ -24,3 +24,7 @@ alias -g DOC='~/Documents/'
 alias -g GCOF='coffee -w -c -o public/js backbone-src/**/*.coffee'
 
 source ~/bin/dotfiles/bash/aliases
+alias todo=task
+
+# oh-my-zsh overrides
+

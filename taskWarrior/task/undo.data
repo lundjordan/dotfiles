@@ -173,3 +173,226 @@ time 1365525528
 old [description:"make slides for SIS assignment" entry:"1365525479" status:"pending" uuid:"b035ccf5-c9ee-4098-827c-be6ea3ca5807"]
 new [description:"make slides for SIS assignment" due:"1365462000" entry:"1365525479" project:"DIT" status:"pending" uuid:"b035ccf5-c9ee-4098-827c-be6ea3ca5807"]
 ---
+time 1365526577
+new [description:"QAassign" due:"1366217777" entry:"1365526577" project:"DIT" status:"pending" uuid:"0ce6a852-b20c-47c3-b445-82bac96d46b8"]
+---
+time 1365526710
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1365526713
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526713" imask:"0" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"31fe444b-1618-44ed-ad00-6ccb4ba303cd"]
+---
+time 1365526713
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"-" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1365526779
+new [description:"call immigration officer" due:"1365548400" entry:"1365526779" status:"pending" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
+---
+time 1365526858
+old [description:"call immigration officer" due:"1365548400" entry:"1365526779" status:"pending" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
+new [description:"call immigration officer" due:"1365548400" entry:"1365526779" priority:"H" status:"pending" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
+---
+time 1365526884
+old [description:"call immigration officer" due:"1365548400" entry:"1365526779" priority:"H" status:"pending" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
+new [description:"call immigration officer" due:"1365548400" entry:"1365526779" priority:"H" status:"waiting" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e" wait:"1365548400"]
+---
+time 1365526934
+new [description:"buy banf tix" due:"1365537734" entry:"1365526934" status:"pending" uuid:"d2f2dfd6-05f4-4772-8f74-52f35cbfbdb2"]
+---
+time 1365600030
+new [description:"meet with project supervisor" due:"1366153200" entry:"1365600030" imask:"1" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"1c6aa244-8cab-4146-b3ca-b1cdc4fa9c18"]
+---
+time 1365600030
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"-" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"--" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1365600056
+old [description:"proof SIS assignment" due:"1365462000" entry:"1365525366" project:"DIT" status:"pending" uuid:"e3498f2d-843c-4973-9018-c347fcc05a42"]
+new [description:"proof SIS assignment" due:"1365462000" end:"1365600051" entry:"1365525366" project:"DIT" status:"completed" uuid:"e3498f2d-843c-4973-9018-c347fcc05a42"]
+---
+time 1365600056
+old [description:"finish refs for SIS assignment" due:"1365462000" entry:"1365525405" project:"DIT" status:"pending" uuid:"eebb63e4-b8ea-4eda-a8a1-790276f5dcdb"]
+new [description:"finish refs for SIS assignment" due:"1365462000" end:"1365600056" entry:"1365525405" project:"DIT" status:"completed" uuid:"eebb63e4-b8ea-4eda-a8a1-790276f5dcdb"]
+---
+time 1365600056
+old [description:"make slides for SIS assignment" due:"1365462000" entry:"1365525479" project:"DIT" status:"pending" uuid:"b035ccf5-c9ee-4098-827c-be6ea3ca5807"]
+new [description:"make slides for SIS assignment" due:"1365462000" end:"1365600056" entry:"1365525479" project:"DIT" status:"completed" uuid:"b035ccf5-c9ee-4098-827c-be6ea3ca5807"]
+---
+time 1365604806
+old [description:"buy banf tix" due:"1365537734" entry:"1365526934" status:"pending" uuid:"d2f2dfd6-05f4-4772-8f74-52f35cbfbdb2"]
+new [description:"buy banf tix" due:"1365537734" end:"1365604806" entry:"1365526934" status:"completed" uuid:"d2f2dfd6-05f4-4772-8f74-52f35cbfbdb2"]
+---
+time 1365606990
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"--" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"+-" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1365606990
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526713" imask:"0" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"31fe444b-1618-44ed-ad00-6ccb4ba303cd"]
+new [description:"meet with project supervisor" due:"1365548400" end:"1365606990" entry:"1365526713" imask:"0" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"completed" uuid:"31fe444b-1618-44ed-ad00-6ccb4ba303cd"]
+---
+time 1365622107
+old [description:"call immigration officer" due:"1365548400" entry:"1365526779" priority:"H" status:"pending" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
+new [description:"call immigration officer" due:"1365721200" entry:"1365526779" priority:"H" status:"pending" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
+---
+time 1365676218
+old [description:"meet with project supervisor" due:"1366153200" entry:"1365600030" imask:"1" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"1c6aa244-8cab-4146-b3ca-b1cdc4fa9c18"]
+new [description:"meet with project supervisor" due:"1366153200" entry:"1365600030" imask:"1" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"waiting" uuid:"1c6aa244-8cab-4146-b3ca-b1cdc4fa9c18" wait:"1366153200"]
+---
+time 1365676361
+new [description:"Sys Admin Hand" due:"1365634800" entry:"1365676361" priority:"L" recur:"daily" status:"recurring" uuid:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6"]
+---
+time 1365676364
+new [description:"Sys Admin Hand" due:"1365634800" entry:"1365676364" imask:"0" parent:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6" priority:"L" recur:"daily" status:"pending" uuid:"120700ed-0264-4a24-b8db-9ae4f68d478d"]
+---
+time 1365676364
+new [description:"Sys Admin Hand" due:"1365721200" entry:"1365676364" imask:"1" parent:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6" priority:"L" recur:"daily" status:"pending" uuid:"ea3c435f-8303-4396-8b03-52c76356ff7f"]
+---
+time 1365676364
+old [description:"Sys Admin Hand" due:"1365634800" entry:"1365676361" priority:"L" recur:"daily" status:"recurring" uuid:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6"]
+new [description:"Sys Admin Hand" due:"1365634800" entry:"1365676361" mask:"--" priority:"L" recur:"daily" status:"recurring" uuid:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6"]
+---
+time 1365676416
+old [description:"Sys Admin Hand" due:"1365634800" entry:"1365676361" mask:"--" priority:"L" recur:"daily" status:"recurring" uuid:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6"]
+new [description:"Sys Admin Hand" due:"1365634800" entry:"1365676361" mask:"X-" priority:"L" recur:"daily" status:"recurring" uuid:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6"]
+---
+time 1365676416
+old [description:"Sys Admin Hand" due:"1365634800" entry:"1365676364" imask:"0" parent:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6" priority:"L" recur:"daily" status:"pending" uuid:"120700ed-0264-4a24-b8db-9ae4f68d478d"]
+new [description:"Sys Admin Hand" due:"1365634800" end:"1365676413" entry:"1365676364" imask:"0" parent:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6" priority:"L" recur:"daily" status:"deleted" uuid:"120700ed-0264-4a24-b8db-9ae4f68d478d"]
+---
+time 1365676422
+old [description:"Sys Admin Hand" due:"1365634800" entry:"1365676361" mask:"X-" priority:"L" recur:"daily" status:"recurring" uuid:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6"]
+new [description:"Sys Admin Hand" due:"1365634800" entry:"1365676361" mask:"XX" priority:"L" recur:"daily" status:"recurring" uuid:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6"]
+---
+time 1365676422
+old [description:"Sys Admin Hand" due:"1365721200" entry:"1365676364" imask:"1" parent:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6" priority:"L" recur:"daily" status:"pending" uuid:"ea3c435f-8303-4396-8b03-52c76356ff7f"]
+new [description:"Sys Admin Hand" due:"1365721200" end:"1365676422" entry:"1365676364" imask:"1" parent:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6" priority:"L" recur:"daily" status:"deleted" uuid:"ea3c435f-8303-4396-8b03-52c76356ff7f"]
+---
+time 1365676422
+old [description:"Sys Admin Hand" due:"1365634800" entry:"1365676361" mask:"XX" priority:"L" recur:"daily" status:"recurring" uuid:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6"]
+new [description:"Sys Admin Hand" due:"1365634800" end:"1365676422" entry:"1365676361" mask:"XX" priority:"L" recur:"daily" status:"deleted" uuid:"11fcfcfa-71d5-4c8d-8c8e-53801038cbd6"]
+---
+time 1365676531
+new [description:"SAH" entry:"1365676531" status:"pending" uuid:"9fe05d47-b4a5-4f50-bafa-8f36058b6715"]
+---
+time 1365676571
+new [description:"climb" entry:"1365676571" priority:"L" status:"pending" uuid:"153fc214-7f90-4294-97eb-56c6641fc1a3"]
+---
+time 1365676608
+old [description:"SAH" entry:"1365676531" status:"pending" uuid:"9fe05d47-b4a5-4f50-bafa-8f36058b6715"]
+new [description:"SAH" entry:"1365676531" priority:"M" status:"pending" uuid:"9fe05d47-b4a5-4f50-bafa-8f36058b6715"]
+---
+time 1365676637
+old [description:"call immigration officer" due:"1365721200" entry:"1365526779" priority:"H" status:"pending" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
+new [description:"call immigration officer" due:"1365721200" entry:"1365526779" priority:"H" status:"waiting" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e" wait:"1365721200"]
+---
+time 1365676880
+new [description:"stop hostgatorrenewal" entry:"1365676880" status:"pending" uuid:"0eb5871f-7127-449d-928e-442c777f0906"]
+---
+time 1365676887
+new [description:"stop chess renewal" entry:"1365676887" status:"pending" uuid:"6a3c620d-e986-4e6c-93df-2f169c6ccfa8"]
+---
+time 1365676922
+new [description:"unsubscribe from quora, linkedIn, and pythonWeekly" entry:"1365676922" status:"pending" uuid:"92162ebe-bd16-4127-acd4-bc9d886869d5"]
+---
+time 1365677238
+new [description:"stop studymode subscription" entry:"1365677238" status:"pending" uuid:"c9ae34b0-a3f7-4073-80e3-5122511338d3"]
+---
+time 1365679164
+old [description:"stop hostgatorrenewal" entry:"1365676880" status:"pending" uuid:"0eb5871f-7127-449d-928e-442c777f0906"]
+new [description:"stop hostgatorrenewal" end:"1365679162" entry:"1365676880" status:"completed" uuid:"0eb5871f-7127-449d-928e-442c777f0906"]
+---
+time 1365679164
+old [description:"stop chess renewal" entry:"1365676887" status:"pending" uuid:"6a3c620d-e986-4e6c-93df-2f169c6ccfa8"]
+new [description:"stop chess renewal" end:"1365679164" entry:"1365676887" status:"completed" uuid:"6a3c620d-e986-4e6c-93df-2f169c6ccfa8"]
+---
+time 1365679164
+old [description:"unsubscribe from quora, linkedIn, and pythonWeekly" entry:"1365676922" status:"pending" uuid:"92162ebe-bd16-4127-acd4-bc9d886869d5"]
+new [description:"unsubscribe from quora, linkedIn, and pythonWeekly" end:"1365679164" entry:"1365676922" status:"completed" uuid:"92162ebe-bd16-4127-acd4-bc9d886869d5"]
+---
+time 1365679164
+old [description:"stop studymode subscription" entry:"1365677238" status:"pending" uuid:"c9ae34b0-a3f7-4073-80e3-5122511338d3"]
+new [description:"stop studymode subscription" end:"1365679164" entry:"1365677238" status:"completed" uuid:"c9ae34b0-a3f7-4073-80e3-5122511338d3"]
+---
+time 1365679232
+old [description:"SAH" entry:"1365676531" priority:"M" status:"pending" uuid:"9fe05d47-b4a5-4f50-bafa-8f36058b6715"]
+new [description:"SAH" entry:"1365676531" priority:"M" start:"1365679232" status:"pending" uuid:"9fe05d47-b4a5-4f50-bafa-8f36058b6715"]
+---
+time 1365700870
+old [description:"SAH" entry:"1365676531" priority:"M" start:"1365679232" status:"pending" uuid:"9fe05d47-b4a5-4f50-bafa-8f36058b6715"]
+new [description:"SAH" entry:"1365676531" priority:"M" status:"pending" uuid:"9fe05d47-b4a5-4f50-bafa-8f36058b6715"]
+---
+time 1365868712
+old [description:"call immigration officer" due:"1365721200" entry:"1365526779" priority:"H" status:"pending" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
+new [description:"call immigration officer" due:"1365721200" entry:"1365526779" priority:"H" status:"waiting" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e" wait:"1365980400"]
+---
+time 1365868728
+old [description:"climb" entry:"1365676571" priority:"L" status:"pending" uuid:"153fc214-7f90-4294-97eb-56c6641fc1a3"]
+new [description:"climb" end:"1365868728" entry:"1365676571" priority:"L" status:"completed" uuid:"153fc214-7f90-4294-97eb-56c6641fc1a3"]
+---
+time 1365868930
+new [description:"martins bday" entry:"1365868930" status:"pending" uuid:"18895672-ac43-407d-924d-78b764183a7b"]
+---
+time 1365868959
+new [description:"fyp" entry:"1365868959" status:"pending" uuid:"1891ca67-e464-4589-bbd6-d8740d6a1662"]
+---
+time 1366114194
+old [description:"call immigration officer" due:"1365721200" entry:"1365526779" priority:"H" status:"pending" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
+new [description:"call immigration officer" due:"1365721200" entry:"1365526779" priority:"H" status:"waiting" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e" wait:"1366326000"]
+---
+time 1366114229
+old [description:"SAH" entry:"1365676531" priority:"M" status:"pending" uuid:"9fe05d47-b4a5-4f50-bafa-8f36058b6715"]
+new [description:"SAH" end:"1366114218" entry:"1365676531" priority:"M" status:"completed" uuid:"9fe05d47-b4a5-4f50-bafa-8f36058b6715"]
+---
+time 1366114230
+old [description:"martins bday" entry:"1365868930" status:"pending" uuid:"18895672-ac43-407d-924d-78b764183a7b"]
+new [description:"martins bday" end:"1366114229" entry:"1365868930" status:"completed" uuid:"18895672-ac43-407d-924d-78b764183a7b"]
+---
+time 1366114231
+old [description:"fyp" entry:"1365868959" status:"pending" uuid:"1891ca67-e464-4589-bbd6-d8740d6a1662"]
+new [description:"fyp" end:"1366114230" entry:"1365868959" status:"completed" uuid:"1891ca67-e464-4589-bbd6-d8740d6a1662"]
+---
+time 1366114269
+new [description:"issue to FYP - supplier not being stored on create product" entry:"1366114269" status:"pending" uuid:"e9049ded-3ad6-40b2-afb6-a68a57cb04c0"]
+---
+time 1366278770
+new [description:"QA quality improves because of Freedom" entry:"1366278770" status:"pending" uuid:"4bbbef68-2f12-49e5-860e-407d60f0e47b"]
+---
+time 1366305126
+new [description:"meet with project supervisor" due:"1366758000" entry:"1366305126" imask:"2" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"b7982ae1-bc0e-4e79-bbcb-a2432f65269a"]
+---
+time 1366305126
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"+-" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"+--" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1366305170
+old [description:"QAassign" due:"1366217777" entry:"1365526577" project:"DIT" status:"pending" uuid:"0ce6a852-b20c-47c3-b445-82bac96d46b8"]
+new [description:"QAassign" due:"1366217777" end:"1366305167" entry:"1365526577" project:"DIT" status:"completed" uuid:"0ce6a852-b20c-47c3-b445-82bac96d46b8"]
+---
+time 1366305170
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"+--" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"++-" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1366305170
+old [description:"meet with project supervisor" due:"1366153200" entry:"1365600030" imask:"1" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"1c6aa244-8cab-4146-b3ca-b1cdc4fa9c18"]
+new [description:"meet with project supervisor" due:"1366153200" end:"1366305170" entry:"1365600030" imask:"1" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"completed" uuid:"1c6aa244-8cab-4146-b3ca-b1cdc4fa9c18"]
+---
+time 1366305170
+old [description:"issue to FYP - supplier not being stored on create product" entry:"1366114269" status:"pending" uuid:"e9049ded-3ad6-40b2-afb6-a68a57cb04c0"]
+new [description:"issue to FYP - supplier not being stored on create product" end:"1366305170" entry:"1366114269" status:"completed" uuid:"e9049ded-3ad6-40b2-afb6-a68a57cb04c0"]
+---
+time 1366305170
+old [description:"QA quality improves because of Freedom" entry:"1366278770" status:"pending" uuid:"4bbbef68-2f12-49e5-860e-407d60f0e47b"]
+new [description:"QA quality improves because of Freedom" end:"1366305170" entry:"1366278770" status:"completed" uuid:"4bbbef68-2f12-49e5-860e-407d60f0e47b"]
+---
+time 1366799988
+new [description:"meet with project supervisor" due:"1367362800" entry:"1366799988" imask:"3" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"1c7fcbbf-4c78-4336-9960-f8a5957bd1ed"]
+---
+time 1366799988
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"++-" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"++--" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1366799994
+old [description:"call immigration officer" due:"1365721200" entry:"1365526779" priority:"H" status:"pending" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
+new [description:"call immigration officer" due:"1365721200" end:"1366799994" entry:"1365526779" priority:"H" status:"completed" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
+---

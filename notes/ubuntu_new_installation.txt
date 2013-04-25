@@ -1,0 +1,7 @@
+Prepare:
+
+1. clean up old Home folder
+2. backup old Home folder
+3. dl new version of Ubuntu
+
+

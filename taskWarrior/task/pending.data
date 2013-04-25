@@ -1,3 +1,3 @@
-[description:"proof SIS assignment" due:"1365462000" entry:"1365525366" project:"DIT" status:"pending" uuid:"e3498f2d-843c-4973-9018-c347fcc05a42"]
-[description:"finish refs for SIS assignment" due:"1365462000" entry:"1365525405" project:"DIT" status:"pending" uuid:"eebb63e4-b8ea-4eda-a8a1-790276f5dcdb"]
-[description:"make slides for SIS assignment" due:"1365462000" entry:"1365525479" project:"DIT" status:"pending" uuid:"b035ccf5-c9ee-4098-827c-be6ea3ca5807"]
+[description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"++--" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+[description:"meet with project supervisor" due:"1366758000" entry:"1366305126" imask:"2" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"b7982ae1-bc0e-4e79-bbcb-a2432f65269a"]
+[description:"meet with project supervisor" due:"1367362800" entry:"1366799988" imask:"3" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"1c7fcbbf-4c78-4336-9960-f8a5957bd1ed"]
