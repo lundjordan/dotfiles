@@ -31,25 +31,25 @@
     - playground
 
 1. install essential packages:
-    ```zsh
+    ```bash
     sudo apt-get install zsh vim git tmux terminator guake cmus vlc
     chromium-browser fonts-inconsolata irssi 
     ```
 
 1. install essential packages:
-    ```zsh
+    ```bash
     sudo apt-get install zsh vim git tmux terminator guake cmus vlc
     chromium-browser fonts-inconsolata
     ```
 
 1. set up zsh with oh-my-zsh:
     **clone dotfiles if they were not backed up**
-    ```zsh
+    ```bash
     git clone git@github.com:lundjordan/dotfiles.git ~/bin
     ```
 
     **now set up dotfiles links
-    ```zsh
+    ```bash
     ln -s ~/bin/dotfiles/tmux/tmux ~/.tmux
     ln -s ~/bin/dotfiles/tmux/tmux.conf ~/.tmux.conf
     ln -s ~/bin/dotfiles/vim/vim ~/.vim
@@ -62,7 +62,7 @@
     ```
 
 1. set up zsh with oh-my-zsh:
-    ```zsh
+    ```bash
     git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
     ln -s ~/bin/dotfiles/zsh/jlund_ohmyzsh_template ~/.zshrc
     ln -s ~/bin/dotfiles/zsh/env ~/.oh-my-zsh/custom/jlund_env.zsh
@@ -75,18 +75,35 @@
     cp bup to ~/.gconf/guake
 
 1. icons/themes:
-    ```zsh
+    ```bash
     sudo add-apt-repository ppa:tiheum/equinox
     sudo apt-get update && sudo apt-get install faenza-icon-theme faience-* 
     ```
 
 1. tweak tools
-    ```zsh
+    ```bash
     sudo add-apt-repository ppa:tualatrix/ppa
     sudo apt-get update
     sudo apt-get install ubuntu-tweak
     ```
-    ### now set themes, colors, and unity/workspace settings
+    ### now set themes, colors, and unity/workspace settings in tweak tools
 
+1. other software
+    skype google-music-manager SystemLoadIndicator
 
+1. FYP
+    ```bash
+    sudo apt-get install coffeescript nodejs npm
+    ```
 
+    #### mongo installation (sigh)
+    ```bash
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+    echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" >> /etc/apt/sources.list.d/10gen.list
+    sudo apt-get update
+    apt-get install mongodb-10gen
+    mkdir -p /data/db
+    mv /var/lib/mongo/* /data/db/
+    rmdir /var/lib/mongo
+    vim /etc/mongodb.conf (set dbpath to /data/db)
+    ```
