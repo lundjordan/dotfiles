@@ -7,7 +7,7 @@
 3. dl new version of Ubuntu
 
 ## Install
-    #### notes: remember to make a separate /home partition, install third
+    ##### notes: remember to make a separate /home partition, install third
     party codecs, and set keyboard layout to colemak
 
 ## Post-Install:
@@ -86,17 +86,24 @@
     sudo apt-get update
     sudo apt-get install ubuntu-tweak
     ```
-    ### now set themes, colors, and unity/workspace settings in tweak tools
+    ##### now set themes, colors, and unity/workspace settings in tweak tools
 
 1. other software
     skype google-music-manager SystemLoadIndicator
 
 1. FYP
     ```bash
-    sudo apt-get install coffeescript nodejs npm
+    sudo apt-get install coffeescript
     ```
 
-    #### mongo installation (sigh)
+    ##### nodejs npm installation
+    ```bash
+    sudo add-apt-repository ppa:chris-lea/node.js
+    sudo apt-get update
+    sudo apt-get install nodejs npm
+    ```
+
+    ##### mongo installation (sigh)
     ```bash
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
     echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" >> /etc/apt/sources.list.d/10gen.list
@@ -106,4 +113,10 @@
     mv /var/lib/mongo/* /data/db/
     rmdir /var/lib/mongo
     vim /etc/mongodb.conf (set dbpath to /data/db)
+    ```
+
+1. vim gnome copy/paste for xclip
+    installing this lets you do (in visual mode): "+y <-- yanks it to clipboard
+    ```bash
+    sudo apt-get install vim-gnome
     ```
