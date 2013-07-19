@@ -10,7 +10,7 @@ then
 
   tmux split-window -h -t development:3
   tmux split-window -v -t development:3.1
-  tmux send-keys -t development:3.3 'mongod --dbpath ~/mongo/db &' C-m
+  tmux send-keys -t development:3.3 'mongod &' C-m
   tmux send-keys -t development:3.1 'cd GOF' C-m
   tmux send-keys -t development:3.1 'GCOF' C-m
   tmux send-keys -t development:3.2 'cmus' C-m

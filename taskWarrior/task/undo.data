@@ -396,3 +396,233 @@ time 1366799994
 old [description:"call immigration officer" due:"1365721200" entry:"1365526779" priority:"H" status:"pending" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
 new [description:"call immigration officer" due:"1365721200" end:"1366799994" entry:"1365526779" priority:"H" status:"completed" uuid:"6290f583-c20d-4c3a-93ab-3b4a4078307e"]
 ---
+time 1367881728
+new [description:"meet with project supervisor" due:"1367967600" entry:"1367881728" imask:"4" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"860da48e-ec19-4c79-b4d5-7511bd899c02"]
+---
+time 1367881728
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"++--" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"++---" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1367881743
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"++---" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"+++--" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1367881743
+old [description:"meet with project supervisor" due:"1366758000" entry:"1366305126" imask:"2" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"b7982ae1-bc0e-4e79-bbcb-a2432f65269a"]
+new [description:"meet with project supervisor" due:"1366758000" end:"1367881743" entry:"1366305126" imask:"2" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"completed" uuid:"b7982ae1-bc0e-4e79-bbcb-a2432f65269a"]
+---
+time 1367881761
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"+++--" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"++++-" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1367881761
+old [description:"meet with project supervisor" due:"1367362800" entry:"1366799988" imask:"3" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"1c7fcbbf-4c78-4336-9960-f8a5957bd1ed"]
+new [description:"meet with project supervisor" due:"1367362800" end:"1367881761" entry:"1366799988" imask:"3" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"completed" uuid:"1c7fcbbf-4c78-4336-9960-f8a5957bd1ed"]
+---
+time 1367881792
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"++++-" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"+++++" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1367881792
+old [description:"meet with project supervisor" due:"1367967600" entry:"1367881728" imask:"4" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"pending" uuid:"860da48e-ec19-4c79-b4d5-7511bd899c02"]
+new [description:"meet with project supervisor" due:"1367967600" end:"1367881792" entry:"1367881728" imask:"4" parent:"9d7005b5-4e79-4308-9379-d9cc1d9e373d" project:"FYP" recur:"weekly" status:"completed" uuid:"860da48e-ec19-4c79-b4d5-7511bd899c02"]
+---
+time 1367882270
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"+++++" project:"FYP" recur:"weekly" status:"recurring" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"+++++" project:"FYP" recur:"weekly" status:"recurring" until:"1367881200" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1367882276
+old [description:"meet with project supervisor" due:"1365548400" entry:"1365526710" mask:"+++++" project:"FYP" recur:"weekly" status:"recurring" until:"1367881200" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+new [description:"meet with project supervisor" due:"1365548400" end:"1367882276" entry:"1365526710" mask:"+++++" project:"FYP" recur:"weekly" status:"deleted" until:"1367881200" uuid:"9d7005b5-4e79-4308-9379-d9cc1d9e373d"]
+---
+time 1367882319
+new [description:"sale creation backend cleanup" entry:"1367882319" status:"pending" uuid:"58c7d74c-d439-4c8f-bd16-0e69087c8612"]
+---
+time 1367882364
+new [description:"empty message for any empty collections" entry:"1367882364" status:"pending" uuid:"6594f156-0669-4c39-b70a-ed6ab8ce374a"]
+---
+time 1367882506
+new [description:"handling for model deletions that are relational" entry:"1367882506" status:"pending" uuid:"61a0f1d0-4662-4991-be2a-1e25aed513f7"]
+---
+time 1367882519
+new [description:"add and clear buttons for Inventory and People pills" entry:"1367882519" status:"pending" uuid:"f4a413ba-71dd-4c7e-aea5-24d1ae69b56f"]
+---
+time 1367882666
+new [description:"finance list view ( w\/ timeline selects) and single view" entry:"1367882666" status:"pending" uuid:"e14a9c96-3d12-4eaa-9cad-7b905a8d311f"]
+---
+time 1367882715
+new [description:"company model, collection, view w\/ way to add stores" entry:"1367882715" status:"pending" uuid:"df355ff6-4ca6-4ddd-8177-c823855102d7"]
+---
+time 1367882736
+new [description:"coloring for products list view table" entry:"1367882736" status:"pending" uuid:"9f68704b-ec2c-409e-af89-4c5c240c5516"]
+---
+time 1367882779
+new [description:"sorting for product single view subquants" entry:"1367882779" status:"pending" uuid:"bf98bcdb-bca3-4eb7-aa65-013343bffe3f"]
+---
+time 1367882818
+new [description:"about button and signup module" entry:"1367882818" status:"pending" uuid:"344835b6-42f5-4dd3-b27d-87b2e944c8ee"]
+---
+time 1367882832
+new [description:"tests!!!" entry:"1367882832" status:"pending" uuid:"6a16fdc7-da4a-4948-9ad0-eb55a1c594e1"]
+---
+time 1367882877
+old [description:"about button and signup module" entry:"1367882818" status:"pending" uuid:"344835b6-42f5-4dd3-b27d-87b2e944c8ee"]
+new [description:"about and signup modal" entry:"1367882818" status:"pending" uuid:"344835b6-42f5-4dd3-b27d-87b2e944c8ee"]
+---
+time 1367882953
+new [description:"add more collection fetches" entry:"1367882953" status:"pending" uuid:"8b621176-9139-4c3d-9010-dd16c39d5ab0"]
+---
+time 1367883021
+new [description:"backbone.offline and socket.io" entry:"1367883021" status:"pending" uuid:"e8f87ef4-5d78-47e9-b781-c64d0c9ecf5f"]
+---
+time 1367932192
+new [description:"enter hothouse comp" entry:"1367932192" status:"pending" uuid:"48bbf6b4-b809-4be9-a782-e2acd14d7733"]
+---
+time 1367941245
+old [description:"sale creation backend cleanup" entry:"1367882319" status:"pending" uuid:"58c7d74c-d439-4c8f-bd16-0e69087c8612"]
+new [description:"sale creation backend cleanup" end:"1367941245" entry:"1367882319" status:"completed" uuid:"58c7d74c-d439-4c8f-bd16-0e69087c8612"]
+---
+time 1368011446
+old [description:"enter hothouse comp" entry:"1367932192" status:"pending" uuid:"48bbf6b4-b809-4be9-a782-e2acd14d7733"]
+new [description:"enter hothouse comp" due:"1369350000" entry:"1367932192" status:"pending" uuid:"48bbf6b4-b809-4be9-a782-e2acd14d7733"]
+---
+time 1368016220
+new [description:"authorization permissions" entry:"1368016220" status:"pending" uuid:"8257e1de-0677-4db0-8fba-be5a27ee3a9d"]
+---
+time 1368016238
+new [description:"can only delete employees not admins" entry:"1368016238" status:"pending" uuid:"855598d9-21c1-4508-ae5a-3974fbe7d5aa"]
+---
+time 1368017731
+old [description:"handling for model deletions that are relational" entry:"1367882506" status:"pending" uuid:"61a0f1d0-4662-4991-be2a-1e25aed513f7"]
+new [description:"handling for model deletions that are relational" end:"1368017731" entry:"1367882506" status:"completed" uuid:"61a0f1d0-4662-4991-be2a-1e25aed513f7"]
+---
+time 1368034512
+old [description:"add and clear buttons for Inventory and People pills" entry:"1367882519" status:"pending" uuid:"f4a413ba-71dd-4c7e-aea5-24d1ae69b56f"]
+new [description:"add and clear buttons for Inventory and People pills" end:"1368034512" entry:"1367882519" status:"completed" uuid:"f4a413ba-71dd-4c7e-aea5-24d1ae69b56f"]
+---
+time 1368034558
+old [description:"enter hothouse comp" due:"1369350000" entry:"1367932192" status:"pending" uuid:"48bbf6b4-b809-4be9-a782-e2acd14d7733"]
+new [description:"enter hothouse comp" due:"1369350000" entry:"1367932192" status:"waiting" uuid:"48bbf6b4-b809-4be9-a782-e2acd14d7733" wait:"1369090800"]
+---
+time 1368037184
+old [description:"sorting for product single view subquants" entry:"1367882779" status:"pending" uuid:"bf98bcdb-bca3-4eb7-aa65-013343bffe3f"]
+new [description:"sorting for product single view subquants" end:"1368037184" entry:"1367882779" status:"completed" uuid:"bf98bcdb-bca3-4eb7-aa65-013343bffe3f"]
+---
+time 1368037195
+old [description:"can only delete employees not admins" entry:"1368016238" status:"pending" uuid:"855598d9-21c1-4508-ae5a-3974fbe7d5aa"]
+new [description:"can only delete employees not admins" end:"1368037195" entry:"1368016238" status:"completed" uuid:"855598d9-21c1-4508-ae5a-3974fbe7d5aa"]
+---
+time 1368038460
+new [description:"ability to add existing products to a new order" entry:"1368038460" status:"pending" uuid:"ddb0a441-d172-4739-a1f4-d33b3cd30d36"]
+---
+time 1368040181
+old [description:"coloring for products list view table" entry:"1367882736" status:"pending" uuid:"9f68704b-ec2c-409e-af89-4c5c240c5516"]
+new [description:"coloring for products list view table" end:"1368040181" entry:"1367882736" status:"completed" uuid:"9f68704b-ec2c-409e-af89-4c5c240c5516"]
+---
+time 1368044830
+old [description:"empty message for any empty collections" entry:"1367882364" status:"pending" uuid:"6594f156-0669-4c39-b70a-ed6ab8ce374a"]
+new [description:"empty message for any empty collections" end:"1368044830" entry:"1367882364" status:"completed" uuid:"6594f156-0669-4c39-b70a-ed6ab8ce374a"]
+---
+time 1368298352
+new [description:"store switch and concat of search items in sales not working" entry:"1368298352" status:"pending" uuid:"74638c09-3005-4dc9-9199-701e5f5d7c9f"]
+---
+time 1368700312
+new [description:"benji franc leftwhich" entry:"1368700312" status:"pending" uuid:"9033cc8c-22b4-4223-9bfb-c069617ee3a7"]
+---
+time 1369163706
+new [description:"puppy not with the owners" entry:"1369163706" status:"pending" uuid:"22f6b02f-2eb8-430c-9649-38e466ef3dc2"]
+---
+time 1370019231
+old [description:"enter hothouse comp" due:"1369350000" entry:"1367932192" status:"pending" uuid:"48bbf6b4-b809-4be9-a782-e2acd14d7733"]
+new [description:"enter hothouse comp" due:"1370214000" entry:"1367932192" status:"pending" uuid:"48bbf6b4-b809-4be9-a782-e2acd14d7733"]
+---
+time 1370019387
+old [description:"finance list view ( w\/ timeline selects) and single view" entry:"1367882666" status:"pending" uuid:"e14a9c96-3d12-4eaa-9cad-7b905a8d311f"]
+new [description:"finance list view ( w\/ timeline selects) and single view" end:"1370019385" entry:"1367882666" status:"completed" uuid:"e14a9c96-3d12-4eaa-9cad-7b905a8d311f"]
+---
+time 1370019387
+old [description:"company model, collection, view w\/ way to add stores" entry:"1367882715" status:"pending" uuid:"df355ff6-4ca6-4ddd-8177-c823855102d7"]
+new [description:"company model, collection, view w\/ way to add stores" end:"1370019387" entry:"1367882715" status:"completed" uuid:"df355ff6-4ca6-4ddd-8177-c823855102d7"]
+---
+time 1370019387
+old [description:"about and signup modal" entry:"1367882818" status:"pending" uuid:"344835b6-42f5-4dd3-b27d-87b2e944c8ee"]
+new [description:"about and signup modal" end:"1370019387" entry:"1367882818" status:"completed" uuid:"344835b6-42f5-4dd3-b27d-87b2e944c8ee"]
+---
+time 1370019387
+old [description:"add more collection fetches" entry:"1367882953" status:"pending" uuid:"8b621176-9139-4c3d-9010-dd16c39d5ab0"]
+new [description:"add more collection fetches" end:"1370019387" entry:"1367882953" status:"completed" uuid:"8b621176-9139-4c3d-9010-dd16c39d5ab0"]
+---
+time 1370019387
+old [description:"backbone.offline and socket.io" entry:"1367883021" status:"pending" uuid:"e8f87ef4-5d78-47e9-b781-c64d0c9ecf5f"]
+new [description:"backbone.offline and socket.io" end:"1370019387" entry:"1367883021" status:"completed" uuid:"e8f87ef4-5d78-47e9-b781-c64d0c9ecf5f"]
+---
+time 1370019387
+old [description:"authorization permissions" entry:"1368016220" status:"pending" uuid:"8257e1de-0677-4db0-8fba-be5a27ee3a9d"]
+new [description:"authorization permissions" end:"1370019387" entry:"1368016220" status:"completed" uuid:"8257e1de-0677-4db0-8fba-be5a27ee3a9d"]
+---
+time 1370019387
+old [description:"ability to add existing products to a new order" entry:"1368038460" status:"pending" uuid:"ddb0a441-d172-4739-a1f4-d33b3cd30d36"]
+new [description:"ability to add existing products to a new order" end:"1370019387" entry:"1368038460" status:"completed" uuid:"ddb0a441-d172-4739-a1f4-d33b3cd30d36"]
+---
+time 1370019387
+old [description:"benji franc leftwhich" entry:"1368700312" status:"pending" uuid:"9033cc8c-22b4-4223-9bfb-c069617ee3a7"]
+new [description:"benji franc leftwhich" end:"1370019387" entry:"1368700312" status:"completed" uuid:"9033cc8c-22b4-4223-9bfb-c069617ee3a7"]
+---
+time 1370019387
+old [description:"puppy not with the owners" entry:"1369163706" status:"pending" uuid:"22f6b02f-2eb8-430c-9649-38e466ef3dc2"]
+new [description:"puppy not with the owners" end:"1370019387" entry:"1369163706" status:"completed" uuid:"22f6b02f-2eb8-430c-9649-38e466ef3dc2"]
+---
+time 1370019439
+new [description:"update aws repo" entry:"1370019439" status:"pending" uuid:"0c129be0-da84-4313-a4cd-a8afb34bc538"]
+---
+time 1370019445
+new [description:"minify js" entry:"1370019445" status:"pending" uuid:"027eab41-f955-4e7e-871c-e7a7055d050e"]
+---
+time 1370019460
+new [description:"make presentation slides" entry:"1370019460" status:"pending" uuid:"1fb5186d-eb6b-4ba0-a437-8be290791028"]
+---
+time 1370019476
+new [description:"email everyone about FYP" entry:"1370019476" status:"pending" uuid:"6b71a2e6-9fa2-46e8-92cc-e379b738c96e"]
+---
+time 1370253861
+new [description:"quantity for prods in list view might be wrong" entry:"1370253861" status:"pending" uuid:"1d3b3921-bf72-4c53-bbda-6a9b29ad64af"]
+---
+time 1370351097
+new [description:"cant edit user title" entry:"1370351097" status:"pending" uuid:"7ca86296-e095-4087-b437-8faab721f173"]
+---
+time 1374080886
+old [description:"enter hothouse comp" due:"1370214000" entry:"1367932192" status:"pending" uuid:"48bbf6b4-b809-4be9-a782-e2acd14d7733"]
+new [description:"enter hothouse comp" due:"1370214000" end:"1374080886" entry:"1367932192" status:"completed" uuid:"48bbf6b4-b809-4be9-a782-e2acd14d7733"]
+---
+time 1374080912
+old [description:"tests!!!" entry:"1367882832" status:"pending" uuid:"6a16fdc7-da4a-4948-9ad0-eb55a1c594e1"]
+new [description:"tests!!!" end:"1374080905" entry:"1367882832" status:"completed" uuid:"6a16fdc7-da4a-4948-9ad0-eb55a1c594e1"]
+---
+time 1374080912
+old [description:"store switch and concat of search items in sales not working" entry:"1368298352" status:"pending" uuid:"74638c09-3005-4dc9-9199-701e5f5d7c9f"]
+new [description:"store switch and concat of search items in sales not working" end:"1374080912" entry:"1368298352" status:"completed" uuid:"74638c09-3005-4dc9-9199-701e5f5d7c9f"]
+---
+time 1374080912
+old [description:"update aws repo" entry:"1370019439" status:"pending" uuid:"0c129be0-da84-4313-a4cd-a8afb34bc538"]
+new [description:"update aws repo" end:"1374080912" entry:"1370019439" status:"completed" uuid:"0c129be0-da84-4313-a4cd-a8afb34bc538"]
+---
+time 1374080912
+old [description:"minify js" entry:"1370019445" status:"pending" uuid:"027eab41-f955-4e7e-871c-e7a7055d050e"]
+new [description:"minify js" end:"1374080912" entry:"1370019445" status:"completed" uuid:"027eab41-f955-4e7e-871c-e7a7055d050e"]
+---
+time 1374080912
+old [description:"make presentation slides" entry:"1370019460" status:"pending" uuid:"1fb5186d-eb6b-4ba0-a437-8be290791028"]
+new [description:"make presentation slides" end:"1374080912" entry:"1370019460" status:"completed" uuid:"1fb5186d-eb6b-4ba0-a437-8be290791028"]
+---
+time 1374080912
+old [description:"email everyone about FYP" entry:"1370019476" status:"pending" uuid:"6b71a2e6-9fa2-46e8-92cc-e379b738c96e"]
+new [description:"email everyone about FYP" end:"1374080912" entry:"1370019476" status:"completed" uuid:"6b71a2e6-9fa2-46e8-92cc-e379b738c96e"]
+---
+time 1374080912
+old [description:"quantity for prods in list view might be wrong" entry:"1370253861" status:"pending" uuid:"1d3b3921-bf72-4c53-bbda-6a9b29ad64af"]
+new [description:"quantity for prods in list view might be wrong" end:"1374080912" entry:"1370253861" status:"completed" uuid:"1d3b3921-bf72-4c53-bbda-6a9b29ad64af"]
+---
+time 1374080912
+old [description:"cant edit user title" entry:"1370351097" status:"pending" uuid:"7ca86296-e095-4087-b437-8faab721f173"]
+new [description:"cant edit user title" end:"1374080912" entry:"1370351097" status:"completed" uuid:"7ca86296-e095-4087-b437-8faab721f173"]
+---

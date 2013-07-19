@@ -79,11 +79,10 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 "autocmd BufEnter * :cd %:p:h
 "
 " Controversial...swap colon and semicolon for easier commands
-nnoremap ; :
-nnoremap : ;
-
-vnoremap ; :
-vnoremap : ;
+" nnoremap ; :
+" nnoremap : ;
+" vnoremap ; :
+" vnoremap : ;
 
 "python settings
 let g:pymode_run_key = 'R'
@@ -93,7 +92,7 @@ let g:pymode_utils_whitespaces = 0
 let g:pymode_folding = 0
 
 " source colemak configs
-source ~/bin/dotfiles/vim/colemakrc
+" source ~/bin/dotfiles/vim/colemakrc
 
 " tab navigation (TODO not working!!!)
 " noremap <A-A> 1gt

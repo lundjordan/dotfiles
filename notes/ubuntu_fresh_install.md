@@ -22,24 +22,33 @@
     - .mozilla
     - .vim_swps
     - .aws_keys
+    - ~/.config/autostart
+    - ~/.config/terminator
+    - ~/.gconf/guake
     - bin
     - devel
     - opensrc
     - sftwre
     - Music
     - Documents
+    - Pictures
     - playground
 
 1. install essential packages:
     ```bash
     sudo apt-get install zsh vim git tmux terminator guake cmus vlc
-    chromium-browser fonts-inconsolata irssi 
+    chromium-browser fonts-inconsolata irssi ctags
     ```
 
 1. install essential packages:
     ```bash
-    sudo apt-get install zsh vim git tmux terminator guake cmus vlc
+    sudo apt-get install build-essential zsh vim git tmux terminator guake cmus vlc
     chromium-browser fonts-inconsolata
+    ```
+
+1. python setup
+    ```bash
+    sudo apt-get install python-dev python-pip python-virtualenv
     ```
 
 1. set up zsh with oh-my-zsh:
@@ -70,10 +79,6 @@
     ln -s ~/bin/dotfiles/zsh/aliases ~/.oh-my-zsh/custom/jlund_aliases.zsh
     ```
 
-1. set up terminator and guake profiles
-    cp bup to ~/.config/terminator
-    cp bup to ~/.gconf/guake
-
 1. icons/themes:
     ```bash
     sudo add-apt-repository ppa:tiheum/equinox
@@ -91,6 +96,21 @@
 1. other software
     skype google-music-manager SystemLoadIndicator
 
+1. vim missing plugins
+    ```bash
+    cd ~/.vim/bundle
+    git clone https://github.com/kien/ctrlp.vim.git
+    git clone https://github.com/kchmck/vim-coffee-script.git
+    ```
+
+1. vim gnome copy/paste for xclip
+    installing this lets you do (in visual mode): "+y <-- yanks it to clipboard
+    ```bash
+    sudo apt-get install vim-gnome
+    ```
+
+1. add to startup applications
+
 1. FYP
     ```bash
     sudo apt-get install coffeescript
@@ -106,17 +126,12 @@
     ##### mongo installation (sigh)
     ```bash
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
-    echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" >> /etc/apt/sources.list.d/10gen.list
+    # echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen" >> /etc/apt/sources.list.d/10gen.list
     sudo apt-get update
     apt-get install mongodb-10gen
     mkdir -p /data/db
     mv /var/lib/mongo/* /data/db/
     rmdir /var/lib/mongo
-    vim /etc/mongodb.conf (set dbpath to /data/db)
-    ```
-
-1. vim gnome copy/paste for xclip
-    installing this lets you do (in visual mode): "+y <-- yanks it to clipboard
-    ```bash
-    sudo apt-get install vim-gnome
+    # vim /etc/mongodb.conf (set dbpath to /data/db)
+    # chown /data/db to jlund so sudo is not needed
     ```

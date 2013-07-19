@@ -20,7 +20,7 @@ servers = (
     address = "irc.quakenet.org";
     chatnet = "QuakeNet";
     port = "6667";
-    autoconnect = "yes";
+    autoconnect = "no";
   },
   {
     address = "localhost";
@@ -28,7 +28,7 @@ servers = (
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
-    autoconnect = "yes";
+    autoconnect = "no";
   }
 );
 
@@ -54,11 +54,13 @@ chatnets = {
 };
 
 channels = (
-  { name = "#dt354"; chatnet = "QuakeNet"; autojoin = "yes"; },
-  { name = "#toronto"; chatnet = "moznet"; autojoin = "yes"; },
+  { name = "#releng"; chatnet = "moznet"; autojoin = "yes"; },
   { name = "#build"; chatnet = "moznet"; autojoin = "yes"; },
   { name = "#ateam"; chatnet = "moznet"; autojoin = "yes"; },
-  { name = "&bitlbee"; chatnet = "bitlbee"; autojoin = "yes"; }
+  { name = "#toronto"; chatnet = "moznet"; autojoin = "yes"; },
+  { name = "&bitlbee"; chatnet = "bitlbee"; autojoin = "no"; },
+  { name = "#dt354"; chatnet = "QuakeNet"; autojoin = "no"; },
+  { name = "#buildbot-test2"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {

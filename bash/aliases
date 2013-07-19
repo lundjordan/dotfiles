@@ -13,6 +13,9 @@ alias cdr='cd ~/projects/rails/gratitude'
 #############
 
 #zsh aliases
+alias vubnotes='vim ~/bin/dotfiles/notes/ubuntu_fresh_install.md'
+
+#zsh aliases
 alias vzshrc='vim ~/.zshrc'
 
 # yum alias's

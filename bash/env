@@ -10,9 +10,9 @@ export EDITOR=/usr/bin/vim
 export PYTHONSTARTUP=~/.pythonrc
 
 # AWS
-export JAVA_HOME=/usr
+export JAVA_HOME="/usr/lib/jvm/jdk1.7.0_25/"
 export AWS_AUTO_SCALING_HOME=/home/jlund/devel/AWS/AutoScaling-1.0.61.2
-export PATH=$PATH:$AWS_AUTO_SCALING_HOME/bin
+export PATH="$PATH:$AWS_AUTO_SCALING_HOME/bin:$JAVA_HOME/bin"
 export AWS_CREDENTIAL_FILE=/home/jlund/devel/AWS/jlund-credentials
 export AWS_AUTO_SCALING_URL=https://autoscaling.eu-west-1.amazonaws.com
 
@@ -47,6 +47,24 @@ export GROFF_NO_SGR=1
 export BUC=~/devel/mozilla/cleanBuildRepos-hg
 export BUD=~/devel/mozilla/dirtyBuildRepos-git
 export PAT=~/devel/mozilla/patches/
+export DOT=~/bin/dotfiles/
+export DEV=~/devel
+export MOZ=~/devel/mozilla
+export LEA=~/devel/learn/
+export LEAA=~/devel/learn/android/
+export LEAC=~/devel/learn/C
+export LEAN=~/devel/learn/node
+export LEAB=~/devel/learn/backbone
+export LEAP=~/devel/learn/python/
+export GOF=~/devel/learn/final_project/goferIT
+export DOW=~/Downloads/
+export DOC=~/Documents/
+
+
+export WORKON_HOME=$HOME/.virtualenvs
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+# source $HOME/venv/bin/virtualenvwrapper.sh
+# export PATH=$HOME/venv/virtualenv-1.8.4/scripts:$PATH
 
 ##################
 
