@@ -37,13 +37,7 @@
 1. install essential packages:
     ```bash
     sudo apt-get install zsh vim git tmux terminator guake cmus vlc
-    chromium-browser fonts-inconsolata irssi ctags
-    ```
-
-1. install essential packages:
-    ```bash
-    sudo apt-get install build-essential zsh vim git tmux terminator guake cmus vlc
-    chromium-browser fonts-inconsolata
+    chromium-browser fonts-inconsolata irssi ctags screen
     ```
 
 1. python setup
