@@ -28,3 +28,4 @@ alias todo=task
 
 # oh-my-zsh overrides
 
+alias ubunotes='vim ~/bin/dotfiles/notes/ubuntu_fresh_install.md'
