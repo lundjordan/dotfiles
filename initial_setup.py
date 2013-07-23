@@ -1,31 +1,44 @@
 #!/usr/bin/python
 
+"""
+This script has some dependancies.
+First make sure: [ zsh git vim tmux irssi screen ] are installed
+"""
+
 import os
 import shutil
 import platform
+import subprocess
 
 ABS_HOME_PATH = os.getenv('HOME')
 ABS_BIN_PATH = os.path.join(ABS_HOME_PATH, 'bin')
 ABS_DOTFILES_PATH = os.path.join(ABS_HOME_PATH, 'bin/dotfiles')
 ABS_BACKUP_DIR = os.path.join(ABS_HOME_PATH, 'dotfiles_backup')
 
-HOME_LINKS = {'zsh/zshrc': '.zshrc',
+HOME_LINKS = {'zsh/jlund_ohmyzsh_template': '.zshrc',
+              'zsh/env': '.oh-my-zsh/custom/jlund_env.zsh',
+              'zsh/config': '.oh-my-zsh/custom/jlund_config.zsh',
+              'zsh/aliases': '.oh-my-zsh/custom/jlund_aliases.zsh',
               'bash/bashrc': '.bashrc',
               'vim/vimrc': '.vimrc',
               'vim/vim': '.vim',
-              'tmux/tumx.conf': '.tmux.conf',
+              'tmux/tmux.conf': '.tmux.conf',
               'tmux/tmux': '.tmux',
               'irssi': '.irssi'}
 
-BIN_LINKS = {'vcprompt': 'vcprompt'}
+GIT_REPOS = {'https://github.com/robbyrussell/oh-my-zsh': '.oh-my-zsh'}
 
 
 def start():
     # thus far lets just make the appropriate links and backup any existing
     # destinations
+    clone_repos(GIT_REPOS)
     make_links(links=HOME_LINKS, base_link_path=ABS_HOME_PATH)
-    make_links(links=BIN_LINKS, base_link_path=ABS_BIN_PATH)
+    # make_links(links=BIN_LINKS, base_link_path=ABS_BIN_PATH)
 
+def clone_repos(repo_urls):
+    for repo_url, repo_dest in repo_urls.iteritems():
+        subprocess.Popen(['git', 'clone', repo_url, repo_dest], cwd=ABS_HOME_PATH)
 
 def make_links(links, base_link_path):
     for target, link in links.iteritems():
