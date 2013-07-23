@@ -36,9 +36,12 @@ def start():
     make_links(links=HOME_LINKS, base_link_path=ABS_HOME_PATH)
     # make_links(links=BIN_LINKS, base_link_path=ABS_BIN_PATH)
 
+
 def clone_repos(repo_urls):
     for repo_url, repo_dest in repo_urls.iteritems():
-        subprocess.Popen(['git', 'clone', repo_url, repo_dest], cwd=ABS_HOME_PATH)
+        subprocess.Popen(['git', 'clone', repo_url, repo_dest],
+                         cwd=ABS_HOME_PATH)
+
 
 def make_links(links, base_link_path):
     for target, link in links.iteritems():
