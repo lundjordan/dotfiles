@@ -39,8 +39,12 @@ def start():
 
 def clone_repos(repo_urls):
     for repo_url, repo_dest in repo_urls.iteritems():
-        subprocess.Popen(['git', 'clone', repo_url, repo_dest],
-                         cwd=ABS_HOME_PATH)
+        p = subprocess.Popen(['git', 'clone', repo_url, repo_dest],
+                             cwd=ABS_HOME_PATH)
+        loop = True
+        while loop:
+            if p.poll() is not None:
+                loop = False
 
 
 def make_links(links, base_link_path):
