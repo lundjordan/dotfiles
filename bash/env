@@ -9,6 +9,9 @@ export EDITOR=/usr/bin/vim
 # bpythonrc path
 export PYTHONSTARTUP=~/.pythonrc
 
+# gpg key
+export GPGKEY=8248BA0F
+
 # AWS
 export JAVA_HOME="/usr/lib/jvm/jdk1.7.0_25/"
 export AWS_AUTO_SCALING_HOME=/home/jlund/devel/AWS/AutoScaling-1.0.61.2
@@ -44,12 +47,19 @@ export GROFF_NO_SGR=1
 # DIRS ###########
 
 # Mozilla Environment
-export BUC=~/devel/mozilla/cleanBuildRepos-hg
-export BUD=~/devel/mozilla/dirtyBuildRepos-git
+export BUC=~/devel/mozilla/cleanBuildRepos/
+export BUD=~/devel/mozilla/dirtyBuildRepos/
+export BUDM=~/devel/mozilla/dirtyBuildRepos/git/mozharness_jlund/
+export BUUM=~/devel/mozilla/userBuildRepos/mozharness/
 export PAT=~/devel/mozilla/patches/
+export LOG=~/devel/mozilla/logs/2013/
+export NOT=~/devel/mozilla/notes/2013/
+export MTMP=~/devel/mozilla/tmp/
+export MOZ=~/devel/mozilla/
+
+# other dirs
 export DOT=~/bin/dotfiles/
 export DEV=~/devel
-export MOZ=~/devel/mozilla
 export LEA=~/devel/learn/
 export LEAA=~/devel/learn/android/
 export LEAC=~/devel/learn/C
@@ -66,6 +76,7 @@ VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 # source $HOME/venv/bin/virtualenvwrapper.sh
 # export PATH=$HOME/venv/virtualenv-1.8.4/scripts:$PATH
 
+export PYTHONPATH=$PYTHONPATH:~/devel/mozilla/dirtyBuildRepos-git/git:~/devel/mozilla/dirtyBuildRepos-git/git/tools/lib/python
 ##################
 
 # Tell less not to beep and also display colours

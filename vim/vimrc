@@ -26,8 +26,8 @@ set wildmenu
 set autoread
 set nocompatible
 set autoindent
-set smartindent
-set textwidth=79 " PEP-8 Friendly
+" set smartindent
+set textwidth=78 " PEP-8 Friendly
 set rnu
 au BufEnter * :set rnu
 au BufLeave * :set nu

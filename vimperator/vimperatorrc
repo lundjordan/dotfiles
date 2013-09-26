@@ -8,7 +8,9 @@
 " noremap Y <c-n>
 " noremap : ;
 " noremap pp <c-^>
-" noremap j 2j
-" noremap k 2k
+noremap h H
+noremap l L
+noremap 2j j
+noremap 2k k
 colorscheme vimPgray
 set hintchars=arstneio

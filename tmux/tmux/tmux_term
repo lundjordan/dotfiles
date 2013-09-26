@@ -1,0 +1,21 @@
+tmux has-session -t terminator
+if [ $? != 0 ]
+then
+  TERM=screen-256color-bce tmux -2 new-session -s terminator -n mozharn -d
+  tmux new-window -n irssi -t terminator
+  tmux new-window -n cmus -t terminator
+  tmux select-layout -t terminator main-vertical
+
+  tmux send-keys -t terminator:1 'cd BUDM' C-m
+  tmux send-keys -t terminator:1 'vim' C-m
+
+  tmux send-keys -t terminator:2 'saws' C-m
+  tmux send-keys -t terminator:2 'rs' C-m
+
+  tmux split-window -h -t terminator:3
+  tmux split-window -v -t terminator:3.1
+  tmux send-keys -t terminator:3.2 'cmus' C-m
+  tmux send-keys -t terminator:3.1 'sudo openvpn --config /home/jlund/.vpn/MozillaVPN/MozillaVPNCustom.ovpn' C-m
+
+fi
+tmux attach -t terminator

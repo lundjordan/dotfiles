@@ -626,3 +626,198 @@ time 1374080912
 old [description:"cant edit user title" entry:"1370351097" status:"pending" uuid:"7ca86296-e095-4087-b437-8faab721f173"]
 new [description:"cant edit user title" end:"1374080912" entry:"1370351097" status:"completed" uuid:"7ca86296-e095-4087-b437-8faab721f173"]
 ---
+time 1375035300
+new [description:"set up calendar 4 Moz" entry:"1375035300" status:"pending" uuid:"3cd42f99-ac62-4519-afc7-bb81baf63a80"]
+---
+time 1375035323
+new [description:"set up mail filters" entry:"1375035323" status:"pending" uuid:"e55a62b7-781e-43a3-adef-905a548bbd91"]
+---
+time 1375035365
+old [description:"set up calendar 4 Moz" entry:"1375035300" status:"pending" uuid:"3cd42f99-ac62-4519-afc7-bb81baf63a80"]
+new [description:"set up calendar 4 Moz" entry:"1375035300" project:"Moz_setup" status:"pending" uuid:"3cd42f99-ac62-4519-afc7-bb81baf63a80"]
+---
+time 1375035365
+old [description:"set up mail filters" entry:"1375035323" status:"pending" uuid:"e55a62b7-781e-43a3-adef-905a548bbd91"]
+new [description:"set up mail filters" entry:"1375035323" project:"Moz_setup" status:"pending" uuid:"e55a62b7-781e-43a3-adef-905a548bbd91"]
+---
+time 1375035395
+new [description:"meet with John Monday morning" entry:"1375035395" status:"pending" uuid:"9ca960fd-2ed0-443b-9aeb-fda0f81c7cf2"]
+---
+time 1375114015
+new [description:"subscribe to release@m.c" entry:"1375114015" status:"pending" uuid:"dee2c2e0-c7ab-4787-83c3-6ff7751676b6"]
+---
+time 1375114020
+new [description:"setup vidyo" entry:"1375114020" status:"pending" uuid:"ed761886-3837-4b75-a984-9e4235d4c33a"]
+---
+time 1375124805
+old [description:"set up calendar 4 Moz" entry:"1375035300" project:"Moz_setup" status:"pending" uuid:"3cd42f99-ac62-4519-afc7-bb81baf63a80"]
+new [description:"set up calendar 4 Moz" end:"1375124802" entry:"1375035300" project:"Moz_setup" status:"completed" uuid:"3cd42f99-ac62-4519-afc7-bb81baf63a80"]
+---
+time 1375124805
+old [description:"set up mail filters" entry:"1375035323" project:"Moz_setup" status:"pending" uuid:"e55a62b7-781e-43a3-adef-905a548bbd91"]
+new [description:"set up mail filters" end:"1375124805" entry:"1375035323" project:"Moz_setup" status:"completed" uuid:"e55a62b7-781e-43a3-adef-905a548bbd91"]
+---
+time 1375124805
+old [description:"meet with John Monday morning" entry:"1375035395" status:"pending" uuid:"9ca960fd-2ed0-443b-9aeb-fda0f81c7cf2"]
+new [description:"meet with John Monday morning" end:"1375124805" entry:"1375035395" status:"completed" uuid:"9ca960fd-2ed0-443b-9aeb-fda0f81c7cf2"]
+---
+time 1375124805
+old [description:"subscribe to release@m.c" entry:"1375114015" status:"pending" uuid:"dee2c2e0-c7ab-4787-83c3-6ff7751676b6"]
+new [description:"subscribe to release@m.c" end:"1375124805" entry:"1375114015" status:"completed" uuid:"dee2c2e0-c7ab-4787-83c3-6ff7751676b6"]
+---
+time 1375124805
+old [description:"setup vidyo" entry:"1375114020" status:"pending" uuid:"ed761886-3837-4b75-a984-9e4235d4c33a"]
+new [description:"setup vidyo" end:"1375124805" entry:"1375114020" status:"completed" uuid:"ed761886-3837-4b75-a984-9e4235d4c33a"]
+---
+time 1375124820
+new [description:"enable vpn" entry:"1375124820" status:"pending" uuid:"1ca454fa-ef9a-4c5c-863c-14ff59db4d7c"]
+---
+time 1375125107
+new [description:"irssi over ssh fix" entry:"1375125107" status:"pending" uuid:"a31e19d1-4121-4f51-afed-ab1e170cf691"]
+---
+time 1375126031
+new [description:"watch onboarding redcarpet" entry:"1375126031" status:"pending" uuid:"8748f7e3-6e97-42e4-ae32-61deaa1748c9"]
+---
+time 1375133522
+new [description:"create bug for ssh keys on build machines" entry:"1375133522" status:"pending" uuid:"d69fe0ea-1726-483b-8dbb-bd48771f4dc9"]
+---
+time 1375133530
+old [description:"enable vpn" entry:"1375124820" status:"pending" uuid:"1ca454fa-ef9a-4c5c-863c-14ff59db4d7c"]
+new [description:"enable vpn" end:"1375133530" entry:"1375124820" status:"completed" uuid:"1ca454fa-ef9a-4c5c-863c-14ff59db4d7c"]
+---
+time 1375133530
+old [description:"create bug for ssh keys on build machines" entry:"1375133522" status:"pending" uuid:"d69fe0ea-1726-483b-8dbb-bd48771f4dc9"]
+new [description:"create bug for ssh keys on build machines" end:"1375133530" entry:"1375133522" status:"completed" uuid:"d69fe0ea-1726-483b-8dbb-bd48771f4dc9"]
+---
+time 1375133748
+new [description:"watch 5 min on bugzilla power searches" entry:"1375133748" status:"pending" uuid:"66bc02ec-99db-4c72-bd8f-54694a14b41a"]
+---
+time 1375136704
+new [description:"close vpn bug" entry:"1375136704" status:"pending" uuid:"88f145e5-d413-4fa7-ad50-71c43baba6c0"]
+---
+time 1375136715
+new [description:"close build machine bug" entry:"1375136715" status:"pending" uuid:"954ca8ca-a2a9-490d-b7aa-c4e19bd67c7f"]
+---
+time 1375141586
+new [description:"setup exspensify" entry:"1375141586" status:"pending" uuid:"1ad048d3-d37b-4acb-bde0-dd0bb3f0e612"]
+---
+time 1375241549
+new [description:"email armen re 897420" entry:"1375241549" status:"pending" uuid:"af446597-c796-417e-955f-1592297849e1"]
+---
+time 1375397080
+old [description:"close vpn bug" entry:"1375136704" status:"pending" uuid:"88f145e5-d413-4fa7-ad50-71c43baba6c0"]
+new [description:"close vpn bug" end:"1375397078" entry:"1375136704" status:"completed" uuid:"88f145e5-d413-4fa7-ad50-71c43baba6c0"]
+---
+time 1375397080
+old [description:"close build machine bug" entry:"1375136715" status:"pending" uuid:"954ca8ca-a2a9-490d-b7aa-c4e19bd67c7f"]
+new [description:"close build machine bug" end:"1375397080" entry:"1375136715" status:"completed" uuid:"954ca8ca-a2a9-490d-b7aa-c4e19bd67c7f"]
+---
+time 1375397080
+old [description:"email armen re 897420" entry:"1375241549" status:"pending" uuid:"af446597-c796-417e-955f-1592297849e1"]
+new [description:"email armen re 897420" end:"1375397080" entry:"1375241549" status:"completed" uuid:"af446597-c796-417e-955f-1592297849e1"]
+---
+time 1375397117
+new [description:"organize Brussels trip" entry:"1375397117" status:"pending" uuid:"46597c72-c4c3-4890-949d-4f8598ab286f"]
+---
+time 1375397137
+new [description:"fill in Trinet forms" entry:"1375397137" status:"pending" uuid:"fa73d966-fed8-4894-b940-4e6b783514a2"]
+---
+time 1376338068
+new [description:"* + 1 800 707 2533, pin 369 - conf 98225" entry:"1376338068" status:"pending" uuid:"b80545ea-ff55-4722-967d-5e60a7d0e759"]
+---
+time 1376342122
+new [description:"muster up an IAP for releng emergencies" entry:"1376342122" status:"pending" uuid:"5aac5186-a992-4cfa-8522-1747d8d26459"]
+---
+time 1377127735
+old [description:"irssi over ssh fix" entry:"1375125107" status:"pending" uuid:"a31e19d1-4121-4f51-afed-ab1e170cf691"]
+new [description:"irssi over ssh fix" end:"1377127732" entry:"1375125107" status:"completed" uuid:"a31e19d1-4121-4f51-afed-ab1e170cf691"]
+---
+time 1377127735
+old [description:"watch onboarding redcarpet" entry:"1375126031" status:"pending" uuid:"8748f7e3-6e97-42e4-ae32-61deaa1748c9"]
+new [description:"watch onboarding redcarpet" end:"1377127735" entry:"1375126031" status:"completed" uuid:"8748f7e3-6e97-42e4-ae32-61deaa1748c9"]
+---
+time 1377127735
+old [description:"watch 5 min on bugzilla power searches" entry:"1375133748" status:"pending" uuid:"66bc02ec-99db-4c72-bd8f-54694a14b41a"]
+new [description:"watch 5 min on bugzilla power searches" end:"1377127735" entry:"1375133748" status:"completed" uuid:"66bc02ec-99db-4c72-bd8f-54694a14b41a"]
+---
+time 1377127735
+old [description:"setup exspensify" entry:"1375141586" status:"pending" uuid:"1ad048d3-d37b-4acb-bde0-dd0bb3f0e612"]
+new [description:"setup exspensify" end:"1377127735" entry:"1375141586" status:"completed" uuid:"1ad048d3-d37b-4acb-bde0-dd0bb3f0e612"]
+---
+time 1377127735
+old [description:"organize Brussels trip" entry:"1375397117" status:"pending" uuid:"46597c72-c4c3-4890-949d-4f8598ab286f"]
+new [description:"organize Brussels trip" end:"1377127735" entry:"1375397117" status:"completed" uuid:"46597c72-c4c3-4890-949d-4f8598ab286f"]
+---
+time 1377127735
+old [description:"fill in Trinet forms" entry:"1375397137" status:"pending" uuid:"fa73d966-fed8-4894-b940-4e6b783514a2"]
+new [description:"fill in Trinet forms" end:"1377127735" entry:"1375397137" status:"completed" uuid:"fa73d966-fed8-4894-b940-4e6b783514a2"]
+---
+time 1377127735
+old [description:"muster up an IAP for releng emergencies" entry:"1376342122" status:"pending" uuid:"5aac5186-a992-4cfa-8522-1747d8d26459"]
+new [description:"muster up an IAP for releng emergencies" end:"1377127735" entry:"1376342122" status:"completed" uuid:"5aac5186-a992-4cfa-8522-1747d8d26459"]
+---
+time 1377127755
+old [description:"* + 1 800 707 2533, pin 369 - conf 98225" entry:"1376338068" status:"pending" uuid:"b80545ea-ff55-4722-967d-5e60a7d0e759"]
+new [description:"* + 1 800 707 2533, pin 369 - conf 98225" end:"1377127755" entry:"1376338068" status:"completed" uuid:"b80545ea-ff55-4722-967d-5e60a7d0e759"]
+---
+time 1377722116
+new [description:"help" entry:"1377722116" status:"pending" uuid:"78858dbf-4536-4560-b321-ce9eda49f153"]
+---
+time 1377722135
+old [description:"help" entry:"1377722116" status:"pending" uuid:"78858dbf-4536-4560-b321-ce9eda49f153"]
+new [description:"help" end:"1377722133" entry:"1377722116" status:"deleted" uuid:"78858dbf-4536-4560-b321-ce9eda49f153"]
+---
+time 1377722296
+new [description:"move query_repo from b2g_build to BuildingMixin" entry:"1377722296" project:"fxMhBuilds" status:"pending" uuid:"d29b6df2-8932-4d64-a692-dc1219b5f272"]
+---
+time 1378336660
+new [description:"remove all error_msgs and set a pre_config_lock for a config validity" entry:"1378336660" status:"pending" uuid:"417fdee9-6fec-416e-ad3f-0f10f03ee171"]
+---
+time 1378868873
+new [description:"in preconfig_lock first check if an action requires buildbot-config action, and if buildbot-config is not in actions, print its a dependency" entry:"1378868873" status:"pending" uuid:"6970de6d-c0c3-4613-a35e-f03e7230e210"]
+---
+time 1378932849
+new [description:"ask at mozharn mtg if desktop builds script would be useful outside of automation" entry:"1378932849" status:"pending" uuid:"b01e082e-ba64-4856-9301-cf0ec344482d"]
+---
+time 1378932886
+new [description:"buildbot config is needed extensively through actions" entry:"1378932886" status:"pending" uuid:"90539ee1-45e9-4f96-bd1c-5087a69f576b"]
+---
+time 1378932971
+new [description:"extract buildbot config set prop steps outside of all actions" entry:"1378932971" status:"pending" uuid:"d45a8526-0912-460e-9cf4-34f8c3d1fa00"]
+---
+time 1379023749
+new [description:"make sure we are parsing all cmds for errors: in buildbot this is with log_eval_func" entry:"1379023749" status:"pending" uuid:"86143804-3dce-40cb-9616-84ae52b0c147"]
+---
+time 1379373019
+new [description:"ask at mozharn meeting how to get things like build.reason line 599 steps.misc.py" entry:"1379373019" status:"pending" uuid:"6c2ac7b7-7e25-4722-b7f1-94d8a04cee63"]
+---
+time 1379373805
+new [description:"ask how to get status .build.gettime()&open;0&close;" entry:"1379373805" status:"pending" uuid:"de5872f6-c307-43d6-b207-2980960683e3"]
+---
+time 1379373836
+old [description:"ask at mozharn mtg if desktop builds script would be useful outside of automation" entry:"1378932849" status:"pending" uuid:"b01e082e-ba64-4856-9301-cf0ec344482d"]
+new [description:"ask at mozharn mtg if desktop builds script would be useful outside of automation" entry:"1378932849" project:"mozharn_mtg" status:"pending" uuid:"b01e082e-ba64-4856-9301-cf0ec344482d"]
+---
+time 1379373836
+old [description:"ask at mozharn meeting how to get things like build.reason line 599 steps.misc.py" entry:"1379373019" status:"pending" uuid:"6c2ac7b7-7e25-4722-b7f1-94d8a04cee63"]
+new [description:"ask at mozharn meeting how to get things like build.reason line 599 steps.misc.py" entry:"1379373019" project:"mozharn_mtg" status:"pending" uuid:"6c2ac7b7-7e25-4722-b7f1-94d8a04cee63"]
+---
+time 1379373836
+old [description:"ask how to get status .build.gettime()&open;0&close;" entry:"1379373805" status:"pending" uuid:"de5872f6-c307-43d6-b207-2980960683e3"]
+new [description:"ask how to get status .build.gettime()&open;0&close;" entry:"1379373805" project:"mozharn_mtg" status:"pending" uuid:"de5872f6-c307-43d6-b207-2980960683e3"]
+---
+time 1379433844
+new [description:"buildbot.py sendchange is not using retry" entry:"1379433844" status:"pending" uuid:"1c546b26-b235-4e7e-8d5f-dbada0dab023"]
+---
+time 1379441676
+new [description:"sendchange has multiple usernames, also should we use --who instead?" entry:"1379441676" status:"pending" uuid:"fa5ede48-290e-48ba-aae3-f80f323010cb"]
+---
+time 1379442984
+new [description:"should I send a sendchange to the sendchange_master \/ talos_master" entry:"1379442984" status:"pending" uuid:"92a1ddd9-2d84-48e6-b163-7ac26a9e5ed0"]
+---
+time 1379443458
+new [description:"got_revision and revision" entry:"1379443458" status:"pending" uuid:"ac986329-8dfc-45f8-934f-e4628227f8ad"]
+---
+time 1380155787
+new [description:"recruit releng" entry:"1380155787" status:"pending" uuid:"c9fe27ce-3e79-4dd4-85b0-2e396e589c9b"]
+---

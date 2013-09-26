@@ -23,8 +23,7 @@ HOME_LINKS = {'zsh/jlund_ohmyzsh_template': '.zshrc',
               'vim/vimrc': '.vimrc',
               'vim/vim': '.vim',
               'tmux/tmux.conf': '.tmux.conf',
-              'tmux/tmux': '.tmux',
-              'irssi': '.irssi'}
+              'tmux/tmux': '.tmux'}
 
 GIT_REPOS = {'https://github.com/robbyrussell/oh-my-zsh': '.oh-my-zsh'}
 
