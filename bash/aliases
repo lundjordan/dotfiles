@@ -186,7 +186,7 @@ function hist () # history of everything if no args[0]. if args[0], grep it
     fi
 }
 
-function mozgithgtalos ()
+function hggit-talos ()
 {
         start_dir=`pwd`
         cd ~/devel/mozilla/dirtyBuildRepos/git/talos_jlund/
@@ -199,7 +199,7 @@ function mozgithgtalos ()
     fi
         echo "#### pushing changes to remote origin..."
         git push
-        cd ~/devel/mozilla/userBuildRepos/build-talos/
+        cd ~/devel/mozilla/dirtyBuildRepos/user/build-talos/
         echo "#### pulling git changes into hg repo..."
         echo "git+ssh://git@github.com:lundjordan/build-talos.git"
         hg pull -u git+ssh://git@github.com:lundjordan/build-talos.git
@@ -210,7 +210,7 @@ function mozgithgtalos ()
         echo "#### complete!"
 }
 
-function mozgithgtools ()
+function hggit-tools ()
 {
         start_dir=`pwd`
         cd ~/devel/mozilla/dirtyBuildRepos/git/tools_jlund/
@@ -223,7 +223,7 @@ function mozgithgtools ()
     fi
         echo "#### pushing changes to remote origin..."
         git push
-        cd ~/devel/mozilla/userBuildRepos/tools
+        cd ~/devel/mozilla/dirtyBuildRepos/user/tools/
         echo "#### pulling git changes into hg repo..."
         hg pull -u git+ssh://git@github.com:lundjordan/build-tools.git
         echo "#### pushing changes in hg repo to hg.mozilla.org user_repo..."
@@ -233,7 +233,7 @@ function mozgithgtools ()
         echo "#### complete!"
 }
 
-function mozgithgmozharn ()
+function hggit-mhbuilds ()
 {
         start_dir=`pwd`
         cd ~/devel/mozilla/dirtyBuildRepos/git/mozharness_jlund/
@@ -246,7 +246,30 @@ function mozgithgmozharn ()
     fi
         echo "#### pushing changes to remote origin..."
         git push
-        cd ~/devel/mozilla/userBuildRepos/mozharness/
+        cd ~/devel/mozilla/dirtyBuildRepos/user/mozharness/
+        echo "#### pulling git changes into hg repo..."
+        hg pull -u git+ssh://git@github.com:lundjordan/mozharness.git
+        echo "#### pushing changes in hg repo to hg.mozilla.org user_repo..."
+        hg push -f
+        cd $start_dir
+        unset start_dir
+        echo "#### complete!"
+}
+
+function hggit-mhmetro ()
+{
+        start_dir=`pwd`
+        cd ~/devel/mozilla/dirtyBuildRepos/git/mozharness_jlund/
+    if [ $1 ]
+    then
+        echo "#### committing changes in local git repo..."
+        gca -m $1
+    else
+        echo "%%%% Warning, not attempting to commit any new changes"
+    fi
+        echo "#### pushing changes to remote origin..."
+        git push
+        cd ~/devel/mozilla/dirtyBuildRepos/user/mozharness2/
         echo "#### pulling git changes into hg repo..."
         hg pull -u git+ssh://git@github.com:lundjordan/mozharness.git
         echo "#### pushing changes in hg repo to hg.mozilla.org user_repo..."
