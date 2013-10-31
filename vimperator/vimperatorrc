@@ -12,5 +12,5 @@ noremap h H
 noremap l L
 noremap 2j j
 noremap 2k k
-colorscheme vimPgray
+" colorscheme vimPgray
 set hintchars=arstneio
