@@ -7,7 +7,7 @@
 " noremap <c-n> Y
 " noremap Y <c-n>
 " noremap : ;
-" noremap pp <c-^>
+noremap pp <c-^>
 noremap h H
 noremap l L
 noremap 2j j
