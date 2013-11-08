@@ -5,6 +5,8 @@ export EDITOR=/usr/bin/vim
 # 
 # export PATH=~/bin:$PATH
 # export PATH=$PATH:~/.android-sdk-linux/tools:~/.android-sdk-linux/platform-tools
+# export PATH=/usr/local/share/python:$PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jlund
 
 # bpythonrc path
 export PYTHONSTARTUP=~/.pythonrc
@@ -13,10 +15,10 @@ export PYTHONSTARTUP=~/.pythonrc
 export GPGKEY=8248BA0F
 
 # AWS
-export JAVA_HOME="/usr/lib/jvm/jdk1.7.0_25/"
-export AWS_AUTO_SCALING_HOME=/home/jlund/devel/AWS/AutoScaling-1.0.61.2
-export PATH="$PATH:$AWS_AUTO_SCALING_HOME/bin:$JAVA_HOME/bin"
-export AWS_CREDENTIAL_FILE=/home/jlund/devel/AWS/jlund-credentials
+# export JAVA_HOME="/usr/lib/jvm/jdk1.7.0_25/"
+# export AWS_AUTO_SCALING_HOME=~/devel/AWS/AutoScaling-1.0.61.2
+# export PATH="$PATH:$AWS_AUTO_SCALING_HOME/bin:$JAVA_HOME/bin"
+export AWS_CREDENTIAL_FILE=~/devel/AWS/jlund-credentials
 export AWS_AUTO_SCALING_URL=https://autoscaling.eu-west-1.amazonaws.com
 
 

@@ -13,7 +13,7 @@ colorscheme ir_black
 
 " ctrlp 'best plugin ever...'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*.so,*.swp,*.zip,*.pyc,*/node_modules/*,*/js/*
+set wildignore+=*.so,*.swp,*.zip,*.pyc,*/node_modules/*
 let g:ctrlp_map = '<c-p>'
 
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
@@ -74,6 +74,7 @@ set expandtab                    " Use spaces instead of tabs
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+
 
 
 "autocmd BufEnter * :cd %:p:h

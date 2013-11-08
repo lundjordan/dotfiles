@@ -73,9 +73,6 @@ alias saws='ssh -i ~/.aws_keys/jlundAWS.pem ubuntu@ec2-54-214-245-108.us-west-2.
 # reattach screen
 alias rs='screen -raAd'
 
-# irssi notifier
-alias irs='~/opensrc/github/irssi-over-ssh-notifications/irssi-notify-listener.py'
-
 # GREP_COLOR=bright yellow on black bg.
 # use GREP_COLOR=7 to highlight whitespace on black terminals
 # LANG=C for speed. See also: http://www.pixelbeat.org/scripts/findrepo
@@ -293,6 +290,7 @@ alias vsendchange='vim ~/devel/mozilla/misc/armen/github-arm/playground/mozilla/
 alias diffharn='git diff > ~/devel/mozilla/patches/mozharness_patch.diff'
 alias impharn='hg import ~/devel/mozilla/patches/mozharness_patch.diff'
 alias vitc='vim ~/devel/mozilla/dirtyBuildRepos-git/buildbot-configs/mozilla-tests/config.py'
+alias ssh-dev='ssh jlund@dev-master01.build.scl1.mozilla.com && tmux attach'
 
 # DIT alias's
 
