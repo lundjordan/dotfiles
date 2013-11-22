@@ -61,8 +61,8 @@ screen, gpg via the cmd:
 brew install {package_name}
 ```
 
-I know some of these packages are installed by default in mac os x, but these
-packages, I find, are maintained/updated more.
+I know some of these packages (vim, python, etc) are installed by default in
+mac os x, but brew, I find, is maintained/updated better.
 
 NOTE: this usually all you need to do. If installs complain, you may need to
 run things like 'brew link' to set up links to '/usr/local/bin'. Fear not,
@@ -84,9 +84,9 @@ NOTE: In my dotfiles, this should all be set up with my .vim and .vimrc
 
 Now that pathogen is installed, let's clone some vim plugins into
 '~/.vim/bundle'. NOTE: I should be using git submodules but cloning directly into
-the bundle dir works good enough.
+the bundle dir works well enough.
 
-These are the following vim plugins I install from there respective github
+These are the following vim plugins I install from their respective github
 owners (some of these are for dependancies of others):
 
 ctrlp.vim jedi-vim, python-mode, tlib_vim, vim-addon-mw-utils vim-repeat,

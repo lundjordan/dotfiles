@@ -9,3 +9,4 @@
 [annotation_1385062683:"done" description:"Bug 941678 - upload a new talos.zip to report tp5o responsiveness numbers" due:"1385010000" entry:"1385062424" modified:"1385062683" status:"pending" uuid:"a3b7cbd4-ab8d-4029-8a36-e4c39ffd4c9c"]
 [description:"add b2g-internal filter" entry:"1385062985" status:"pending" uuid:"9b3455f8-d1a8-4c31-aef8-195d43abc69f"]
 [description:"talk to coop about lion-r5-008" due:"1385010000" entry:"1385065672" status:"pending" uuid:"c5c5ef7c-c2f1-466a-aeb3-571bc746fce6"]
+[description:"Review patch from: Bug 941659 - adjust android automation to run tsvgx with fewer cycles" due:"1385096400" entry:"1385137522" status:"pending" uuid:"30b1bc6e-170b-446f-89ac-342cb18d61e1"]

@@ -1410,3 +1410,6 @@ time 1385072311
 old [annotation_1385072284:"done" description:"bug 940968 - archive talos data on bm-remote web hosts before move to scl3" due:"1385096400" entry:"1384960828" modified:"1385072284" priority:"H" status:"pending" uuid:"0390714a-603e-4fab-8cd5-fdc3c5470c4c"]
 new [annotation_1385072284:"done" description:"bug 940968 - archive talos data on bm-remote web hosts before move to scl3" due:"1385096400" end:"1385072311" entry:"1384960828" modified:"1385072311" priority:"H" status:"completed" uuid:"0390714a-603e-4fab-8cd5-fdc3c5470c4c"]
 ---
+time 1385137522
+new [description:"Review patch from: Bug 941659 - adjust android automation to run tsvgx with fewer cycles" due:"1385096400" entry:"1385137522" status:"pending" uuid:"30b1bc6e-170b-446f-89ac-342cb18d61e1"]
+---
