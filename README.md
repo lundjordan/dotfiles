@@ -4,7 +4,7 @@ dotfiles
 ## Just another dotfile repo
 
 ### DISCLAIMER:
-I highly recommend only viewing my files and not running
+> I highly recommend only viewing my files and not running
 things like initial_setup.py. This setup is highly tailored for me and will
 probably cause spurious/confusing results for you...
 
@@ -14,7 +14,7 @@ When I clone this repo on a new machine as ~/bin/dotfiles, (or I end up switchin
 This script will clone oh-my-zsh in ~/.oh-my-zsh and create some links in my home dir to files/dirs
 in this dotfiles repo
 
-note: If the dest link path exists, I make a backup incase it contains
+NOTE: If the dest link path exists, I make a backup incase it contains
 configurations that I did not mean to overwrite. The backup dir is in
 ~/dotfiles_backup
 
@@ -93,18 +93,13 @@ ctrlp.vim jedi-vim, python-mode, tlib_vim, vim-addon-mw-utils vim-repeat,
 vim-snipmate, vim-snippets, vim-surround
 
 ```
+mkdir -p ~/.vim/bundle
 cd ~/.vim/bundle
 git clone {github plugin url}
 ```
 
 NOTE: visit the github repos for further instructions/details on what these
 do and how to use them.
-
-ANOTHER NOTE: if you end up using my dotfiles and running things like
-initial_setup.py, 1) you're crazy, and 2) you will probably have to delete
-whatever is in ~/.vim/bundle first as I think there are some empty dirs/old
-plugins (this is because I added some of these plugins to my dotfiles repo and
-I havn't untracked them yet)
 
 OK, so now let's talk about some of these plugins. There are three key ones I
 can't live without.
@@ -123,10 +118,8 @@ let g:pymode_rope = 0
    installation. NOTE: for installation, if you have already cloned it in
    ~/.vim/bundle, all you need to do is:
 ```
-cd ~/.vim/bundle/jedi-vim
-git submodule update --initt
+cd ~/.vim/bundle/jedi-vim; git submodule update --initt
 ```
-
 
 That should be about it. Check out my conf files like vimrc, tmux.conf, and
 zshrc for more settings!
