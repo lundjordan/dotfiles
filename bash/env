@@ -49,10 +49,10 @@ export GROFF_NO_SGR=1
 # DIRS ###########
 
 # Mozilla Environment
-export BUC=~/devel/mozilla/cleanBuildRepos/
-export BUD=~/devel/mozilla/dirtyBuildRepos/
-export BUDM=~/devel/mozilla/dirtyBuildRepos/git/mozharness_jlund/
-export BUUM=~/devel/mozilla/userBuildRepos/mozharness/
+export BUC=~/devel/mozilla/cleanRepos/
+export BUD=~/devel/mozilla/dirtyRepos/
+export BUDM=~/devel/mozilla/dirtyRepos/mozharness_jlund/
+export BUUM=~/devel/mozilla/userRepos/mozharness/
 export PAT=~/devel/mozilla/patches/
 export LOG=~/devel/mozilla/logs/2013/
 export NOT=~/devel/mozilla/notes/2013/
@@ -78,7 +78,7 @@ VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 # source $HOME/venv/bin/virtualenvwrapper.sh
 # export PATH=$HOME/venv/virtualenv-1.8.4/scripts:$PATH
 
-export PYTHONPATH=$PYTHONPATH:~/devel/mozilla/dirtyBuildRepos-git/git:~/devel/mozilla/dirtyBuildRepos-git/git/tools/lib/python
+export PYTHONPATH=$PYTHONPATH:~/devel/mozilla/dirtyRepos-git/git:~/devel/mozilla/dirtyRepos-git/git/tools/lib/python
 ##################
 
 # Tell less not to beep and also display colours

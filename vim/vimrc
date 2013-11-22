@@ -1,15 +1,14 @@
-filetype off
-
 call pathogen#infect()
 call pathogen#helptags()
 
-filetype on
 filetype plugin indent on
-
 syntax on
 
 set background=dark
 colorscheme ir_black
+
+" for mac os x pbcopy clipboard
+set clipboard=unnamed
 
 " ctrlp 'best plugin ever...'
 set runtimepath^=~/.vim/bundle/ctrlp.vim

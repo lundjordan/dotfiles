@@ -30,7 +30,12 @@ alias ys='yum search'
 # alias au='sudo apt-get update && sudo apt-get upgrade'
 
 # taskwarrior alias's
-alias tad='task add project:DIT'
+alias tat='task add due:today'
+alias tst='task due:today'
+alias tsam='task due:today project:metro-talos'
+alias tsab='task due:today project:mh-builds'
+alias tatm='task add due:today project:metro-talos'
+alias tatb='task add due:today project:mh-builds'
 
 
 ####### Configs
@@ -169,7 +174,7 @@ chr() { printf $(printf '\\%03o\\n' "$1"); }
 
 function viba ()
 {
-        cd ~/devel/mozilla/dirtyBuildRepos-git/
+        cd ~/devel/mozilla/dirtyRepos-git/
         vim -S vimbackup.vim
 }
 
@@ -186,7 +191,7 @@ function hist () # history of everything if no args[0]. if args[0], grep it
 function hggit-talos ()
 {
         start_dir=`pwd`
-        cd ~/devel/mozilla/dirtyBuildRepos/git/talos_jlund/
+        cd ~/devel/mozilla/dirtyRepos/git/talos_jlund/
     if [ $1 ]
     then
         echo "#### committing changes in local git repo..."
@@ -196,7 +201,7 @@ function hggit-talos ()
     fi
         echo "#### pushing changes to remote origin..."
         git push
-        cd ~/devel/mozilla/dirtyBuildRepos/user/build-talos/
+        cd ~/devel/mozilla/dirtyRepos/user/build-talos/
         echo "#### pulling git changes into hg repo..."
         echo "git+ssh://git@github.com:lundjordan/build-talos.git"
         hg pull -u git+ssh://git@github.com:lundjordan/build-talos.git
@@ -210,7 +215,7 @@ function hggit-talos ()
 function hggit-tools ()
 {
         start_dir=`pwd`
-        cd ~/devel/mozilla/dirtyBuildRepos/git/tools_jlund/
+        cd ~/devel/mozilla/dirtyRepos/git/tools_jlund/
     if [ $1 ]
     then
         echo "#### committing changes in local git repo..."
@@ -220,7 +225,7 @@ function hggit-tools ()
     fi
         echo "#### pushing changes to remote origin..."
         git push
-        cd ~/devel/mozilla/dirtyBuildRepos/user/tools/
+        cd ~/devel/mozilla/dirtyRepos/user/tools/
         echo "#### pulling git changes into hg repo..."
         hg pull -u git+ssh://git@github.com:lundjordan/build-tools.git
         echo "#### pushing changes in hg repo to hg.mozilla.org user_repo..."
@@ -233,7 +238,7 @@ function hggit-tools ()
 function hggit-mhbuilds ()
 {
         start_dir=`pwd`
-        cd ~/devel/mozilla/dirtyBuildRepos/git/mozharness_jlund/
+        cd ~/devel/mozilla/dirtyRepos/git/mozharness_jlund/
     if [ $1 ]
     then
         echo "#### committing changes in local git repo..."
@@ -243,7 +248,7 @@ function hggit-mhbuilds ()
     fi
         echo "#### pushing changes to remote origin..."
         git push
-        cd ~/devel/mozilla/dirtyBuildRepos/user/mozharness/
+        cd ~/devel/mozilla/dirtyRepos/user/mozharness/
         echo "#### pulling git changes into hg repo..."
         hg pull -u git+ssh://git@github.com:lundjordan/mozharness.git
         echo "#### pushing changes in hg repo to hg.mozilla.org user_repo..."
@@ -256,7 +261,7 @@ function hggit-mhbuilds ()
 function hggit-mhmetro ()
 {
         start_dir=`pwd`
-        cd ~/devel/mozilla/dirtyBuildRepos/git/mozharness_jlund/
+        cd ~/devel/mozilla/dirtyRepos/git/mozharness_jlund/
     if [ $1 ]
     then
         echo "#### committing changes in local git repo..."
@@ -266,7 +271,7 @@ function hggit-mhmetro ()
     fi
         echo "#### pushing changes to remote origin..."
         git push
-        cd ~/devel/mozilla/dirtyBuildRepos/user/mozharness2/
+        cd ~/devel/mozilla/dirtyRepos/user/mozharness2/
         echo "#### pulling git changes into hg repo..."
         hg pull -u git+ssh://git@github.com:lundjordan/mozharness.git
         echo "#### pushing changes in hg repo to hg.mozilla.org user_repo..."
@@ -278,10 +283,10 @@ function hggit-mhmetro ()
 
 # Mozilla alias's
 alias mozenv='source ~/virtualenvs/bbot/bin/activate'
-alias mozvim='cd ~/devel/mozilla/dirtyBuildRepos-git/ && vim -S vimbackup.vim'
-alias char='cd ~/devel/mozilla/dirtyBuildRepos-git/mozharness'
-alias cbc='cd ~/devel/mozilla/cleanBuildRepos-hg'
-alias cdir='cd ~/devel/mozilla/dirtyBuildRepos-git'
+alias mozvim='cd ~/devel/mozilla/dirtyRepos-git/ && vim -S vimbackup.vim'
+alias char='cd ~/devel/mozilla/dirtyRepos-git/mozharness'
+alias cbc='cd ~/devel/mozilla/cleanRepos-hg'
+alias cdir='cd ~/devel/mozilla/dirtyRepos-git'
 alias cus='cd ~/devel/mozilla/user-repo/mozharness/'
 alias sshp='ssh people.mozilla.org'
 alias sshm="ssh -t jlund@dev-master01.build.scl1.mozilla.com 'cd /builds/buildbot/jlund/tests-master; exec zsh'"
@@ -289,7 +294,7 @@ alias sendchange='python ~/devel/mozilla/misc/armen/github-arm/playground/mozill
 alias vsendchange='vim ~/devel/mozilla/misc/armen/github-arm/playground/mozilla/scripts/sendchanges.py'
 alias diffharn='git diff > ~/devel/mozilla/patches/mozharness_patch.diff'
 alias impharn='hg import ~/devel/mozilla/patches/mozharness_patch.diff'
-alias vitc='vim ~/devel/mozilla/dirtyBuildRepos-git/buildbot-configs/mozilla-tests/config.py'
+alias vitc='vim ~/devel/mozilla/dirtyRepos-git/buildbot-configs/mozilla-tests/config.py'
 alias ssh-dev='ssh jlund@dev-master01.build.scl1.mozilla.com && tmux attach'
 
 # DIT alias's
