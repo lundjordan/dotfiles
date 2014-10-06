@@ -1,7 +1,44 @@
+" ################
+" vundle
+" ################
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" alternatively, pass a path where Vundle should install plugins
+"let path = '~/some/path/here'
+"call vundle#rc(path)
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
+
+Bundle 'Rykka/riv.vim'
+
+let g:riv_fold_auto_update = 0
+
+filetype plugin indent on     " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Plugin commands are not allowed.
+" Put your stuff after this line
+
+
+" ################
+" pathogen
+" ################
 call pathogen#infect()
 call pathogen#helptags()
 
-filetype plugin indent on
 syntax on
 
 set background=dark
@@ -23,7 +60,6 @@ set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\
 set wildmode=longest,list,full
 set wildmenu
 set autoread
-set nocompatible
 set autoindent
 " set smartindent
 set textwidth=78 " PEP-8 Friendly
@@ -88,7 +124,7 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 let g:pymode_run_key = 'R'
 let g:pymode_breakpoint_key = 'B'
 let g:pymode_doc_key = '<M-M>'
-let g:pymode_utils_whitespaces = 0
+let g:pymode_trim_whitespaces = 0
 let g:pymode_folding = 0
 let g:pymode_rope = 0
 
@@ -203,3 +239,6 @@ let coffee_linter = '/usr/local/bin/coffeelint'
 map <Leader>c ;CoffeeMake<CR>
 map <Leader>C ;CoffeeCompile<CR>
 au BufWritePost *.coffee silent CoffeeMake! -o ./.compiled_javascripts/ -b | cwindow | redraw!
+
+" puppet
+au FileType puppet setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4

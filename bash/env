@@ -6,7 +6,7 @@ export EDITOR=/usr/bin/vim
 # export PATH=~/bin:$PATH
 # export PATH=$PATH:~/.android-sdk-linux/tools:~/.android-sdk-linux/platform-tools
 # export PATH=/usr/local/share/python:$PATH
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jlund
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jlund:/Applications/Android\ Studio.app/sdk/platform-tools/
 
 # bpythonrc path
 export PYTHONSTARTUP=~/.pythonrc
@@ -51,12 +51,16 @@ export GROFF_NO_SGR=1
 # Mozilla Environment
 export BUC=~/devel/mozilla/cleanRepos/
 export BUD=~/devel/mozilla/dirtyRepos/
+export BUU=~/devel/mozilla/userRepos/
 export BUDM=~/devel/mozilla/dirtyRepos/mozharness_jlund/
+export BUDST=~/devel/mozilla/dirtyRepos/buildbotcustom_jlund/
+export BUDCF=~/devel/mozilla/dirtyRepos/buildbot-configs_jlund/
 export BUUM=~/devel/mozilla/userRepos/mozharness/
 export PAT=~/devel/mozilla/patches/
-export LOG=~/devel/mozilla/logs/2013/
-export NOT=~/devel/mozilla/notes/2013/
+export LOG=~/devel/mozilla/logs/2014/
+export NOT=~/devel/mozilla/notes/
 export MTMP=~/devel/mozilla/tmp/
+export MBR=~/devel/mozilla/branch_diffs
 export MOZ=~/devel/mozilla/
 
 # other dirs
@@ -78,7 +82,7 @@ VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 # source $HOME/venv/bin/virtualenvwrapper.sh
 # export PATH=$HOME/venv/virtualenv-1.8.4/scripts:$PATH
 
-export PYTHONPATH=$PYTHONPATH:~/devel/mozilla/dirtyRepos-git/git:~/devel/mozilla/dirtyRepos-git/git/tools/lib/python
+export PYTHONPATH=~/devel/mozilla/dev_master/:~/devel/mozilla/dev_master/tools/lib/python/
 ##################
 
 # Tell less not to beep and also display colours

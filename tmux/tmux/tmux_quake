@@ -1,23 +1,15 @@
-tmux has-session -t quake
+tmux has-session -t total
 if [ $? != 0 ]
 then
-  TERM=screen-256color-bce tmux -2 new-session -s quake -n cmd -d
-  tmux new-window -n notes -t quake
-  tmux new-window -n master -t quake
-  tmux new-window -n slaves -t quake
-  tmux new-window -n ipython -t quake
+  tmux -2 new-session -s total -n cmd -d
+  tmux new-window -n cust -t total
+  tmux new-window -n cfgs -t total
+  tmux new-window -n local_dev -t total
+  tmux new-window -n ssh_dev -t total
+  tmux new-window -n slave -t total
 
-  tmux send-keys -t quake:1 'cd BUDM' C-m
-
-  tmux send-keys -t quake:2 'cd NOT' C-m
-  tmux send-keys -t quake:2 'vim build_notes_linux64.md' C-m
-
-  tmux send-keys -t quake:3 'ssh jlund@dev-master01.build.scl1.mozilla.com' C-m
-  tmux send-keys -t quake:3 'zsh' C-m
-  tmux send-keys -t quake:3 'cd /builds/buildbot/jlund/build1 && source bin/activate' C-m
-
-  tmux send-keys -t quake:4 'ssh cltbld@dev-linux64-ec2-jlund2.dev.releng.use1.mozilla.com ' C-m
-
-  tmux send-keys -t quake:5 'ipython' C-m
+  tmux send-keys -t total:1 'cd BUDM' C-m
+  tmux send-keys -t total:2 'cd $BUDST' C-m
+  tmux send-keys -t total:3 'cd $BUDCF' C-m
 fi
-tmux attach -t quake
+tmux attach -t total

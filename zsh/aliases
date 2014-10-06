@@ -6,6 +6,9 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 
+# MOZILLA
+alias -g PEOP="people.mozilla.org:/home/jlund/public_html"
+
 # file paths
 # alias -g DOT='~/bin/dotfiles/'
 # alias -g DEV='~/devel'

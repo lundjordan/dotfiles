@@ -30,12 +30,56 @@ alias ys='yum search'
 # alias au='sudo apt-get update && sudo apt-get upgrade'
 
 # taskwarrior alias's
-alias tat='task add due:today'
-alias tst='task due:today'
-alias tsam='task due:today project:metro-talos'
-alias tsab='task due:today project:mh-builds'
-alias tatm='task add due:today project:metro-talos'
-alias tatb='task add due:today project:mh-builds'
+alias tstm='task due:today project:mozharness'
+alias tsam='task project:mozharness'
+alias taam='task add priority:M project:mozharness'
+alias tatm='task add priority:M due:today project:mozharness'
+
+alias tsts='task due:today project:slaveapi-disable'
+alias tsas='task project:slaveapi-disable'
+alias tats='task add priority:H due:today project:slaveapi-disable'
+alias taas='task add priority:H project:slaveapi-disable'
+
+alias tstl='task due:today project:loantool'
+alias tsal='task project:loantool'
+alias tatl='task add priority:H due:today project:loantool'
+alias taal='task add priority:H project:loantool'
+
+alias tstb='task due:today project:mh-builds'
+alias tsab='task project:mh-builds'
+alias tatb='task add priority:M due:today project:mh-builds'
+alias taab='task add priority:M project:mh-builds'
+
+alias tstw='task due:today project:wasabi'
+alias tsaw='task project:wasabi'
+alias tatw='task add priority:H due:today project:wasabi'
+alias taaw='task add priority:M project:wasabi'
+
+alias tstd='task due:today project:buildduty'
+alias tsad='task project:buildduty'
+alias tatd='task add priority:M due:today project:buildduty'
+alias taad='task add priority:M project:buildduty'
+
+alias tstv='task due:today project:vs2013'
+alias tsav='task project:vs2013'
+alias tatv='task add priority:M due:today project:vs2013'
+alias taav='task add priority:M project:vs2013'
+
+alias tstx='task due:today project:blackbox'
+alias tsax='task project:blackbox'
+alias tatx='task add priority:M due:today project:blackbox'
+alias taax='task add priority:M project:blackbox'
+
+alias tstk='task due:today project:apk'
+alias tsak='task project:apk'
+alias tatk='task add priority:M due:today project:apk'
+alias taak='task add priority:M project:apk'
+
+alias tata='task add due:today'
+alias tt='task due:today'
+
+alias tsar='task project:reviews'
+alias tatr='task add priority:H due:today project:reviews'
 
 
 ####### Configs
@@ -59,8 +103,6 @@ alias vimnotes='vim ~/bin/dotfiles/notes/vim_cheat_sheet.txt'
 
 # tmux
 alias tmux="TERM=screen-256color-bce tmux -2"
-alias tmu="~/.tmux/dev"
-alias tmuh="~/.tmux/dev_home"
 alias tmut="~/.tmux/tmux_term"
 alias tmuq="~/.tmux/tmux_quake"
 
@@ -73,6 +115,7 @@ alias ppydump='python ~/tmp/pydump.py'
 alias moshw='mosh 176.61.62.139'
 alias moshl='mosh 192.168.1.16'
 alias saws='ssh -i ~/.aws_keys/jlundAWS.pem ubuntu@ec2-54-214-245-108.us-west-2.compute.amazonaws.com -R 4222:localhost:4222'
+# alias saws='ssh -i ~/.aws_keys/jlundAWS.pem ubuntu@ec2-54-214-245-108.us-west-2.compute.amazonaws.com'
 # alias sshaws='ssh -i ~/.aws_keys/jlundAWS.pem ubuntu@ec2-54-214-245-108.us-west-2.compute.amazonaws.com'
 
 # reattach screen
@@ -151,7 +194,7 @@ alias realpath='readlink -f'
 catl () { cat "$1" | less; }
 
 # grep with color, context of 3 lines, and pipe through less
-grel () {grep --color=always -rnC 3 "$1" . | less -R}
+# grel () {grep --color=always -rnC 3 "$1" . | less -R}
 
 # print the corresponding error message
 strerror() { python -c "\
@@ -191,7 +234,7 @@ function hist () # history of everything if no args[0]. if args[0], grep it
 function hggit-talos ()
 {
         start_dir=`pwd`
-        cd ~/devel/mozilla/dirtyRepos/git/talos_jlund/
+        cd ~/devel/mozilla/dirtyRepos/talos_jlund/
     if [ $1 ]
     then
         echo "#### committing changes in local git repo..."
@@ -201,10 +244,10 @@ function hggit-talos ()
     fi
         echo "#### pushing changes to remote origin..."
         git push
-        cd ~/devel/mozilla/dirtyRepos/user/build-talos/
+        cd ~/devel/mozilla/userRepos/build-talos/
         echo "#### pulling git changes into hg repo..."
-        echo "git+ssh://git@github.com:lundjordan/build-talos.git"
-        hg pull -u git+ssh://git@github.com:lundjordan/build-talos.git
+        echo "git://github.com/lundjordan/build-talos.git"
+        hg pull -u git://github.com/lundjordan/build-talos.git
         echo "#### pushing changes in hg repo to hg.mozilla.org user_repo..."
         hg push -f
         cd $start_dir
@@ -225,10 +268,33 @@ function hggit-tools ()
     fi
         echo "#### pushing changes to remote origin..."
         git push
-        cd ~/devel/mozilla/dirtyRepos/user/tools/
+        cd ~/devel/mozilla/userRepos/tools/
         echo "#### pulling git changes into hg repo..."
-        hg pull -u git+ssh://git@github.com:lundjordan/build-tools.git
+        hg pull -u git://github.com/lundjordan/build-tools.git
         echo "#### pushing changes in hg repo to hg.mozilla.org user_repo..."
+        hg push -f
+        cd $start_dir
+        unset start_dir
+        echo "#### complete!"
+}
+
+function hggit-slaveapi ()
+{
+        start_dir=`pwd`
+        cd ~/devel/mozilla/dirtyRepos/slaveapi_jlund/
+    if [ $1 ]
+    then
+        echo "#### committing changes in local git repo..."
+        gca -m $1
+    else
+        echo "%%%% Warning, not attempting to commit any new changes"
+    fi
+        echo "#### pushing changes to remote origin..."
+        git push
+        cd ~/devel/mozilla/userRepos/slaveapi
+        echo "#### pulling git changes into hg repo: ~/devel/mozilla/userRepos/slaveapi"
+        hg pull -u git://github.com/lundjordan/slaveapi.git
+        echo "#### pushing changes in hg repo to hg.mozilla.org user_repo with `hg push -f`"
         hg push -f
         cd $start_dir
         unset start_dir
@@ -238,7 +304,7 @@ function hggit-tools ()
 function hggit-mhbuilds ()
 {
         start_dir=`pwd`
-        cd ~/devel/mozilla/dirtyRepos/git/mozharness_jlund/
+        cd ~/devel/mozilla/dirtyRepos/mozharness_jlund/
     if [ $1 ]
     then
         echo "#### committing changes in local git repo..."
@@ -248,10 +314,10 @@ function hggit-mhbuilds ()
     fi
         echo "#### pushing changes to remote origin..."
         git push
-        cd ~/devel/mozilla/dirtyRepos/user/mozharness/
-        echo "#### pulling git changes into hg repo..."
-        hg pull -u git+ssh://git@github.com:lundjordan/mozharness.git
-        echo "#### pushing changes in hg repo to hg.mozilla.org user_repo..."
+        cd ~/devel/mozilla/userRepos/mozharness
+        echo "#### pulling git changes into hg repo: ~/devel/mozilla/userRepos/mozharness"
+        hg pull -u git://github.com/lundjordan/mozharness.git
+        echo "#### pushing changes in hg repo to hg.mozilla.org user_repo with `hg push -f`"
         hg push -f
         cd $start_dir
         unset start_dir
@@ -261,7 +327,7 @@ function hggit-mhbuilds ()
 function hggit-mhmetro ()
 {
         start_dir=`pwd`
-        cd ~/devel/mozilla/dirtyRepos/git/mozharness_jlund/
+        cd ~/devel/mozilla/dirtyRepos/mozharness/
     if [ $1 ]
     then
         echo "#### committing changes in local git repo..."
@@ -271,7 +337,7 @@ function hggit-mhmetro ()
     fi
         echo "#### pushing changes to remote origin..."
         git push
-        cd ~/devel/mozilla/dirtyRepos/user/mozharness2/
+        cd ~/devel/mozilla/userRepos/mozharness2/
         echo "#### pulling git changes into hg repo..."
         hg pull -u git+ssh://git@github.com:lundjordan/mozharness.git
         echo "#### pushing changes in hg repo to hg.mozilla.org user_repo..."
@@ -322,5 +388,9 @@ alias devserv="~/devel/learn/final_project/goferIT/bin/devserv"
 alias mocha="~/devel/learn/final_project/goferIT/bin/mocha"
 
 # gofer
-ggrel () {grep --color=always --exclude-dir coverage -rnC 3 "$1" . | less -R}
+ggrel ()
+{
+    grep --color=always --exclude-dir coverage -rnC 6 "$1" . | less -R
+}
+
 alias linesOfGoferCode="find . -type d \( -name node_modules -o -name .git -o -name js -o -name css -o -name img -o -name .compiled_javascripts \) -prune -o -print | xargs wc -l | less"
