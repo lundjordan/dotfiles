@@ -6,7 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell" original
-ZSH_THEME="juanghurtado"
+ZSH_THEME="jlund_juang"
 # ZSH_THEME="candy-kingdom"
 
 # Example aliases
@@ -34,7 +34,7 @@ ZSH_THEME="juanghurtado"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras mercurial pip screen osx aws brew tmux sublime taskwarrior python virtualenv celery docker pip)
+plugins=(jlundgit git-extras jlundmercurial pip screen osx aws brew tmux sublime taskwarrior python virtualenv celery docker pip)
 
 source $ZSH/oh-my-zsh.sh
 

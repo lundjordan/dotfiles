@@ -29,57 +29,74 @@ alias ys='yum search'
 # alias ar='sudo apt-get remove'
 # alias au='sudo apt-get update && sudo apt-get upgrade'
 
+# trello alias's
+alias trello='. ~/.run_trello_with_creds trello'
+alias t_note='trello card create -b 5575e96ed5af09aa2221c4b4 -l 55b914d4dbf0ea6e0e37765e'
+alias t_triage='trello card create -b 5575e96ed5af09aa2221c4b4 -l 5575fcc06c11219ec5f47e29'
+alias t_current='trello card create -b 5575e96ed5af09aa2221c4b4 -l 5575e9beb4497bb77b045710'
+alias t_next='trello card create -b 5575e96ed5af09aa2221c4b4 -l 5575e9c93baae54a5a73145a'
+
 # taskwarrior alias's
-alias tstm='task due:today project:mozharness'
-alias tsam='task project:mozharness'
-alias taam='task add priority:M project:mozharness'
-alias tatm='task add priority:M due:today project:mozharness'
-
-alias tsts='task due:today project:slaveapi-disable'
-alias tsas='task project:slaveapi-disable'
-alias tats='task add priority:H due:today project:slaveapi-disable'
-alias taas='task add priority:H project:slaveapi-disable'
-
-alias tstl='task due:today project:loantool'
-alias tsal='task project:loantool'
-alias tatl='task add priority:H due:today project:loantool'
-alias taal='task add priority:H project:loantool'
-
-alias tstb='task due:today project:mh-builds'
-alias tsab='task project:mh-builds'
-alias tatb='task add priority:M due:today project:mh-builds'
-alias taab='task add priority:M project:mh-builds'
-
-alias tstw='task due:today project:wasabi'
-alias tsaw='task project:wasabi'
-alias tatw='task add priority:H due:today project:wasabi'
-alias taaw='task add priority:M project:wasabi'
-
-alias tstd='task due:today project:buildduty'
-alias tsad='task project:buildduty'
-alias tatd='task add priority:M due:today project:buildduty'
-alias taad='task add priority:M project:buildduty'
-
-alias tstv='task due:today project:vs2013'
-alias tsav='task project:vs2013'
-alias tatv='task add priority:M due:today project:vs2013'
-alias taav='task add priority:M project:vs2013'
-
-alias tstx='task due:today project:blackbox'
-alias tsax='task project:blackbox'
-alias tatx='task add priority:M due:today project:blackbox'
-alias taax='task add priority:M project:blackbox'
-
-alias tstk='task due:today project:apk'
-alias tsak='task project:apk'
-alias tatk='task add priority:M due:today project:apk'
-alias taak='task add priority:M project:apk'
-
-alias tata='task add due:today'
-alias tt='task due:today'
-
-alias tsar='task project:reviews'
-alias tatr='task add priority:H due:today project:reviews'
+# alias tstg='task due:today project:mergeduty'
+# alias tsag='task project:mergeduty'
+# alias taag='task add priority:M project:mergeduty'
+# alias tatg='task add priority:M due:today project:mergeduty'
+# 
+# alias tstm='task due:today project:mozharness'
+# alias tsam='task project:mozharness'
+# alias taam='task add priority:M project:mozharness'
+# alias tatm='task add priority:M due:today project:mozharness'
+# 
+# alias tsts='task due:today project:slaveapi'
+# alias tsas='task project:slaveapi'
+# alias tats='task add priority:H due:today project:slaveapi'
+# alias taas='task add priority:H project:slaveapi'
+# 
+# alias tstl='task due:today project:loantool'
+# alias tsal='task project:loantool'
+# alias tatl='task add priority:H due:today project:loantool'
+# alias taal='task add priority:H project:loantool'
+# 
+# alias tstb='task due:today project:mh-builds'
+# alias tsab='task project:mh-builds'
+# alias tatb='task add priority:M due:today project:mh-builds'
+# alias taab='task add priority:M project:mh-builds'
+# 
+# alias tstw='task due:today project:wasabi'
+# alias tsaw='task project:wasabi'
+# alias tatw='task add priority:H due:today project:wasabi'
+# alias taaw='task add priority:M project:wasabi'
+# 
+# alias tstd='task due:today project:buildduty'
+# alias tsad='task project:buildduty'
+# alias tatd='task add priority:M due:today project:buildduty'
+# alias taad='task add priority:M project:buildduty'
+# 
+# alias tstv='task due:today project:vs2013'
+# alias tsav='task project:vs2013'
+# alias tatv='task add priority:M due:today project:vs2013'
+# alias taav='task add priority:M project:vs2013'
+# 
+# alias tstx='task due:today project:blackbox'
+# alias tsax='task project:blackbox'
+# alias tatx='task add priority:M due:today project:blackbox'
+# alias taax='task add priority:M project:blackbox'
+# 
+# alias tstk='task due:today project:apk'
+# alias tsak='task project:apk'
+# alias tatk='task add priority:M due:today project:apk'
+# alias taak='task add priority:M project:apk'
+# 
+# alias tsth='task due:today project:hg-repos'
+# alias tsah='task project:hg-repos'
+# alias tath='task add priority:M due:today project:hg-repos'
+# alias taah='task add priority:M project:hg-repos'
+# 
+# alias tata='task add due:today'
+# alias tt='task due:today'
+# 
+# alias tsar='task project:reviews'
+# alias tatr='task add priority:H due:today project:reviews'
 
 
 ####### Configs
@@ -103,8 +120,7 @@ alias vimnotes='vim ~/bin/dotfiles/notes/vim_cheat_sheet.txt'
 
 # tmux
 alias tmux="TERM=screen-256color-bce tmux -2"
-alias tmut="~/.tmux/tmux_term"
-alias tmuq="~/.tmux/tmux_quake"
+alias tmum="~/.tmux/tmux_mozilla"
 
 # pydump practice
 alias pydump='vim ~/tmp/pydump.py'
@@ -213,14 +229,6 @@ scan() { e="$1"; shift; less -i -p "*$e" "$@"; }
 ord() { printf "0x%x\n" "'$1"; }
 chr() { printf $(printf '\\%03o\\n' "$1"); }
 
-# Mozilla functions
-
-function viba ()
-{
-        cd ~/devel/mozilla/dirtyRepos-git/
-        vim -S vimbackup.vim
-}
-
 function hist () # history of everything if no args[0]. if args[0], grep it
 {
     if [ $1 ]
@@ -230,6 +238,22 @@ function hist () # history of everything if no args[0]. if args[0], grep it
         history 1 -1 | vim -R -
     fi
 }
+
+# Mozilla functions
+
+function peop ()
+{
+        filename=$(basename $1)
+        scp $1 people.mozilla.org:public_html/
+        echo "http://people.mozilla.org/~jlund/${filename}"
+}
+
+function viba ()
+{
+        cd ~/devel/mozilla/dirtyRepos-git/
+        vim -S vimbackup.vim
+}
+
 
 function hggit-talos ()
 {

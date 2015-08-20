@@ -78,13 +78,12 @@ VIRTUAL_ENV=/Users/jlund/devel/mozilla/dev_master/bin/activate
 DUMP_MASTER_PY=/Users/jlund/devel/mozilla/dev_master/braindump/buildbot-related/dump_master.py
 BUILDER_LIST_PY=/Users/jlund/devel/mozilla/dev_master/braindump/buildbot-related/builder_list.py
 
-BUILDER_LIST_PATH_CLEAN=${MASTER_PATH}/builderlists/$(date +%F--%T--clean)
-BUILDER_LIST_PATH_DIRTY=${MASTER_PATH}/builderlists/$(date +%F--%T--dirty)
-DUMP_MASTER_PATH_CLEAN=${MASTER_PATH}/dumpmasters/$(date +%F--%T--clean)
-DUMP_MASTER_PATH_DIRTY=${MASTER_PATH}/dumpmasters/$(date +%F--%T--dirty)
+BUILDER_LIST_PATH_CLEAN=/Users/jlund/devel/mozilla/dev_master/${MASTER_TYPE}-builderlists/$(date +%F--%T--clean)
+BUILDER_LIST_PATH_DIRTY=/Users/jlund/devel/mozilla/dev_master/${MASTER_TYPE}-builderlists/$(date +%F--%T--dirty)
+DUMP_MASTER_PATH_CLEAN=/Users/jlund/devel/mozilla/dev_master/${MASTER_TYPE}-dumpmasters/$(date +%F--%T--clean)
+DUMP_MASTER_PATH_DIRTY=/Users/jlund/devel/mozilla/dev_master/${MASTER_TYPE}-dumpmasters/$(date +%F--%T--dirty)
 
 ##### Now check parsed parameters are valid...
-
 echo "#### using master type: $MASTER_TYPE"
 echo "#### using bbot-config branch: $CFG_BRANCH"
 echo "#### using bbotcustom branch: $CUSTOM_BRANCH"
@@ -107,11 +106,13 @@ if [ "$DO_CLEAN" = true ] ; then
     #### CLEAN
     echo "#### pulling and checking out clean buildbotcustom repo"
     cd ${CUST_REPO}
-    git checkout master
+    git checkout master_fix
     # git pull upstream master
 
     echo "#### pulling and checking out clean buildbot-config repo"
     cd ${CFG_REPO}
+    # git checkout tmp
+    # git checkout master_try_fix
     git checkout master
     # git pull upstream master
 
@@ -160,11 +161,23 @@ ${DUMP_MASTER_PY} ${MASTER_CFG} > ${DUMP_MASTER_PATH_DIRTY}
 
 echo "Files generated..."
 if [ "$DO_CLEAN" = true ] ; then
-    echo CLEAN_BUILDER_LIST=${BUILDER_LIST_PATH_CLEAN}
-    echo CLEAN_DUMP_MASTER=${DUMP_MASTER_PATH_CLEAN}
+    if [ "${MASTER_TYPE}" == 'build' ] ; then
+        echo BUILD_CLEAN_BUILDER_LIST=${BUILDER_LIST_PATH_CLEAN}
+        echo BUILD_CLEAN_DUMP_MASTER=${DUMP_MASTER_PATH_CLEAN}
+    fi
+    if [ "${MASTER_TYPE}" == 'test' ] ; then
+        echo TEST_CLEAN_BUILDER_LIST=${BUILDER_LIST_PATH_CLEAN}
+        echo TEST_CLEAN_DUMP_MASTER=${DUMP_MASTER_PATH_CLEAN}
+    fi
 fi
-echo DIRTY_BUILDER_LIST=${BUILDER_LIST_PATH_DIRTY}
-echo DIRTY_DUMP_MASTER=${DUMP_MASTER_PATH_DIRTY}
+if [ "${MASTER_TYPE}" == 'build' ] ; then
+    echo BUILD_DIRTY_BUILDER_LIST=${BUILDER_LIST_PATH_DIRTY}
+    echo BUILD_DIRTY_DUMP_MASTER=${DUMP_MASTER_PATH_DIRTY}
+fi
+if [ "${MASTER_TYPE}" == 'test' ] ; then
+    echo TEST_DIRTY_BUILDER_LIST=${BUILDER_LIST_PATH_DIRTY}
+    echo TEST_DIRTY_DUMP_MASTER=${DUMP_MASTER_PATH_DIRTY}
+fi
 
 # clean up
 #cd ${CUST_REPO}
