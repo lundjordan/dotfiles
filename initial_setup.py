@@ -11,19 +11,22 @@ import platform
 import subprocess
 
 ABS_HOME_PATH = os.getenv('HOME')
-ABS_BIN_PATH = os.path.join(ABS_HOME_PATH, 'bin')
 ABS_DOTFILES_PATH = os.path.join(ABS_HOME_PATH, 'bin/dotfiles')
 ABS_BACKUP_DIR = os.path.join(ABS_HOME_PATH, 'dotfiles_backup')
 
-HOME_LINKS = {'zsh/jlund_ohmyzsh_template': '.zshrc',
-              'zsh/env': '.oh-my-zsh/custom/jlund_env.zsh',
-              'zsh/config': '.oh-my-zsh/custom/jlund_config.zsh',
-              'zsh/aliases': '.oh-my-zsh/custom/jlund_aliases.zsh',
-              'bash/bashrc': '.bashrc',
-              'vim/vimrc': '.vimrc',
-              'vim/vim': '.vim',
-              'tmux/tmux.conf': '.tmux.conf',
-              'tmux/tmux': '.tmux'}
+HOME_LINKS = {
+    'zsh/jlund_ohmyzsh_template': '.zshrc',
+    'bash/bashrc': '.bashrc',
+    'vim/vimrc': '.vimrc',
+    'vim/vim': '.vim',
+    'tmux/tmux.conf': '.tmux.conf',
+    'tmux/tmux': '.tmux',
+    'taskWarrior/taskrc': '.taskrc',
+    'taskWarrior/task': '.task',
+    'ssh/config': '.ssh/config',
+    'git/gitconfig': '.gitconfig',
+    'gpg/gpg.conf': '.gnupg/gpg.conf',
+}
 
 GIT_REPOS = {'https://github.com/robbyrussell/oh-my-zsh': '.oh-my-zsh'}
 
@@ -33,7 +36,6 @@ def start():
     # destinations
     clone_repos(GIT_REPOS)
     make_links(links=HOME_LINKS, base_link_path=ABS_HOME_PATH)
-    # make_links(links=BIN_LINKS, base_link_path=ABS_BIN_PATH)
 
 
 def clone_repos(repo_urls):
