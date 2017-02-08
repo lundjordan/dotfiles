@@ -45,7 +45,7 @@ set background=dark
 colorscheme ir_black
 
 " for mac os x pbcopy clipboard
-set clipboard=unnamed
+" set clipboard=unnamed
 
 " ctrlp 'best plugin ever...'
 set runtimepath^=~/.vim/bundle/ctrlp.vim

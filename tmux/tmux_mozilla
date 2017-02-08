@@ -1,0 +1,17 @@
+tmux has-session -t mozilla
+if [ $? != 0 ]
+then
+  tmux -2 new-session -s mozilla -n cmd -d
+  tmux rename-window -t mozilla inbound
+  tmux new-window -n cust -t mozilla
+  tmux new-window -n cfgs -t mozilla
+  tmux new-window -n local_dev -t mozilla
+  tmux new-window -n ssh_dev -t mozilla
+  tmux new-window -n slave -t mozilla
+
+  tmux send-keys -t mozilla:1 'cd $BUD/mozilla-inbound' C-m
+  tmux send-keys -t mozilla:2 'cd $BUDST' C-m
+  tmux send-keys -t mozilla:3 'cd $BUDCF' C-m
+  tmux send-keys -t mozilla:4 'cd $DEV_MASTER && source ../bin/activate' C-m
+fi
+tmux attach -t mozilla

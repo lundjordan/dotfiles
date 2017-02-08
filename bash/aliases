@@ -30,28 +30,48 @@ alias ys='yum search'
 # alias au='sudo apt-get update && sudo apt-get upgrade'
 
 # trello alias's
-alias trello='. ~/.run_trello_with_creds trello'
-alias t_note='trello card create -b 5575e96ed5af09aa2221c4b4 -l 55b914d4dbf0ea6e0e37765e'
-alias t_triage='trello card create -b 5575e96ed5af09aa2221c4b4 -l 5575fcc06c11219ec5f47e29'
-alias t_current='trello card create -b 5575e96ed5af09aa2221c4b4 -l 5575e9beb4497bb77b045710'
-alias t_next='trello card create -b 5575e96ed5af09aa2221c4b4 -l 5575e9c93baae54a5a73145a'
+# alias trello='. ~/.run_trello_with_creds trello'
+# alias t_note='trello card create -b 5575e96ed5af09aa2221c4b4 -l 55b914d4dbf0ea6e0e37765e'
+# alias t_triage='trello card create -b 5575e96ed5af09aa2221c4b4 -l 5575fcc06c11219ec5f47e29'
+# alias t_current='trello card create -b 5575e96ed5af09aa2221c4b4 -l 5575e9beb4497bb77b045710'
+# alias t_next='trello card create -b 5575e96ed5af09aa2221c4b4 -l 5575e9c93baae54a5a73145a'
 
 # taskwarrior alias's
-# alias tstg='task due:today project:mergeduty'
-# alias tsag='task project:mergeduty'
-# alias taag='task add priority:M project:mergeduty'
-# alias tatg='task add priority:M due:today project:mergeduty'
-# 
-# alias tstm='task due:today project:mozharness'
-# alias tsam='task project:mozharness'
-# alias taam='task add priority:M project:mozharness'
-# alias tatm='task add priority:M due:today project:mozharness'
-# 
-# alias tsts='task due:today project:slaveapi'
-# alias tsas='task project:slaveapi'
-# alias tats='task add priority:H due:today project:slaveapi'
-# alias taas='task add priority:H project:slaveapi'
-# 
+alias tstw='task due:today project:warrior'
+alias tsaw='task project:warrior'
+alias taaw='task add priority:M project:warrior'
+alias tatw='task add priority:M due:today project:warrior'
+
+alias tstm='task due:today project:mozharness'
+alias tsam='task project:mozharness'
+alias taam='task add priority:M project:mozharness'
+alias tatm='task add priority:M due:today project:mozharness'
+
+alias tstp='task due:today project:promotion'
+alias tsap='task project:promotion'
+alias tatp='task add priority:H due:today project:promotion'
+alias taap='task add priority:H project:promotion'
+
+alias tstd='task due:today project:releaseduty'
+alias tsad='task project:releaseduty'
+alias tatd='task add priority:H due:today project:releaseduty'
+alias taad='task add priority:H project:releaseduty'
+
+alias tstr='task due:today project:reviews'
+alias tsar='task project:reviews'
+alias tatr='task add priority:H due:today project:reviews'
+alias taar='task add priority:H project:reviews'
+
+alias tstc='task due:today project:tcmigration'
+alias tsac='task project:tcmigration'
+alias tatc='task add priority:H due:today project:tcmigration'
+alias taac='task add priority:H project:tcmigration'
+
+alias tsts='task due:today project:shipit'
+alias tsas='task project:shipit'
+alias tats='task add priority:H due:today project:shipit'
+alias taas='task add priority:H project:shipit'
+
 # alias tstl='task due:today project:loantool'
 # alias tsal='task project:loantool'
 # alias tatl='task add priority:H due:today project:loantool'
@@ -91,12 +111,12 @@ alias t_next='trello card create -b 5575e96ed5af09aa2221c4b4 -l 5575e9c93baae54a
 # alias tsah='task project:hg-repos'
 # alias tath='task add priority:M due:today project:hg-repos'
 # alias taah='task add priority:M project:hg-repos'
-# 
-# alias tata='task add due:today'
-# alias tt='task due:today'
-# 
-# alias tsar='task project:reviews'
-# alias tatr='task add priority:H due:today project:reviews'
+
+alias tata='task add due:today'
+alias tt='task due:today'
+
+alias tsar='task project:reviews'
+alias tatr='task add priority:H due:today project:reviews'
 
 
 ####### Configs
@@ -119,7 +139,7 @@ alias vimnotes='vim ~/bin/dotfiles/notes/vim_cheat_sheet.txt'
 ########
 
 # tmux
-alias tmux="TERM=screen-256color-bce tmux -2"
+# alias tmux="TERM=screen-256color-bce tmux -2"
 alias tmum="~/.tmux/tmux_mozilla"
 
 # pydump practice

@@ -1,0 +1,7 @@
+[description:"Bug 1289980 - Add new routes for releases" due:"1485907200" entry:"1477450202" modified:"1485430819" status:"pending" uuid:"c79f8e3b-def1-4720-90dd-196de13282eb"]
+[description:"add FUTURE releases with watersheds and tracking bugs for upcoming releases" due:"1485734400" entry:"1479938820" modified:"1485254999" priority:"H" project:"releaseduty" status:"pending" uuid:"18347caa-ef51-412d-996a-491e4e7b1ad4"]
+[description:"tmux plugins and vim copy\/paste for macos" entry:"1483451751" modified:"1483451751" status:"pending" uuid:"e2a002c4-186d-4d98-9383-6fd706b06e4b"]
+[description:"Bug 1331141 - beetmoverscript: allow for artifact list changes without bustage" entry:"1484653417" modified:"1484653417" project:"tcmigration" status:"pending" uuid:"6c126d0a-176d-41ed-aee4-07cc430d49ad"]
+[description:"Bug 1333750 - investigate how many users we currently detect as having websense" due:"1485388800" entry:"1485431037" modified:"1485431037" priority:"H" project:"releaseduty" status:"pending" uuid:"3b08e8cf-990d-4c81-a579-db81ac91868b"]
+[description:"Bug 1286944 - Build Process for Android partner distributions" due:"1485388800" entry:"1485431074" modified:"1485431074" priority:"H" project:"releaseduty" status:"pending" uuid:"1d5989b6-f384-4b92-b7b8-0ba3db831ad6"]
+[description:"review requested: &open;Bug 1337366&close; Gecko-specific changes to support mozilla-esr52" due:"1486454400" entry:"1486483798" modified:"1486483798" priority:"H" project:"releaseduty" status:"pending" uuid:"64eda37e-79c1-4423-a10e-0306fddc598c"]

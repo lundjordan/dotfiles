@@ -106,20 +106,23 @@ if [ "$DO_CLEAN" = true ] ; then
     #### CLEAN
     echo "#### pulling and checking out clean buildbotcustom repo"
     cd ${CUST_REPO}
-    git checkout master_fix
+    # git checkout master_fix
     # git pull upstream master
+    hg up -r master_local_fix
 
     echo "#### pulling and checking out clean buildbot-config repo"
     cd ${CFG_REPO}
     # git checkout tmp
     # git checkout master_try_fix
-    git checkout master
+    # git checkout master
     # git pull upstream master
+    hg up -r master
 
     echo "#### pulling and checking out clean tools repo"
     cd ${TOOLS_REPO}
-    git checkout master
+    # git checkout master
     # git pull --no-edit upstream master
+    hg up -r master
 
     echo "#### ensuring clean checkconfig works"
     cd ${MASTER_PATH}
@@ -136,17 +139,21 @@ fi
 if [ -n "${CFG_BRANCH}" ]; then
     echo "#### checking out buildbot-config branch"
     cd ${CFG_REPO}
-    git checkout $CFG_BRANCH
+    # git checkout $CFG_BRANCH
+    hg up -r $CFG_BRANCH
 fi
 if [ -n "${CUSTOM_BRANCH}" ]; then
     echo "#### checking out buildbotcustom branch"
     cd ${CUST_REPO}
-    git checkout $CUSTOM_BRANCH
+    # git checkout $CUSTOM_BRANCH
+    hg up -r $CUSTOM_BRANCH
+
 fi
 if [ -n "${TOOLS_BRANCH}" ]; then
     echo "#### checking out tools branch"
     cd ${TOOLS_REPO}
-    git checkout $TOOLS_BRANCH
+    # git checkout $TOOLS_BRANCH
+    hg up -r $TOOLS_BRANCH
 fi
 
 echo "#### ensuring dirty checkconfig works"

@@ -1,0 +1,31 @@
+Host *
+    TCPKeepAlive yes
+    ServerAliveInterval 120
+    HashKnownHosts yes
+
+Host hg.mozilla.org git.mozilla.org
+    User jlund@mozilla.com
+    Compression yes
+    ServerAliveInterval 300
+
+Host reviewboard-hg.mozilla.org
+    User jlund@mozilla.com
+    Compression yes
+    ServerAliveInterval 300
+
+Host aws-manager2.srv.releng.scl3.mozilla.com
+    User buildduty
+
+Host cruncher.build.mozilla.org
+    User buildduty
+
+Host aus3-staging.mozilla.org releng-puppet* dev-master2.bb.releng.use1.mozilla.com
+    User jlund
+
+Host *.build.mozilla.org *.releng.scl3.mozilla.com *.srv.releng.*.mozilla.com *.test.releng.*.mozilla.com
+    User cltbld
+
+Host 10.13?.*.* bld-* tst-* try-* b-2008-*
+    User cltbld
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
