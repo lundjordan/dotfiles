@@ -11,7 +11,7 @@ import platform
 import subprocess
 
 ABS_HOME_PATH = os.getenv('HOME')
-ABS_DOTFILES_PATH = os.path.join(ABS_HOME_PATH, 'bin/dotfiles')
+ABS_DOTFILES_PATH = os.path.join(ABS_HOME_PATH, 'devel/personal/dotfiles')
 ABS_BACKUP_DIR = os.path.join(ABS_HOME_PATH, 'dotfiles_backup')
 
 HOME_LINKS = {
@@ -34,7 +34,7 @@ GIT_REPOS = {'https://github.com/robbyrussell/oh-my-zsh': '.oh-my-zsh'}
 def start():
     # thus far lets just make the appropriate links and backup any existing
     # destinations
-    clone_repos(GIT_REPOS)
+    # clone_repos(GIT_REPOS)
     make_links(links=HOME_LINKS, base_link_path=ABS_HOME_PATH)
 
 
