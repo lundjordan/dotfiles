@@ -1,3 +1,4 @@
+[description:"fix env paths" due:"1486627200" end:"1487206911" entry:"1486662355" modified:"1487206911" priority:"H" project:"macos-setup" status:"completed" uuid:"589bcd95-60c9-406d-9bd1-3ded7e9a8559"]
 [description:"inbox 0" due:"1487059200" end:"1487123767" entry:"1487122552" modified:"1487123767" status:"completed" uuid:"dadfd537-8ab7-45d0-9f01-fa69ff2861c6"]
 [description:"Bug 1286944 - Build Process for Android partner distributions" due:"1485388800" end:"1487123404" entry:"1485431074" modified:"1487123404" priority:"H" project:"releaseduty" status:"completed" uuid:"1d5989b6-f384-4b92-b7b8-0ba3db831ad6"]
 [description:"setup hg" due:"1486627200" end:"1487122514" entry:"1486674748" modified:"1487122514" priority:"H" project:"macos-setup" status:"completed" uuid:"81a8cf67-9cca-47ab-89d5-92e0b9f6a56d"]

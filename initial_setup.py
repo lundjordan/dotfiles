@@ -15,7 +15,7 @@ ABS_DOTFILES_PATH = os.path.join(ABS_HOME_PATH, 'devel/personal/dotfiles')
 ABS_BACKUP_DIR = os.path.join(ABS_HOME_PATH, 'dotfiles_backup')
 
 HOME_LINKS = {
-    'zsh/jlund_ohmyzsh_template': '.zshrc',
+    'zsh/zshrc': '.zshrc',
     'bash/bashrc': '.bashrc',
     'vim/vimrc': '.vimrc',
     'vim/vim': '.vim',
