@@ -98,16 +98,16 @@ alias tatr='task add priority:H due:today project:reviews'
 ####### Configs
 # source zsh
 alias sz='. ~/.zshrc'
+# zsh rc shortcut
+alias viz='vim ~/.zshrc'
+# zsh alias shortcut
+alias via='vim ~/devel/personal/dotfiles/zsh/aliases.zsh'
+# my zsh config
+alias vic='vim ~/devel/personal/dotfiles/zsh/config.zsh'
+# my zsh config
+alias vie='vim ~/devel/personal/dotfiles/zsh/env.zsh'
 # alias's to dirs
 alias cdot='cd ~/devel/personal/dotfiles'
-# alias to aliases
-alias via='vim ~/devel/personal/dotfiles/bash/aliases'
-# zsh alias shortcut
-alias viaz='vim ~/devel/personal/dotfiles/zsh/aliases'
-# my zsh config
-alias vic='vim ~/devel/personal/dotfiles/zsh/config'
-# my zsh config
-alias vie='vim ~/devel/personal/dotfiles/bash/env'
 # alias to vimrc
 alias vimrc='vim ~/.vimrc'
 # alias to vimrc

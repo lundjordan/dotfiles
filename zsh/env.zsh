@@ -44,13 +44,15 @@ export GROFF_NO_SGR=1
 # DIRS ###########
 
 # Mozilla Environment
-export BUD=~/devel/mozilla/repos/
-export BUDST=~/devel/mozilla/repos/buildbotcustom/
-export BUDCF=~/devel/mozilla/repos/buildbot-configs/
+export MOZ=~/devel/mozilla/
+export REPOS=~/devel/mozilla/repos/
+export FIRE=~/devel/mozilla/repos/firefox/
+export CUST=~/devel/mozilla/repos/buildbotcustom/
+export CONF=~/devel/mozilla/repos/buildbot-configs/
+export TOOLS=~/devel/mozilla/repos/tools/
 export PAT=~/devel/mozilla/patches/
 export LOG=~/devel/mozilla/logs/
 export NOT=~/devel/mozilla/notes/
-export MOZ=~/devel/mozilla/
 export DEV_MASTER=~/devel/mozilla/dev_master/build-master/
 
 # other dirs
