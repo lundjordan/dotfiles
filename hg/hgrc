@@ -1,0 +1,55 @@
+[ui]
+username = Jordan Lund <jlund@mozilla.com>
+interface = curses
+
+[extensions]
+pager = 
+strip = 
+color = 
+histedit = 
+rebase = 
+blackbox = 
+progress = 
+fsmonitor =
+shelve = 
+histedit = 
+prompt = ~/devel/opensrc/hg-prompt/prompt.py
+bzpost = ~/.mozbuild/version-control-tools/hgext/bzpost
+reviewboard = /Users/jlund/.mozbuild/version-control-tools/hgext/reviewboard/client.py
+push-to-try = /Users/jlund/.mozbuild/version-control-tools/hgext/push-to-try
+
+[pager]
+pager = LESS=FRSXQ less
+attend-help = true
+attend-incoming = true
+attend-outgoing = true
+attend-status = true
+attend-wip = true
+
+[alias]
+wip = log --graph --rev=wip --template=wip
+
+[revsetalias]
+wip = (parents(not public()) or not public() or . or (head() and branch(default))) and (not obsolete() or unstable()^) and not closed()
+
+[templates]
+wip = '{label("wip.branch", if(branches,"{branches} "))}{label(ifeq(graphnode,"x","wip.obsolete","wip.{phase}"),"{rev}:{node|short}")}{label("wip.user", " {author|user}")}{label("wip.tags", if(tags," {tags}"))}{label("wip.tags", if(fxheads," {fxheads}"))}{if(bookmarks," ")}{label("wip.bookmarks", if(bookmarks,bookmarks))}{label(ifcontains(rev, revset("parents()"), "wip.here"), " {desc|firstline}")}'
+
+[color]
+wip.bookmarks = yellow underline
+wip.branch = yellow
+wip.draft = green
+wip.here = red
+wip.obsolete = none
+wip.public = blue
+wip.tags = yellow
+wip.user = magenta
+
+[experimental]
+graphshorten = true
+
+[bugzilla]
+username = jlund@mozilla.com
+
+[paths]
+review = https://reviewboard-hg.mozilla.org/autoreview
