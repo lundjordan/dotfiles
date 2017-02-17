@@ -45,7 +45,7 @@ export GROFF_NO_SGR=1
 
 # Mozilla Environment
 export MOZ=~/devel/mozilla/
-export REPOS=~/devel/mozilla/repos/
+export REP=~/devel/mozilla/repos/
 export FIRE=~/devel/mozilla/repos/firefox/
 export CUST=~/devel/mozilla/repos/buildbotcustom/
 export CONF=~/devel/mozilla/repos/buildbot-configs/
