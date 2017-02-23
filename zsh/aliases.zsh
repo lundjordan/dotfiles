@@ -143,6 +143,8 @@ alias -g .....='../../../..'
 
 # MOZILLA
 alias -g PEOP="people.mozilla.org:/home/jlund/public_html"
+alias warrior="cd $REP/releasewarrior && workon releasewarrior"
+alias talker="cd $REP/tctalker && workon tctalker"
 
 # file paths
 # alias -g DOT='~/devel/personal/dotfiles/'
