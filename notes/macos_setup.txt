@@ -1,0 +1,52 @@
+# install from app store
+
+* 1password
+* moom
+* things
+* daisydisk
+
+# install unmanaged packages
+
+## install nix
+
+https://nixos.org/nix/manual/#chap-installation
+https://nixos.org/nixos/nix-pills/
+
+## install gpgtools
+
+https://gpgtools.org/
+
+## install docker
+
+https://store.docker.com/editions/community/docker-ce-desktop-mac
+
+## others
+
+https://www.mozilla.org/en-US/firefox/channel/desktop/
+https://www.sparklabs.com/viscosity/download/
+https://www.jetbrains.com/pycharm/
+https://v.mozilla.com/
+https://www2.meethue.com/en-us/entertainment/hue-sync
+https://mullvad.net/en/download/
+https://transmissionbt.com/download/
+https://www.videolan.org/vlc/download-macosx.html
+
+# install nix packages
+
+* ssh
+* zsh
+* wget
+* hg
+* git
+* vim
+* python
+* watchman
+
+# copy gpg, ssh keys from external hdd
+
+# setup dotfiles
+
+mkdir ~/devel/personal/dotfiles
+git clone git@github.com:lundjordan/dotfiles.git
+cd ~/devel/personal/dotfiles
+python intial_setup.py

@@ -4,126 +4,79 @@ dotfiles
 ## Just another dotfile repo
 
 ### DISCLAIMER:
-> I highly recommend only viewing my files and not running
+> I recommend only viewing my files and not running
 things like initial_setup.py. This setup is highly tailored for me and will
 probably cause spurious/confusing results for you...
 
-When I clone this repo on a new machine as ~/bin/dotfiles, (or I end up switching/losing an OS), I run:
 * initial_setup.py
 
 This script will clone oh-my-zsh in ~/.oh-my-zsh and create some links in my home dir to files/dirs
 in this dotfiles repo
 
-NOTE: If the dest link path exists, I make a backup incase it contains
+NOTE: If the dest link path exists, a backup is created incase it contains
 configurations that I did not mean to overwrite. The backup dir is in
 ~/dotfiles_backup
 
 In here there are configs for use with:
-* python
-* colemak
-* irssi
-* tmux
-* vim
-* vimperator
-* zsh
-* bash
-
-For a new machine I still havn't automated some tasks. These are some things
-that I need to do for python/vim setup. I'll document this below so I don't
-forget what to do.
-
+python, tmux, vim, zsh, iterm, ssh, gpg, git, hg
 
 ### Mac os x setup
 
-First things first, install homebrew!
+# install from app store
 
-```
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
-```
+* 1password
+* moom
+* things
+* daisydisk
+* alfred
 
-Then run 'brew doctor' and follow any instructions to make sure your machine
-is ready for brew. By memory, I seem to recall having to install cmd line
-tools/xcode, and making sure that my PATH had '/usr/local/bin' listed before
-anything else. This is because brew installs packages here so we want our path
-to pick up things like python from here rather than the default '/usr/bin'
+# install unmanaged packages
 
-```
-brew doctor
-```
+https://www.iterm2.com/
+https://www.mozilla.org/en-US/firefox/channel/desktop/
+https://www.sparklabs.com/viscosity/download/
+https://www.jetbrains.com/pycharm/
+https://v.mozilla.com/
+https://www2.meethue.com/en-us/entertainment/hue-sync
+https://mullvad.net/en/download/
+https://transmissionbt.com/download/
+https://www.videolan.org/vlc/download-macosx.html
 
-TIP: regularly run 'brew upgrade' and 'brew doctor' to make sure that 1) all
-your packages are up to date and 2) your machine is setup well for homebrew
+## install nix
 
-If brew doesn't complain, install some packages. Install python, vim, tmux, wget, git, mercurial,
-screen, gpg via the cmd:
+https://nixos.org/nix/manual/#chap-installation
+https://nixos.org/nixos/nix-pills/
 
-```
-brew install {package_name}
-```
+## install gpgtools
 
-I know some of these packages (vim, python, etc) are installed by default in
-mac os x, but brew, I find, is maintained/updated better.
+https://gpgtools.org/
 
-NOTE: this usually all you need to do. If installs complain, you may need to
-run things like 'brew link' to set up links to '/usr/local/bin'. Fear not,
-this is usually taken care of and install/doctor commands will tell you if you
-need to run anything extra.
+## install docker
 
-Now let's move on to python/vim setup. To be sure sure, open a new prompt or
-source your dotfiles and make sure that 'which python' points to
-/usr/local/bin. This python should be around 2.7.5 and works better with vim
-plugins.
+https://store.docker.com/editions/community/docker-ce-desktop-mac
 
-Feel free to pip/easy_install your favorite modules like virtualenv
+# install nix packages
 
-Now with regards to vim, first things first, install pathogen by following
-instructions from here:
-https://github.com/tpope/vim-pathogen
+* ssh
+* zsh
+* wget
+* hg
+* git
+* vim
+* python
+* watchman
 
-NOTE: In my dotfiles, this should all be set up with my .vim and .vimrc
+# copy gpg, ssh keys from external hdd
 
-Now that pathogen is installed, let's clone some vim plugins into
-'~/.vim/bundle'. NOTE: I should be using git submodules but cloning directly into
-the bundle dir works well enough.
+# setup dotfiles
 
-These are the following vim plugins I install from their respective github
-owners (some of these are for dependancies of others):
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+mkdir -p ~/devel/personal
+mkdir -p ~/devel/mozilla/{playgroud,repos,releaseduty}
+mkdir -p ~/opensrc/bitbucket
+git clone git@github.com:lundjordan/dotfiles.git ~/devel/personal/dotfiles
+hg clone https://bitbucket.org/sjl/hg-prompt ~/opensrc/bitbucket
 
-ctrlp.vim jedi-vim, python-mode, tlib_vim, vim-addon-mw-utils vim-repeat,
-vim-snipmate, vim-snippets, vim-surround
-
-```
-mkdir -p ~/.vim/bundle
-cd ~/.vim/bundle
-git clone {github plugin url}
-```
-
-NOTE: visit the github repos for further instructions/details on what these
-do and how to use them.
-
-OK, so now let's talk about some of these plugins. There are three key ones I
-can't live without.
-
-1. ctrlp.vim: This is like command-t but it has less dependancies and works very very
-well. It is a file/buffer manager for repos/src_code trees.
-2. python-mode: this is a one stop shop for setting up a python IDE in vim.
-   Visit https://github.com/klen/python-mode for more details. The only thing
-   I don't like is how it uses 'rope'. I prefer jedi for navigating
-   class/method/function definitions. So I disable it via my vimrc:
-```
-let g:pymode_rope = 0
-```
-3. as my rope replacement, I have jedi-vim. Visit
-   https://github.com/davidhalter/jedi-vim for details on its uses and
-   installation. NOTE: for installation, if you have already cloned it in
-   ~/.vim/bundle, all you need to do is:
-```
-cd ~/.vim/bundle/jedi-vim; git submodule update --initt
-```
-
-That should be about it. Check out my conf files like vimrc, tmux.conf, and
-zshrc for more settings!
-
-
-
-
+cd ~/devel/personal/dotfiles
+python intial_setup.py

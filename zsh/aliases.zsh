@@ -13,10 +13,10 @@ alias tsaw='task project:warrior'
 alias taaw='task add priority:M project:warrior'
 alias tatw='task add priority:M due:today project:warrior'
 
-alias tstm='task due:today project:mozharness'
-alias tsam='task project:mozharness'
-alias taam='task add priority:M project:mozharness'
-alias tatm='task add priority:M due:today project:mozharness'
+alias tstm='task due:today project:mgmt'
+alias tsam='task project:mgmt'
+alias taam='task add priority:M project:mgmt'
+alias tatm='task add priority:M due:today project:mgmt'
 
 alias tstp='task due:today project:promotion'
 alias tsap='task project:promotion'
@@ -33,10 +33,10 @@ alias tsar='task project:reviews'
 alias tatr='task add priority:H due:today project:reviews'
 alias taar='task add priority:H project:reviews'
 
-alias tstc='task due:today project:tcmigration'
-alias tsac='task project:tcmigration'
-alias tatc='task add priority:H due:today project:tcmigration'
-alias taac='task add priority:H project:tcmigration'
+alias tstb='task due:today project:buildduty'
+alias tsab='task project:buildduty'
+alias tatb='task add priority:H due:today project:buildduty'
+alias taab='task add priority:H project:buildduty'
 
 alias tsts='task due:today project:shipit'
 alias tsas='task project:shipit'
@@ -165,7 +165,10 @@ alias -g GCOF='coffee -w -c -o public/js backbone-src/**/*.coffee'
 
 
 alias todo=task
-alias dled='ls -t ~/Downloads/**/* | head -n1'
+alias dld='ls -t ~/Downloads/**/* | head -n1'
 alias ubunotes='vim ~/devel/personal/dotfiles/notes/ubuntu_fresh_install.md'
+
+alias rwl='git --work-tree=/Users/jlund/devel/mozilla/repos/releasewarrior-data --git-dir=/Users/jlund/devel/mozilla/repos/releasewarrior-data/.git pull upstream master'
+alias rwh='git --work-tree=/Users/jlund/devel/mozilla/repos/releasewarrior-data --git-dir=/Users/jlund/devel/mozilla/repos/releasewarrior-data/.git push upstream master'
 
 # oh-my-zsh overrides

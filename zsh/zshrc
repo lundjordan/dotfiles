@@ -32,16 +32,12 @@ ZSH_THEME="jlund_juang"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
-export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jlund:/Applications/Android\ Studio.app/sdk/platform-tools
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(jlundgit git-extras jlundmercurial pip screen osx aws brew tmux sublime taskwarrior python virtualenv celery docker pip vagrant ansible)
+plugins=(git git-extras mercurial jlundmercurial tmux pip screen osx aws brew sublime taskwarrior python virtualenv pip docker vagrant ansible)
 
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

@@ -1,57 +1,57 @@
-" ################
-" vundle
-" ################
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"let path = '~/some/path/here'
-"call vundle#rc(path)
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
-
-Bundle 'Rykka/riv.vim'
-
-let g:riv_fold_auto_update = 0
-
-call vundle#end()            " required
-filetype plugin indent on     " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Plugin commands are not allowed.
-" Put your stuff after this line
-
-
-" ################
-" pathogen
-" ################
-call pathogen#infect()
-call pathogen#helptags()
+" " ################
+" " vundle
+" " ################
+" set nocompatible              " be iMproved, required
+" filetype off                  " required
+" 
+" " set the runtime path to include Vundle and initialize
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+" " alternatively, pass a path where Vundle should install plugins
+" "let path = '~/some/path/here'
+" "call vundle#rc(path)
+" 
+" " let Vundle manage Vundle, required
+" Plugin 'gmarik/vundle'
+" 
+" Bundle 'Rykka/riv.vim'
+" 
+" let g:riv_fold_auto_update = 0
+" 
+" call vundle#end()            " required
+" filetype plugin indent on     " required
+" " To ignore plugin indent changes, instead use:
+" "filetype plugin on
+" "
+" " Brief help
+" " :PluginList          - list configured plugins
+" " :PluginInstall(!)    - install (update) plugins
+" " :PluginSearch(!) foo - search (or refresh cache first) for foo
+" " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+" "
+" " see :h vundle for more details or wiki for FAQ
+" " NOTE: comments after Plugin commands are not allowed.
+" " Put your stuff after this line
+" 
+" 
+" " ################
+" " pathogen
+" " ################
+" call pathogen#infect()
+" call pathogen#helptags()
 
 syntax on
 
 set background=dark
-colorscheme ir_black
+" colorscheme ir_black
 
 " for mac os x pbcopy clipboard
 set clipboard=unnamed
 
 " ctrlp 'best plugin ever...'
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*.so,*.swp,*.zip,*.pyc,*/node_modules/*
-let g:ctrlp_map = '<c-p>'
+" set runtimepath^=~/.vim/bundle/ctrlp.vim
+" set wildignore+=*.so,*.swp,*.zip,*.pyc,*/node_modules/*
+" let g:ctrlp_map = '<c-p>'
 
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
@@ -122,12 +122,12 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 " vnoremap : ;
 
 "python settings
-let g:pymode_run_key = 'R'
-let g:pymode_breakpoint_key = 'B'
-let g:pymode_doc_key = '<M-M>'
-let g:pymode_trim_whitespaces = 0
-let g:pymode_folding = 0
-let g:pymode_rope = 0
+" let g:pymode_run_key = 'R'
+" let g:pymode_breakpoint_key = 'B'
+" let g:pymode_doc_key = '<M-M>'
+" let g:pymode_trim_whitespaces = 0
+" let g:pymode_folding = 0
+" let g:pymode_rope = 0
 
 " source colemak configs
 " source ~/bin/dotfiles/vim/colemakrc
@@ -186,10 +186,10 @@ noremap <leader>F yiw/def <C-r>0<CR>
 " autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 
 " mustache.vim settings
-if has("autocmd")
-    au  BufnewFile,BufRead *.mustache set syntax=mustache
-    endif
-
+" if has("autocmd")
+"     au  BufnewFile,BufRead *.mustache set syntax=mustache
+"     endif
+" 
 
 set pastetoggle=<F2>
 
@@ -214,15 +214,15 @@ if has('autocmd')
   endif
 
 "camelcaseplugin
-map <S-W> <Plug>CamelCaseMotion_e
-map <S-B> <Plug>CamelCaseMotion_b
-"map <S-E> <Plug>CamelCaseMotion_e
-omap l<S-W> <Plug>CamelCaseMotion_iw
-xmap l<S-B> <Plug>CamelCaseMotion_iw
-omap l<S-E> <Plug>CamelCaseMotion_ib
-xmap l<S-W> <Plug>CamelCaseMotion_ib
-omap l<S-B> <Plug>CamelCaseMotion_ie
-xmap l<S-E> <Plug>CamelCaseMotion_ie
+" map <S-W> <Plug>CamelCaseMotion_e
+" map <S-B> <Plug>CamelCaseMotion_b
+" "map <S-E> <Plug>CamelCaseMotion_e
+" omap l<S-W> <Plug>CamelCaseMotion_iw
+" xmap l<S-B> <Plug>CamelCaseMotion_iw
+" omap l<S-E> <Plug>CamelCaseMotion_ib
+" xmap l<S-W> <Plug>CamelCaseMotion_ib
+" omap l<S-B> <Plug>CamelCaseMotion_ie
+" xmap l<S-E> <Plug>CamelCaseMotion_ie
 
 
 " automatically reload vimrc when it's saved
@@ -236,10 +236,10 @@ autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType jade setlocal shiftwidth=2 tabstop=2
 
 "coffee
-let coffee_linter = '/usr/local/bin/coffeelint'
-map <Leader>c ;CoffeeMake<CR>
-map <Leader>C ;CoffeeCompile<CR>
-au BufWritePost *.coffee silent CoffeeMake! -o ./.compiled_javascripts/ -b | cwindow | redraw!
+" let coffee_linter = '/usr/local/bin/coffeelint'
+" map <Leader>c ;CoffeeMake<CR>
+" map <Leader>C ;CoffeeCompile<CR>
+" au BufWritePost *.coffee silent CoffeeMake! -o ./.compiled_javascripts/ -b | cwindow | redraw!
 
 " puppet
 au FileType puppet setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4

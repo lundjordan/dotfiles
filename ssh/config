@@ -1,3 +1,37 @@
+# Ensure KnownHosts are unreadable if leaked - it is otherwise easier to know which hosts your keys have access to.
+HashKnownHosts yes
+# Host keys the client accepts - order here is honored by OpenSSH
+HostKeyAlgorithms ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-ed25519,ssh-rsa,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256
+
+Host rejh?.srv.releng.????.mozilla.com
+    ControlMaster auto
+    ControlPath ~/.ssh/ssh-%C
+    ControlPersist 10m
+    ForwardAgent no
+
+Host *.releng.mdc1.mozilla.com !rejh?.srv.releng.mdc1.mozilla.com !*.private.releng.????.mozilla.com
+    ProxyJump rejh1.srv.releng.mdc1.mozilla.com
+
+Host *.releng.us??.mozilla.com *.releng.scl3.mozilla.com !rejh?.srv.releng.????.mozilla.com !*.private.releng.scl3.mozilla.com
+    ProxyJump rejh1.srv.releng.scl3.mozilla.com
+
+Host hg.mozilla.org git.mozilla.org
+    User jlund@mozilla.com
+    Compression yes
+    ServerAliveInterval 300
+
+Host *.mozilla.com
+    User jlund
+    IdentityFile ~/.ssh/id_rsa_mozilla_jlund
+    Compression yes
+    ServerAliveInterval 300
+
+Host *.build.mozilla.org
+    Compression yes
+    User cltbld
+    ServerAliveInterval 300
+
+
 Host *
     TCPKeepAlive yes
     ServerAliveInterval 120

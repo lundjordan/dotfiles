@@ -1,39 +1,36 @@
 [ui]
 username = Jordan Lund <jlund@mozilla.com>
-interface = curses
+
+[diff]
+git = 1
+showfunc = 1
+unified = 8
+
+[defaults]
+diff = -p -U 9
 
 [extensions]
-pager = 
 strip = 
-color = 
-histedit = 
-rebase = 
-blackbox = 
 progress = 
-fsmonitor =
-shelve = 
+graphlog = 
+rebase = 
+transplant = 
+fsmonitor = 
+purge = 
+shelve =
 histedit = 
-prompt = ~/devel/opensrc/hg-prompt/prompt.py
+blackbox = 
+firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
+mozext = ~/.mozbuild/version-control-tools/hgext/mozext
 bzpost = ~/.mozbuild/version-control-tools/hgext/bzpost
-reviewboard = /Users/jlund/.mozbuild/version-control-tools/hgext/reviewboard/client.py
-push-to-try = /Users/jlund/.mozbuild/version-control-tools/hgext/push-to-try
-
-[pager]
-pager = LESS=FRSXQ less
-attend-help = true
-attend-incoming = true
-attend-outgoing = true
-attend-status = true
-attend-wip = true
+evolve = ~/.mozbuild/evolve/hgext3rd/evolve
+prompt = ~/opensrc/bitbucket/hg-prompt/prompt.py
 
 [alias]
-wip = log --graph --rev=wip --template=wip
+slog = log --template '{rev}:{node|short} {desc|firstline}\n'
 
-[revsetalias]
-wip = (parents(not public()) or not public() or . or (head() and branch(default))) and (not obsolete() or unstable()^) and not closed()
-
-[templates]
-wip = '{label("wip.branch", if(branches,"{branches} "))}{label(ifeq(graphnode,"x","wip.obsolete","wip.{phase}"),"{rev}:{node|short}")}{label("wip.user", " {author|user}")}{label("wip.tags", if(tags," {tags}"))}{label("wip.tags", if(fxheads," {fxheads}"))}{if(bookmarks," ")}{label("wip.bookmarks", if(bookmarks,bookmarks))}{label(ifcontains(rev, revset("parents()"), "wip.here"), " {desc|firstline}")}'
+[mozilla]
+ircnick = jlund
 
 [color]
 wip.bookmarks = yellow underline
@@ -44,12 +41,3 @@ wip.obsolete = none
 wip.public = blue
 wip.tags = yellow
 wip.user = magenta
-
-[experimental]
-graphshorten = true
-
-[bugzilla]
-username = jlund@mozilla.com
-
-[paths]
-review = https://reviewboard-hg.mozilla.org/autoreview
