@@ -28,19 +28,19 @@ python, tmux, vim, zsh, iterm, ssh, gpg, git, hg
 * moom
 * things
 * daisydisk
-* alfred
 
 # install unmanaged packages
 
-https://www.iterm2.com/
-https://www.mozilla.org/en-US/firefox/channel/desktop/
-https://www.sparklabs.com/viscosity/download/
-https://www.jetbrains.com/pycharm/
-https://v.mozilla.com/
-https://www2.meethue.com/en-us/entertainment/hue-sync
-https://mullvad.net/en/download/
-https://transmissionbt.com/download/
-https://www.videolan.org/vlc/download-macosx.html
+* https://www.iterm2.com/
+* https://www.alfredapp.com/
+* https://www.mozilla.org/en-US/firefox/channel/desktop/
+* https://www.sparklabs.com/viscosity/download/
+* https://www.jetbrains.com/pycharm/
+* https://v.mozilla.com/
+* https://www2.meethue.com/en-us/entertainment/hue-sync
+* https://mullvad.net/en/download/
+* https://transmissionbt.com/download/
+* https://www.videolan.org/vlc/download-macosx.html
 
 ## install nix
 
