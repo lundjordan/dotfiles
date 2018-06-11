@@ -28,6 +28,7 @@ python, tmux, vim, zsh, iterm, ssh, gpg, git, hg
 * moom
 * things
 * daisydisk
+* slack
 
 # install unmanaged packages
 
@@ -51,6 +52,10 @@ https://nixos.org/nixos/nix-pills/
 
 https://gpgtools.org/
 
+## macOS command line tools
+
+https://developer.apple.com/xcode/features/ (not all of xcode)
+
 ## install docker
 
 https://store.docker.com/editions/community/docker-ce-desktop-mac
@@ -66,17 +71,22 @@ https://store.docker.com/editions/community/docker-ce-desktop-mac
 * python
 * watchman
 
-# copy gpg, ssh keys from external hdd
+# copy gpg, ssh keys, zsh_history from external hdd
 
 # setup dotfiles
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 mkdir -p ~/devel/personal
 mkdir -p ~/devel/mozilla/{playgroud,repos,releaseduty}
 mkdir -p ~/opensrc/bitbucket
+mkdir ~/.vim_swps
+mkdir ~/.iterm
+mkdir ~/.ssh
+mkdir -p ~/.mozbuild
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone git@github.com:lundjordan/dotfiles.git ~/devel/personal/dotfiles
 hg clone https://bitbucket.org/sjl/hg-prompt ~/opensrc/bitbucket
+hg clone https://hg.mozilla.org/hgcustom/version-control-tools ~/.mozbuild/version-control-tools
 
 cd ~/devel/personal/dotfiles
 python intial_setup.py

@@ -23,7 +23,6 @@ blackbox =
 firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
 mozext = ~/.mozbuild/version-control-tools/hgext/mozext
 bzpost = ~/.mozbuild/version-control-tools/hgext/bzpost
-evolve = ~/.mozbuild/evolve/hgext3rd/evolve
 prompt = ~/opensrc/bitbucket/hg-prompt/prompt.py
 
 [alias]

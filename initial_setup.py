@@ -18,7 +18,7 @@ HOME_LINKS = {
     'zsh/zshrc': '.zshrc',
     'vim/vimrc': '.vimrc',
     'tmux/tmux.conf': '.tmux.conf',
-    'iterm/com.googlecode.iterm2.plist': '.com.googlecode.iterm2.plist',
+    'iterm/com.googlecode.iterm2.plist': '.iterm/com.googlecode.iterm2.plist',
     'git/gitconfig': '.gitconfig',
     'hg/hgrc': '.hgrc',
     'ssh/config': '.ssh/config',
