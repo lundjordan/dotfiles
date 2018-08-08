@@ -21,7 +21,7 @@
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{876, 448}</string>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -53,18 +53,12 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>1975 33 445 77 0 0 2560 1418 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 786 620 392 0 0 2560 1440 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 237 606 469 0 0 1440 878 </string>
+	<string>2560 769 620 392 2560 320 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 427 796 473 0 0 1440 900 </string>
+	<string>737 218 796 473 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>499 224 810 502 0 0 2560 1440 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>343 181 810 502 0 0 1440 878 </string>
+	<string>0 0 2560 1395 0 0 1920 1178 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1385,17 +1379,13 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>20F2F990-97E7-4533-B4DC-278E915D4999</string>
+	<string>E49E6FDE-08C6-4C5F-812C-3EAC998F55CF</string>
 	<key>NoSyncLastTipTime</key>
-	<real>550352283.64912605</real>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<real>554064449.52159905</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>543214723.83543599</real>
+	<real>550367259.50977898</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>000</string>
@@ -1415,36 +1405,9 @@
 		<string>0013</string>
 		<string>0014</string>
 		<string>0015</string>
-		<string>0016</string>
-		<string>0017</string>
-		<string>0018</string>
-		<string>0019</string>
-		<string>0020</string>
-		<string>0021</string>
-		<string>0022</string>
-		<string>0023</string>
-		<string>0024</string>
-		<string>0025</string>
-		<string>0026</string>
-		<string>0027</string>
-		<string>0028</string>
-		<string>0029</string>
-		<string>0030</string>
-		<string>0031</string>
-		<string>0032</string>
-		<string>0033</string>
-		<string>0034</string>
-		<string>0035</string>
-		<string>0036</string>
-		<string>0037</string>
-		<string>0038</string>
-		<string>0039</string>
-		<string>0040</string>
-		<string>0041</string>
-		<string>0042</string>
-		<string>0043</string>
-		<string>0044</string>
 	</array>
+	<key>OnlyWhenMoreTabs</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1480,6 +1443,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/jlund/.iterm</string>
+	<key>PromptOnQuit</key>
+	<false/>
 	<key>RightCommand</key>
 	<integer>3</integer>
 	<key>SUAutomaticallyUpdate</key>
@@ -1489,11 +1454,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=1</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=59</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-08T19:19:33Z</date>
+	<date>2018-07-22T05:08:04Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -1503,7 +1468,7 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.1.6</string>
+	<string>3.1.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
