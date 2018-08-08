@@ -1,6 +1,6 @@
 export EDITOR=/usr/bin/vim
 
-export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/Users/jlund/.gem/ruby/2.5.0/bin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
 
 
 # Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t

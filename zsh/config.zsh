@@ -46,7 +46,6 @@ start_ssh_agent ()
         ssh-add -t 14400
     fi
 }
-start_ssh_agent
 
 zle -N globalias
 

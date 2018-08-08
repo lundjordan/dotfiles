@@ -35,9 +35,12 @@ ZSH_THEME="jlund_juang"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras mercurial jlundmercurial tmux pip screen osx aws brew sublime taskwarrior python virtualenv pip docker vagrant ansible)
+plugins=(brew git git-extras mercurial jlundmercurial tmux pip screen osx aws python virtualenv pip docker ansible)
 
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+# added by travis gem
+[ -f /Users/jlund/.travis/travis.sh ] && source /Users/jlund/.travis/travis.sh

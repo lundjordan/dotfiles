@@ -89,4 +89,19 @@ hg clone https://bitbucket.org/sjl/hg-prompt ~/opensrc/bitbucket
 hg clone https://hg.mozilla.org/hgcustom/version-control-tools ~/.mozbuild/version-control-tools
 
 cd ~/devel/personal/dotfiles
-python intial_setup.py
+
+# initial_setup.py sort of works.
+# python intial_setup.py
+# better to:
+ln -s ~/devel/personal/dotfiles/ssh/config ~/.ssh/config
+ln -s ~/devel/personal/dotfiles/hg/hgrc ~/.hgrc
+ln -s ~/devel/personal/dotfiles/git/gitconfig ~/.gitconfig
+ln -s ~/devel/personal/dotfiles/tmux/tmuxrc ~/.tmuxrc
+ln -s ~/devel/personal/dotfiles/vim/vimrc ~/.vimrc
+ln -s ~/devel/personal/dotfiles/iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist
+ln -s ~/devel/personal/dotfiles/gpg/gpg.conf ~/.gnupg/gpg.conf
+ln -s ~/devel/personal/dotfiles/zsh/jlundmercurial.plugin.zsh ~/.oh-my-zsh/custom/plugins/jlundmercurial/jlundmercurial.plugin.zsh
+ln -s ~/devel/personal/dotfiles/zsh/jlund_juang.zsh-theme  ~/.oh-my-zsh/custom/themes/jlund_juang.zsh-theme
+ln -s ~/devel/personal/dotfiles/zsh/aliases.zsh  ~/.oh-my-zsh/custom/aliases.zsh
+ln -s ~/devel/personal/dotfiles/zsh/env.zsh  ~/.oh-my-zsh/custom/env.zsh
+ln -s ~/devel/personal/dotfiles/zsh/config.zsh  ~/.oh-my-zsh/custom/config.zsh
