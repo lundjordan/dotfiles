@@ -25,3 +25,7 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[gpg]
+    program = /usr/local/bin/gpg
+[commit]
+    gpgsign = true
