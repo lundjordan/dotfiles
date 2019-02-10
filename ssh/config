@@ -3,17 +3,17 @@ HashKnownHosts yes
 # Host keys the client accepts - order here is honored by OpenSSH
 HostKeyAlgorithms ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-ed25519,ssh-rsa,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256
 
-Host rejh?.srv.releng.????.mozilla.com
-    ControlMaster auto
-    ControlPath ~/.ssh/ssh-%C
-    ControlPersist 10m
-    ForwardAgent no
-
-Host *.releng.mdc1.mozilla.com !rejh?.srv.releng.mdc1.mozilla.com !*.private.releng.????.mozilla.com
+ Host rejh?.srv.releng.????.mozilla.com
+     ControlMaster auto
+     ControlPath ~/.ssh/ssh-%C
+     ControlPersist 10m
+     ForwardAgent no
+ 
+ Host *.releng.mdc1.mozilla.com !rejh?.srv.releng.mdc1.mozilla.com !*.private.releng.????.mozilla.com
     ProxyJump rejh1.srv.releng.mdc1.mozilla.com
 
-Host *.releng.us??.mozilla.com *.releng.scl3.mozilla.com !rejh?.srv.releng.????.mozilla.com !*.private.releng.scl3.mozilla.com
-    ProxyJump rejh1.srv.releng.scl3.mozilla.com
+ Host *.releng.us??.mozilla.com *.releng.scl3.mozilla.com !rejh?.srv.releng.????.mozilla.com !*.private.releng.scl3.mozilla.com
+    ProxyJump rejh1.srv.releng.mdc1.mozilla.com
 
 Host hg.mozilla.org git.mozilla.org
     User jlund@mozilla.com
