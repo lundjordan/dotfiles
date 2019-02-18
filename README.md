@@ -36,17 +36,13 @@ python, tmux, vim, zsh, iterm, ssh, gpg, git, hg
 * https://www.alfredapp.com/
 * https://www.mozilla.org/en-US/firefox/channel/desktop/
 * https://www.sparklabs.com/viscosity/download/
-* https://www.jetbrains.com/pycharm/
 * https://v.mozilla.com/
-* https://www2.meethue.com/en-us/entertainment/hue-sync
-* https://mullvad.net/en/download/
 * https://transmissionbt.com/download/
 * https://www.videolan.org/vlc/download-macosx.html
 
-## install nix
+## install brew
 
-https://nixos.org/nix/manual/#chap-installation
-https://nixos.org/nixos/nix-pills/
+https://brew.sh/
 
 ## install gpgtools
 
@@ -60,7 +56,7 @@ https://developer.apple.com/xcode/features/ (not all of xcode)
 
 https://store.docker.com/editions/community/docker-ce-desktop-mac
 
-# install nix packages
+# install brew packages
 
 * ssh
 * zsh
