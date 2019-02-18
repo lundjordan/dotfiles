@@ -17,9 +17,6 @@ NOTE: If the dest link path exists, a backup is created incase it contains
 configurations that I did not mean to overwrite. The backup dir is in
 ~/dotfiles_backup
 
-In here there are configs for use with:
-python, tmux, vim, zsh, iterm, ssh, gpg, git, hg
-
 ### Mac os x setup
 
 # install from app store
@@ -50,7 +47,7 @@ https://gpgtools.org/
 
 ## macOS command line tools
 
-https://developer.apple.com/xcode/features/ (not all of xcode)
+(brew should install this by default now)
 
 ## install docker
 
@@ -58,20 +55,17 @@ https://store.docker.com/editions/community/docker-ce-desktop-mac
 
 # install brew packages
 
-* ssh
-* zsh
-* wget
-* hg
-* git
-* vim
-* python
-* watchman
+openssh zsh wget hg git vim python watchman tmux
 
 # copy gpg, ssh keys, zsh_history from external hdd
 
 # setup dotfiles
 
 ```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone git@github.com:lundjordan/dotfiles.git ~/devel/personal/dotfiles
+hg clone https://bitbucket.org/sjl/hg-prompt ~/opensrc/bitbucket
+hg clone https://hg.mozilla.org/hgcustom/version-control-tools ~/.mozbuild/version-control-tools
 mkdir -p ~/devel/personal
 mkdir -p ~/devel/mozilla/{playgroud,repos,releaseduty}
 mkdir -p ~/opensrc/bitbucket
@@ -79,10 +73,7 @@ mkdir ~/.vim_swps
 mkdir ~/.iterm
 mkdir ~/.ssh
 mkdir -p ~/.mozbuild
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone git@github.com:lundjordan/dotfiles.git ~/devel/personal/dotfiles
-hg clone https://bitbucket.org/sjl/hg-prompt ~/opensrc/bitbucket
-hg clone https://hg.mozilla.org/hgcustom/version-control-tools ~/.mozbuild/version-control-tools
+mkdir -p ~/.oh-my-zsh/custom/plugins/jlundmercurial
 
 cd ~/devel/personal/dotfiles
 
@@ -92,12 +83,14 @@ cd ~/devel/personal/dotfiles
 ln -s ~/devel/personal/dotfiles/ssh/config ~/.ssh/config
 ln -s ~/devel/personal/dotfiles/hg/hgrc ~/.hgrc
 ln -s ~/devel/personal/dotfiles/git/gitconfig ~/.gitconfig
-ln -s ~/devel/personal/dotfiles/tmux/tmuxrc ~/.tmuxrc
+ln -s ~/devel/personal/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -s ~/devel/personal/dotfiles/vim/vimrc ~/.vimrc
-ln -s ~/devel/personal/dotfiles/iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist
+ln -s ~/devel/personal/dotfiles/iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist  # add in iterm pref
 ln -s ~/devel/personal/dotfiles/gpg/gpg.conf ~/.gnupg/gpg.conf
 ln -s ~/devel/personal/dotfiles/zsh/jlundmercurial.plugin.zsh ~/.oh-my-zsh/custom/plugins/jlundmercurial/jlundmercurial.plugin.zsh
 ln -s ~/devel/personal/dotfiles/zsh/jlund_juang.zsh-theme  ~/.oh-my-zsh/custom/themes/jlund_juang.zsh-theme
+ln -s ~/devel/personal/dotfiles/zsh/jlundmercurial.plugin.zsh  ~/.oh-my-zsh/custom/plugins/jlundmercurial/jlundmercurial.plugin.zsh
 ln -s ~/devel/personal/dotfiles/zsh/aliases.zsh  ~/.oh-my-zsh/custom/aliases.zsh
 ln -s ~/devel/personal/dotfiles/zsh/env.zsh  ~/.oh-my-zsh/custom/env.zsh
 ln -s ~/devel/personal/dotfiles/zsh/config.zsh  ~/.oh-my-zsh/custom/config.zsh
+ln -s ~/devel/personal/dotfiles/zsh/zshrc ~/.zshrc
