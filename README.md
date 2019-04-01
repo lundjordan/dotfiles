@@ -53,19 +53,11 @@ https://gpgtools.org/
 
 https://store.docker.com/editions/community/docker-ce-desktop-mac
 
-# install brew packages
-
-openssh zsh wget hg git vim python watchman tmux
-
-# copy gpg, ssh keys, zsh_history from external hdd
+# copy gpg private key, .ssh dir , zsh_history from backup
 
 # setup dotfiles
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone git@github.com:lundjordan/dotfiles.git ~/devel/personal/dotfiles
-hg clone https://bitbucket.org/sjl/hg-prompt ~/opensrc/bitbucket
-hg clone https://hg.mozilla.org/hgcustom/version-control-tools ~/.mozbuild/version-control-tools
 mkdir -p ~/devel/personal
 mkdir -p ~/devel/mozilla/{playgroud,repos,releaseduty}
 mkdir -p ~/opensrc/bitbucket
@@ -74,13 +66,17 @@ mkdir ~/.iterm
 mkdir ~/.ssh
 mkdir -p ~/.mozbuild
 mkdir -p ~/.oh-my-zsh/custom/plugins/jlundmercurial
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone git@github.com:lundjordan/dotfiles.git ~/devel/personal/dotfiles
+hg clone https://bitbucket.org/sjl/hg-prompt ~/opensrc/bitbucket/hg-prompt
+hg clone https://hg.mozilla.org/hgcustom/version-control-tools ~/.mozbuild/version-control-tools
 
 cd ~/devel/personal/dotfiles
 
 # initial_setup.py sort of works.
 # python intial_setup.py
 # better to:
-ln -s ~/devel/personal/dotfiles/ssh/config ~/.ssh/config
+# ln -s ~/devel/personal/dotfiles/ssh/config ~/.ssh/config
 ln -s ~/devel/personal/dotfiles/hg/hgrc ~/.hgrc
 ln -s ~/devel/personal/dotfiles/git/gitconfig ~/.gitconfig
 ln -s ~/devel/personal/dotfiles/tmux/tmux.conf ~/.tmux.conf
@@ -94,3 +90,8 @@ ln -s ~/devel/personal/dotfiles/zsh/aliases.zsh  ~/.oh-my-zsh/custom/aliases.zsh
 ln -s ~/devel/personal/dotfiles/zsh/env.zsh  ~/.oh-my-zsh/custom/env.zsh
 ln -s ~/devel/personal/dotfiles/zsh/config.zsh  ~/.oh-my-zsh/custom/config.zsh
 ln -s ~/devel/personal/dotfiles/zsh/zshrc ~/.zshrc
+
+
+# install brew packages
+
+openssh zsh wget hg git vim python watchman tmux
