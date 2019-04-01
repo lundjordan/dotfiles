@@ -79,7 +79,10 @@ https://brew.sh/
 
 # install brew packages
 
-openssh zsh wget hg git vim python watchman tmux
+autoconf        ldns            libyaml         openssh         perl            python@2        tmux            xz
+gdbm            libevent        lua             openssl         pkg-config      readline        vim             zlib
+gettext         libidn2         mercurial       pcre            pyenv           ruby            watchman        zsh
+git             libunistring    ncurses         pcre2           python          sqlite          wget            pyenv-virtualenv
 
 # install gpgtools
 
@@ -106,3 +109,26 @@ hg clone https://hg.mozilla.org/hgcustom/version-control-tools ~/.mozbuild/versi
 
 gpg --import $name-private-key.asc
 
+# install pyenv
+
+follow steps but use brew for step 1-2: https://github.com/pyenv/pyenv#basic-github-checkout
+
+## note because of dotfiles, you should have this in ~/devel/personal/dotfiles/zsh/env.zsh
+```
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+```
+
+## install python versions, set global, and some local
+
+```
+pyenv install $version # check via pyenv install --list
+...
+pyenv global $python_version
+pyenv virtualenv [$python_version] $virtualenv_name
+cd $some_project
+pyenv local $virtualenv_name|$python_version  # sets .python-version in cwd with the python env you want
+# install your deps
+```
