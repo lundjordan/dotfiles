@@ -130,6 +130,7 @@ git clone --recursive git@github.com:lundjordan/vimfiles.git ~/devel/personal/vi
 ln -s ~/devel/personal/vimfiles ~/.vim
 vim
 :helptags ALL
+:CocInstall coc-python   # for coc python
 ```
 
 #### setup pyenv
