@@ -1,88 +1,15 @@
-" " ################
-" " vundle
-" " ################
-" set nocompatible              " be iMproved, required
-" filetype off                  " required
-" 
-" " set the runtime path to include Vundle and initialize
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
-" " alternatively, pass a path where Vundle should install plugins
-" "let path = '~/some/path/here'
-" "call vundle#rc(path)
-" 
-" " let Vundle manage Vundle, required
-" Plugin 'gmarik/vundle'
-" 
-" Bundle 'Rykka/riv.vim'
-" 
-" let g:riv_fold_auto_update = 0
-" 
-" call vundle#end()            " required
-" filetype plugin indent on     " required
-" " To ignore plugin indent changes, instead use:
-" "filetype plugin on
-" "
-" " Brief help
-" " :PluginList          - list configured plugins
-" " :PluginInstall(!)    - install (update) plugins
-" " :PluginSearch(!) foo - search (or refresh cache first) for foo
-" " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-" "
-" " see :h vundle for more details or wiki for FAQ
-" " NOTE: comments after Plugin commands are not allowed.
-" " Put your stuff after this line
-" 
-" 
-" " ################
-" " pathogen
-" " ################
-" call pathogen#infect()
-" call pathogen#helptags()
-
 syntax on
 
-set background=dark
-" colorscheme ir_black
+set background=dark               " theme
 
-" for mac os x pbcopy clipboard
-set clipboard=unnamed
+set clipboard=unnamed             " for mac os x pbcopy clipboard
 
-" ctrlp 'best plugin ever...'
-" set runtimepath^=~/.vim/bundle/ctrlp.vim
-" set wildignore+=*.so,*.swp,*.zip,*.pyc,*/node_modules/*
-" let g:ctrlp_map = '<c-p>'
-
-set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-
-set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\
-            \ [%l/%L\ (%p%%)
-
-set wildmode=longest,list,full
-set wildmenu
-set autoread
-set autoindent
-" set smartindent
-" set textwidth=78 " PEP-8 Friendly
-set rnu
-au BufEnter * :set rnu
-au BufLeave * :set nu
-au WinEnter * :set rnu
-au WinLeave * :set nu
-au InsertEnter * :set nu
-au InsertLeave * :set rnu
-au FocusLost * :set nu
-au FocusGained * :set rnu
-
-"let g:pydiction_location = '$HOME/Development/vimFiles/pydiction/complete-dict'
-
-"runtime macros/matchit.vim        " Load the matchit plugin.
+set rtp+=/usr/local/opt/fzf       " install fzf
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
 set backspace=indent,eol,start    " Intuitive backspacing.
-
 
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
@@ -103,24 +30,66 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim_swps//,  " Keep swap files in one location
 
-set tabstop=4                    " Global tab width.
-set shiftwidth=4                 " And again, related.
-set expandtab                    " Use spaces instead of tabs
 
 set laststatus=2                  " Show the status line all the time
+
+set autoread                      " autoread a file if detected to be modified outside of vim
+
+set pastetoggle=<F2>              " use F2 to toggle between paste with and without formatting (e.g. line wrap)
+
+
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 
+" use symbols for unwanted invisible chars
+set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
-"autocmd BufEnter * :cd %:p:h
-"
-" Controversial...swap colon and semicolon for easier commands
-" nnoremap ; :
-" nnoremap : ;
-" vnoremap ; :
-" vnoremap : ;
+""" indent and width settings
+set tabstop=4                    " Global tab width.
+set shiftwidth=4                 " And again, related.
+set expandtab                    " Use spaces instead of tabs
+autocmd Filetype python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+autocmd FileType html css setlocal shiftwidth=2 tabstop=2
+autocmd FileType puppet setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 
+" setup line numbers
+set rnu
+au BufEnter * :set rnu
+au BufLeave * :set nu
+au WinEnter * :set rnu
+au WinLeave * :set nu
+au InsertEnter * :set nu
+au InsertLeave * :set rnu
+au FocusLost * :set nu
+au FocusGained * :set rnu
+
+" remap leader to space
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+"clear search history
+noremap <silent><Leader>] :nohls<CR>
+
+"buffers
+"switch to previous buffer
+noremap <Leader>\ <C-^>
+
+"remove all trailing white spaces
+noremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+
+"refactor highlighted word
+noremap <leader>r yiw:%s/<C-r>"/
+
+"search find look
+noremap <leader>f yiw:/<C-r>0<CR>N
+noremap <leader>F yiw/def <C-r>0<CR>
+
+" TODO figure out if we need wild* with fzf.vim
+" set wildmode=longest,list,full
+" set wildmenu
+
+" TODO figure out if we need pymode
 "python settings
 " let g:pymode_run_key = 'R'
 " let g:pymode_breakpoint_key = 'B'
@@ -129,117 +98,31 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 " let g:pymode_folding = 0
 " let g:pymode_rope = 0
 
-" source colemak configs
-" source ~/bin/dotfiles/vim/colemakrc
 
-" tab navigation (TODO not working!!!)
-" noremap <A-A> 1gt
-" noremap <A-R> 2gt
-" noremap <A-S> 3gt
-" noremap <A-T> 4gt
-" noremap <A-D> 5gt
-" noremap <A-Q> :tablast<CR>
+""" PLUGINS
 
-"clear search history
-noremap <silent><Leader>] :nohls<CR>
+" nerdtree toggle
+map <Leader>t :NERDTree<Enter>
 
-"buffers
-"switch to previous buffer
-noremap <Leader><Leader> <C-^>
+" fzf
+" https://github.com/zenbro/dotfiles/blob/d3f4bd3/.nvimrc#L220-L264
+nnoremap <silent> <leader><space> :Files<CR>
+nnoremap <silent> <leader>a :Buffers<CR>
+nnoremap <silent> <leader>A :Windows<CR>
+nnoremap <silent> <leader>; :BLines<CR>
+nnoremap <silent> <leader>o :BTags<CR>
+nnoremap <silent> <leader>O :Tags<CR>
+nnoremap <silent> <leader>? :History<CR>
+nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
+nnoremap <silent> <leader>. :AgIn 
 
-"remove all trailing white spaces
-noremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+nnoremap <silent> K :call SearchWordWithAg()<CR>
+vnoremap <silent> K :call SearchVisualSelectionWithAg()<CR>
+nnoremap <silent> <leader>gl :Commits<CR>
+nnoremap <silent> <leader>ga :BCommits<CR>
+nnoremap <silent> <leader>ft :Filetypes<CR>
 
-"refactor highlighted word
-noremap <leader>r yiw:%s/<C-r>"/
-
-"grep all current buffers (WOOT!)
-"Bgrep - searches all buffers listed with the :buffers command, skipping over
-"unlisted, quickfix, and help buffers.  Analagous to :bufdo.
-"Agrep - searches all buffers listed with the :args command.  Analagous to
-":argdo.
-"Wgrep - searches all buffers visible on the screen (current tab page only).
-"Analagous to :windo.
-"Tgrep - searches all buffers open on any tabpage.  Analagous to :tabdo.
-noremap <leader>g ;Bgrep
-
-"search find look
-noremap <leader>f yiw:/<C-r>0<CR>N
-noremap <leader>F yiw/def <C-r>0<CR>
-
-" The Tab key is mapped to Escape. Press Shift-Tab to insert a Tab.
-" To minimize Tab use, you can use '<', '>' and ':set autoindent'
-"nnoremap <silent> <Esc> <Esc>:nohlsearch<bar>pclose<CR>|
-" vnoremap <Tab> <Esc><Nul>| " <Nul> added to fix select mode problem
-" inoremap <Tab> <Esc>|
-" nnoremap <S-Tab> i<Tab><Esc><Right>
-" vnoremap <S-Tab> >gv|
-" inoremap <S-Tab> <Tab>|
-
-
-"Java stuff
-":inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P>
-":inoremap <buffer> <C-S-Space> <C-X><C-U><C-P>
-
-" Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
-
-" mustache.vim settings
-" if has("autocmd")
-"     au  BufnewFile,BufRead *.mustache set syntax=mustache
-"     endif
-" 
-
-set pastetoggle=<F2>
-
-
-" Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :NERDTree<Enter>
-
-" map <Leader>t ;CommandT<CR>
-" map <Leader>b ;CommandTBuffer<CR>
-" map <Leader>r ;CommandTFlush <CR>
-" let g:CommandTCancelMap=['<ESC>','<C-c>']
-" let g:CommandTAcceptSelectionMap=['<CR>']
-
-set guifont=Liberation\ Mono\ 10
-
-if has("gui_running")
-    set guioptions=egmrt
-endif
-set noerrorbells visualbell t_vb=
-if has('autocmd')
-      autocmd GUIEnter * set visualbell t_vb=
-  endif
-
-"camelcaseplugin
-" map <S-W> <Plug>CamelCaseMotion_e
-" map <S-B> <Plug>CamelCaseMotion_b
-" "map <S-E> <Plug>CamelCaseMotion_e
-" omap l<S-W> <Plug>CamelCaseMotion_iw
-" xmap l<S-B> <Plug>CamelCaseMotion_iw
-" omap l<S-E> <Plug>CamelCaseMotion_ib
-" xmap l<S-W> <Plug>CamelCaseMotion_ib
-" omap l<S-B> <Plug>CamelCaseMotion_ie
-" xmap l<S-E> <Plug>CamelCaseMotion_ie
-
-
-" automatically reload vimrc when it's saved
-"au BufWritePost .vimrc so ~/.vimrc
-"
-
-" set html indenting to 2 spaces
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-
-" set html indenting to 2 spaces
-autocmd FileType jade setlocal shiftwidth=2 tabstop=2
-
-"coffee
-" let coffee_linter = '/usr/local/bin/coffeelint'
-" map <Leader>c ;CoffeeMake<CR>
-" map <Leader>C ;CoffeeCompile<CR>
-" au BufWritePost *.coffee silent CoffeeMake! -o ./.compiled_javascripts/ -b | cwindow | redraw!
-
-" puppet
-au FileType puppet setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
+" powerline
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup

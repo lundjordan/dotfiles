@@ -1,6 +1,6 @@
 export EDITOR=/usr/bin/vim
 
-export PATH=/Users/jlund/opensrc/github/arcanist/bin:/Users/jlund/.gem/ruby/2.5.0/bin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=:/Users/jlund/.mozbuild/arcanist/bin:/Users/jlund/.mozbuild/moz-phab:/Users/jlund/.gem/ruby/2.5.0/bin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
 
 
 # Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t
@@ -50,3 +50,11 @@ export DOC=~/Documents/
 # bpythonrc path
 export PYTHONSTARTUP=~/.pythonrc
 unset VIRTUAL_ENV
+
+
+if command -v pyenv 1>/dev/null 2>&1; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi

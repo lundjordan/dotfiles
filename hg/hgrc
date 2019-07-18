@@ -22,11 +22,10 @@ purge =
 shelve = 
 histedit = 
 blackbox = 
-firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
+# firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
 mozext = ~/.mozbuild/version-control-tools/hgext/mozext
 bzpost = ~/.mozbuild/version-control-tools/hgext/bzpost
 prompt = ~/opensrc/bitbucket/hg-prompt/prompt.py
-evolve = /Users/jlund/.mozbuild/evolve/hgext3rd/evolve
 push-to-try = /Users/jlund/.mozbuild/version-control-tools/hgext/push-to-try
 
 [alias]
