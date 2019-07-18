@@ -58,8 +58,6 @@ https://gpgtools.org/
 
 https://store.docker.com/editions/community/docker-ce-desktop-mac
 
-
-
 ## setup dotfiles
 
 ### get secrets from backup disk
@@ -124,7 +122,6 @@ ln -s ~/devel/personal/dotfiles/zsh/config.zsh  ~/.oh-my-zsh/custom/config.zsh
 ln -s ~/devel/personal/dotfiles/zsh/zshrc ~/.zshrc
 ```
 
-
 #### vim setup
 ```
 # managing plugins with vim https://gist.github.com/manasthakur/ab4cf8d32a28ea38271ac0d07373bb53
@@ -139,13 +136,17 @@ vim
 ```
 # https://gist.github.com/eliangcs/43a51f5c95dd9b848ddc
 pyenv install --list
-pyenv install 3.{*}
-pyenv global 3.{*}
+pyenv install $python_version
+pyenv global $python_version # set version of python from any non local defined dir
+```
 
 # virtualenvs
+```
 https://github.com/pyenv/pyenv-virtualenv#usage
-pyenv virtualenv ${someproject} # uses current pyenv version
-cd $someproject_dir pyenv local $someproject
+pyenv virtualenv [$python_version] $virtualenv_name
+cd $some_project
+pyenv local $virtualenv_name|$python_version  # sets .python-version in cwd with the python env you want
+```
 
 #### install powerline status bar for tmux and vim
 ```
