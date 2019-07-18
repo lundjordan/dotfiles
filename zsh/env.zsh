@@ -1,4 +1,4 @@
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/vim
 
 export PATH=:/Users/jlund/.mozbuild/arcanist/bin:/Users/jlund/.mozbuild/moz-phab:/Users/jlund/.gem/ruby/2.5.0/bin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
 
