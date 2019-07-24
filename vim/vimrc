@@ -38,7 +38,7 @@ set pastetoggle=<F2>              " use F2 to toggle between paste with and with
 
 
 " Useful status information at bottom of screen
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+" set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 
 " use symbols for unwanted invisible chars
@@ -84,8 +84,8 @@ noremap <leader>r yiw:%s/<C-r>"/
 noremap <leader>f yiw:/<C-r>0<CR>N
 noremap <leader>F yiw/def <C-r>0<CR>
 
-set wildmode=longest,list,full
-set wildmenu
+" set wildmode=longest,list,full
+" set wildmenu
 
 """ PLUGINS
 

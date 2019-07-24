@@ -35,11 +35,10 @@ ZSH_THEME="jlund_juang"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew git git-extras mercurial jlundmercurial tmux screen osx aws python virtualenv pip docker ansible fzf ssh-agent)
+plugins=(osx brew git git-extras mercurial jlundmercurial fzf ssh-agent tmux screen python virtualenv pip poetry docker ansible aws heroku)
 
-zstyle :omz:plugins:ssh-agent identities id_rsa_mozilla_jlund
 zstyle :omz:plugins:ssh-agent lifetime 4h
-
+zstyle :omz:plugins:ssh-agent identities id_rsa_mozilla_jlund
 
 source $ZSH/oh-my-zsh.sh
 
