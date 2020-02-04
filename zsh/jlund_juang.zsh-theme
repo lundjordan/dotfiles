@@ -38,8 +38,14 @@ ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}(!)"
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$YELLOW%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 
+# Format for hg prompt
+ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
+ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗%{$reset_color%}"
+ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
+
 # Prompt format
 PROMPT='
 $(virtualenv_prompt_info)%{$BLACK%}%n@%m%{$BLACK%}:%{$BLACK%}%~%u$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
 %{$WHITE%}λ%{$RESET_COLOR%} '
-RPROMPT='%{$GREEN_BOLD%}$(git_current_branch)$(git_prompt_short_sha)$(git_prompt_status)$(hg_ps1)%{$RESET_COLOR%}'
+RPROMPT='%{$GREEN_BOLD%}$(git_current_branch)$(git_prompt_short_sha)$(git_prompt_status)$(hg_prompt_info)%{$RESET_COLOR%}'

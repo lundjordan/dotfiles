@@ -48,8 +48,8 @@ export DOC=~/Documents/
 # VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 # source /usr/local/bin/virtualenvwrapper.sh
 # bpythonrc path
-export PYTHONSTARTUP=~/.pythonrc
-unset VIRTUAL_ENV
+# export PYTHONSTARTUP=~/.pythonrc
+# unset VIRTUAL_ENV
 
 
 if command -v pyenv 1>/dev/null 2>&1; then
