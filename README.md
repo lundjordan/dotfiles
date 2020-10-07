@@ -28,14 +28,12 @@ configurations that I did not mean to overwrite. The backup dir is in
 * things
 * daisydisk
 * slack
+* Xcode
 
 ### install unmanaged packages
 
 * https://www.iterm2.com/
 * https://www.alfredapp.com/
-* https://www.mozilla.org/en-US/firefox/channel/desktop/
-* https://www.sparklabs.com/viscosity/download/
-* https://v.mozilla.com/
 * https://transmissionbt.com/download/
 * https://www.videolan.org/vlc/download-macosx.html
 
@@ -43,16 +41,12 @@ configurations that I did not mean to overwrite. The backup dir is in
 
 https://brew.sh/
 ```
-bash fzf git gnu-sed mercurial openssh pyenv pyenv-virtualenv tmux vim watchman wget zlib zsh
+fzf git mercurial openssh pyenv pyenv-virtualenv tmux vim wget zlib zsh node
 ```
 
 ### install gpgtools
 
 https://gpgtools.org/
-
-### macOS command line tools
-
-(brew should install this by default now)
 
 ### install docker
 
@@ -66,27 +60,21 @@ copy .gnupg dir, .ssh dir , and .zsh_history from backup
 ### create some initial homedirs
 ```
 mkdir -p ~/devel/personal
-mkdir -p ~/devel/mozilla/{playgroud,repos,releaseduty}
 mkdir -p ~/opensrc/bitbucket
 mkdir -p ~/opensrc/github
 mkdir ~/.vim_swps
 mkdir ~/.iterm
-mkdir -p ~/.mozbuild
-mkdir -p ~/.oh-my-zsh/custom/plugins/jlundmercurial
+# mkdir -p ~/.oh-my-zsh/custom/plugins/jlundmercurial
 ```
 
 ### setup oh-my-zsh
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
+https://ohmyz.sh/#install
 
 ### clone some needed repos
 ```
 git clone git@github.com:lundjordan/dotfiles.git ~/devel/personal/dotfiles
-hg clone https://bitbucket.org/sjl/hg-prompt ~/opensrc/bitbucket/hg-prompt
-# only for mozilla env
-hg clone https://hg.mozilla.org/hgcustom/version-control-tools ~/.mozbuild/version-control-tools
-git clone https://github.com/powerline/fonts.git --depth=1
+# hg clone https://bitbucket.org/sjl/hg-prompt ~/opensrc/bitbucket/hg-prompt
+# git clone https://github.com/powerline/fonts.git --depth=1
 ```
 
 ## link homedir paths to dotfiles
@@ -101,11 +89,10 @@ cd ~/devel/personal/dotfiles && python intial_setup.py
 
 ####  first remove the backup copies of ssh and gpg config files and instead use dotfiles versions assuming they are the same
 ```
-rm ~/.ssh/config ~/.gnupg/gpg.conf
+rm ~/.ssh/config ~/.gnupg/gpg.conf ~/.zshrc
 ```
 
 #### now link all dotfiles configs to home dir
-```
 ln -s ~/devel/personal/dotfiles/ssh/config ~/.ssh/config
 ln -s ~/devel/personal/dotfiles/gpg/gpg.conf ~/.gnupg/gpg.conf
 ln -s ~/devel/personal/dotfiles/hg/hgrc ~/.hgrc
@@ -113,13 +100,31 @@ ln -s ~/devel/personal/dotfiles/git/gitconfig ~/.gitconfig
 ln -s ~/devel/personal/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -s ~/devel/personal/dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/devel/personal/dotfiles/iterm/com.googlecode.iterm2.plist ~/.iterm/com.googlecode.iterm2.plist  # add in iterm pref
-ln -s ~/devel/personal/dotfiles/zsh/jlundmercurial.plugin.zsh ~/.oh-my-zsh/custom/plugins/jlundmercurial/jlundmercurial.plugin.zsh
 ln -s ~/devel/personal/dotfiles/zsh/jlund_juang.zsh-theme  ~/.oh-my-zsh/custom/themes/jlund_juang.zsh-theme
-ln -s ~/devel/personal/dotfiles/zsh/jlundmercurial.plugin.zsh  ~/.oh-my-zsh/custom/plugins/jlundmercurial/jlundmercurial.plugin.zsh
 ln -s ~/devel/personal/dotfiles/zsh/aliases.zsh  ~/.oh-my-zsh/custom/aliases.zsh
 ln -s ~/devel/personal/dotfiles/zsh/env.zsh  ~/.oh-my-zsh/custom/env.zsh
 ln -s ~/devel/personal/dotfiles/zsh/config.zsh  ~/.oh-my-zsh/custom/config.zsh
-ln -s ~/devel/personal/dotfiles/zsh/zshrc ~/.zshrc
+ln -s ~/devel/personal/dotfiles/zsh/zshrc ~/.zshrc```
+
+```
+
+#### setup pyenv
+```
+# https://gist.github.com/eliangcs/43a51f5c95dd9b848ddc
+pyenv install --list
+pyenv install $python_version
+pyenv global $python_version # set version of python from any non local defined dir
+```
+
+#### install poetry
+https://python-poetry.org/docs/
+
+# virtualenvs
+```
+https://github.com/pyenv/pyenv-virtualenv#usage
+pyenv virtualenv [$python_version] $virtualenv_name
+cd $some_project
+pyenv local $virtualenv_name|$python_version  # sets .python-version in cwd with the python env you want
 ```
 
 #### vim setup
@@ -131,22 +136,6 @@ ln -s ~/devel/personal/vimfiles ~/.vim
 vim
 :helptags ALL
 :CocInstall coc-python   # for coc python
-```
-
-#### setup pyenv
-```
-# https://gist.github.com/eliangcs/43a51f5c95dd9b848ddc
-pyenv install --list
-pyenv install $python_version
-pyenv global $python_version # set version of python from any non local defined dir
-```
-
-# virtualenvs
-```
-https://github.com/pyenv/pyenv-virtualenv#usage
-pyenv virtualenv [$python_version] $virtualenv_name
-cd $some_project
-pyenv local $virtualenv_name|$python_version  # sets .python-version in cwd with the python env you want
 ```
 
 #### install powerline status bar for tmux and vim
