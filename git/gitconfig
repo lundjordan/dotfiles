@@ -1,7 +1,7 @@
 [user]
 	name = Jordan Lund
-	email = jlund@mozilla.com
-    signingkey = 0xAD7CB99F8248BA0F
+	email = jordan.l.lund@gmail.com
+    signingkey = 544D961D09949767A2028140F6FE4B00F757906B
 [color]
 	status = true
 	branch = true
@@ -26,6 +26,6 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [gpg]
-    program = /usr/local/bin/gpg
+	program = gpg
 [commit]
     gpgsign = true
