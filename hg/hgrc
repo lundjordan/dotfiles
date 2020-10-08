@@ -1,5 +1,5 @@
 [ui]
-username = Jordan Lund <jlund@mozilla.com>
+username = Jordan Lund <jordan.l.lund@gmail.com>
 tweakdefaults = true
 interface = curses
 
@@ -22,31 +22,6 @@ purge =
 shelve = 
 histedit = 
 blackbox = 
-# firefoxtree = ~/.mozbuild/version-control-tools/hgext/firefoxtree
-mozext = ~/.mozbuild/version-control-tools/hgext/mozext
-# bzpost = ~/.mozbuild/version-control-tools/hgext/bzpost
-# prompt = ~/opensrc/bitbucket/hg-prompt/prompt.py
-push-to-try = /Users/jlund/.mozbuild/version-control-tools/hgext/push-to-try
 
 [alias]
 slog = log --template '{rev}:{node|short} {desc|firstline}\n'
-wip = log --graph --rev=wip --template=wip
-
-[mozilla]
-ircnick = jlund
-
-[color]
-wip.bookmarks = yellow underline
-wip.branch = yellow
-wip.draft = green
-wip.here = red
-wip.obsolete = none
-wip.public = blue
-wip.tags = yellow
-wip.user = magenta
-[revsetalias]
-wip = (parents(not public()) or not public() or . or (head() and branch(default))) and (not obsolete() or orphan()^) and not closed() and not (fxheads() - date(-90))
-[templates]
-wip = '{label("wip.branch", if(branches,"{branches} "))}{label(ifeq(graphnode,"x","wip.obsolete","wip.{phase}"),"{rev}:{node|short}")}{label("wip.user", " {author|user}")}{label("wip.tags", if(tags," {tags}"))}{label("wip.tags", if(fxheads," {fxheads}"))}{if(bookmarks," ")}{label("wip.bookmarks", if(bookmarks,bookmarks))}{label(ifcontains(rev, revset("parents()"), "wip.here"), " {desc|firstline}")}'
-[experimental]
-graphshorten = true

@@ -3,63 +3,7 @@ HashKnownHosts yes
 # Host keys the client accepts - order here is honored by OpenSSH
 HostKeyAlgorithms ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-ed25519,ssh-rsa,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256
 
- Host rejh?.srv.releng.????.mozilla.com
-     ControlMaster auto
-     ControlPath ~/.ssh/ssh-%C
-     ControlPersist 10m
-     ForwardAgent no
- 
- Host *.releng.mdc1.mozilla.com !rejh?.srv.releng.mdc1.mozilla.com !*.private.releng.????.mozilla.com
-    ProxyJump rejh1.srv.releng.mdc1.mozilla.com
-
- Host *.releng.us??.mozilla.com *.releng.scl3.mozilla.com !rejh?.srv.releng.????.mozilla.com !*.private.releng.scl3.mozilla.com
-    ProxyJump rejh1.srv.releng.mdc1.mozilla.com
-
-Host hg.mozilla.org git.mozilla.org
-    User jlund@mozilla.com
-    Compression yes
-    ServerAliveInterval 300
-
-Host *.mozilla.com
-    User jlund
-    IdentityFile ~/.ssh/id_rsa_mozilla_jlund
-    Compression yes
-    ServerAliveInterval 300
-
-Host *.build.mozilla.org
-    Compression yes
-    User cltbld
-    ServerAliveInterval 300
-
-
 Host *
     TCPKeepAlive yes
     ServerAliveInterval 120
     HashKnownHosts yes
-
-Host hg.mozilla.org git.mozilla.org
-    User jlund@mozilla.com
-    Compression yes
-    ServerAliveInterval 300
-
-Host reviewboard-hg.mozilla.org
-    User jlund@mozilla.com
-    Compression yes
-    ServerAliveInterval 300
-
-Host aws-manager2.srv.releng.scl3.mozilla.com
-    User buildduty
-
-Host cruncher.build.mozilla.org
-    User buildduty
-
-Host aus3-staging.mozilla.org releng-puppet* dev-master2.bb.releng.use1.mozilla.com
-    User jlund
-
-Host *.build.mozilla.org *.releng.scl3.mozilla.com *.srv.releng.*.mozilla.com *.test.releng.*.mozilla.com
-    User cltbld
-
-Host 10.13?.*.* bld-* tst-* try-* b-2008-*
-    User cltbld
-    UserKnownHostsFile /dev/null
-    StrictHostKeyChecking no

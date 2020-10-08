@@ -38,7 +38,7 @@ ZSH_THEME="jlund_juang"
 plugins=(osx brew git git-extras fzf ssh-agent tmux screen python virtualenv pip docker ansible aws heroku)
 
 zstyle :omz:plugins:ssh-agent lifetime 4h
-zstyle :omz:plugins:ssh-agent identities id_rsa_mozilla_jlund
+zstyle :omz:plugins:ssh-agent identities id_rsa
 
 source $ZSH/oh-my-zsh.sh
 
