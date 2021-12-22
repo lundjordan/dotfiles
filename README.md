@@ -34,8 +34,6 @@ configurations that I did not mean to overwrite. The backup dir is in
 
 * https://www.iterm2.com/
 * https://www.alfredapp.com/
-* https://transmissionbt.com/download/
-* https://www.videolan.org/vlc/download-macosx.html
 
 ### install brew
 
